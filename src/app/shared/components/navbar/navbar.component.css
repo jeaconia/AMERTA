@@ -10,6 +10,16 @@
 .navbar__logo {
   height: 40px;
   width: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  flex-shrink: 0;
 }
 
 .navbar__links {

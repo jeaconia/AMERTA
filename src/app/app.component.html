@@ -1,9 +1,9 @@
-<!-- Navbar reusable component -->
-<app-navbar></app-navbar>
+<app-hero></app-hero>
+
+<app-sejarah></app-sejarah>
 
 <main class="page-content">
 
-  <!-- Section: Produk Unggulan, memakai CardComponent di dalam *ngFor -->
   <section class="produk-section">
     <h2>Produk Unggulan</h2>
 
@@ -14,7 +14,6 @@
         [title]="produk.title"
         [description]="produk.description">
 
-        <!-- Konten custom diisi lewat ng-content, contoh: tombol di dalam card -->
         <app-button
           label="Lihat Detail"
           variant="outline"
@@ -25,13 +24,11 @@
     </div>
   </section>
 
-  <!-- Contoh pemakaian ButtonComponent langsung dengan variant berbeda -->
   <section class="cta-section">
     <app-button label="Hubungi Kami" variant="primary" size="lg"></app-button>
     <app-button label="Lihat Peta Desa" variant="secondary" size="md"></app-button>
   </section>
 
-  <!-- Routed pages (Beranda / Produk / Peta) akan dirender di sini -->
   <router-outlet></router-outlet>
 
 </main>

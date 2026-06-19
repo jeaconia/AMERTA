@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Navbar } from '../navbar/navbar.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, Navbar],
-  templateUrl: './hero.html',
-  styleUrl: './hero.css'
+  imports: [CommonModule, NavbarComponent],
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.css'
 })
-export class Hero {
+export class HeroComponent {
   /** Gambar latar belakang hero, default placeholder pegunungan */
   @Input() backgroundUrl: string = 'assets/images/background.png';
 

@@ -16,7 +16,6 @@
   cursor: not-allowed;
 }
 
-/* --- Variants --- */
 .btn--primary {
   background-color: var(--color-primary);
   color: var(--color-background);
@@ -43,16 +42,6 @@
   color: var(--color-background);
 }
 
-/* --- Sizes --- */
-.btn--sm {
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
-}
-.btn--md {
-  padding: 0.65rem 1.5rem;
-  font-size: 1rem;
-}
-.btn--lg {
-  padding: 0.9rem 2rem;
-  font-size: 1.15rem;
-}
+.btn--sm { padding: 0.4rem 0.9rem; font-size: 0.85rem; }
+.btn--md { padding: 0.65rem 1.5rem; font-size: 1rem; }
+.btn--lg { padding: 0.9rem 2rem; font-size: 1.15rem; }

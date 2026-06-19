@@ -11,13 +11,11 @@ export interface NavLink {
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  templateUrl: './navbar.html',
+  styleUrl: './navbar.css'
 })
-export class NavbarComponent {
-  @Input() logoUrl: string = 'assets/icons/logo-desa.svg';
-
-  /** Daftar link navigasi, default sesuai referensi: Beranda, Produk, Peta */
+export class Navbar {
+  @Input() logoUrl: string = 'assets/images/lambang-belok-sidan.png';
   @Input() links: NavLink[] = [
     { label: 'Beranda', path: '/' },
     { label: 'Produk', path: '/produk' },

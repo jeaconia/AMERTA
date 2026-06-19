@@ -9,15 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  /** URL gambar produk, misal 'assets/images/produk-asparagus.png' */
   @Input() imageUrl: string = '';
-
-  /** Judul kartu, misal 'Asparagus' */
   @Input() title: string = '';
-
-  /** Deskripsi singkat (opsional) */
   @Input() description: string = '';
-
-  /** Jika true, tampilkan border alih-alih shadow */
   @Input() bordered: boolean = false;
 }

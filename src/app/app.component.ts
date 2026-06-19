@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { CardComponent } from './shared/components/card/card.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { HeroComponent } from './shared/components/hero/hero.component';
+import { SejarahComponent } from './shared/components/sejarah/sejarah.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ButtonComponent, CardComponent, NavbarComponent],
+  imports: [RouterOutlet, ButtonComponent, CardComponent, NavbarComponent, HeroComponent, SejarahComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
