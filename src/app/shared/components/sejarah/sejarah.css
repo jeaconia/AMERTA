@@ -1,0 +1,57 @@
+.sejarah {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-background);
+}
+
+.sejarah__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.sejarah__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.sejarah__paragraph {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+
+.sejarah__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.sejarah__emblem-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--space-sm);
+}
+
+.sejarah__emblem {
+  width: 100%;
+  max-width: 220px;
+}
+
+@media (max-width: 768px) {
+  .sejarah__container {
+    grid-template-columns: 1fr;
+  }
+
+  .sejarah__emblem-wrap {
+    order: -1;
+    max-width: 160px;
+    margin: 0 auto var(--space-sm);
+  }
+}

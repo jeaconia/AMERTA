@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   GLOBAL CSS VARIABLES — Desa Belok/Sidan Theme
+   ========================================================================== */
+:root {
+  --color-primary: #52854D;
+  --color-secondary: #7DA761;
+  --color-background: #FFFFFF;
+
+  --color-primary-dark: #3E6539;
+  --color-text: #1F2A1D;
+  --color-text-muted: #5C6B57;
+  --color-border: #E2E8DF;
+
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
