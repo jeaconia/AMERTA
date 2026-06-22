@@ -1,18 +1,1 @@
-.page-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--space-lg) var(--space-md);
-}
 
-.produk-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-md);
-  margin-top: var(--space-md);
-}
-
-.cta-section {
-  display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-xl);
-}

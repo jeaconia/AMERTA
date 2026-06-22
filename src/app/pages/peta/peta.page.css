@@ -1,0 +1,173 @@
+.peta-page {
+  background-color: #1B2A18;
+  padding: var(--space-md) var(--space-md) 0;
+}
+
+.peta__navbar-wrap {
+  max-width: 1400px;
+  margin: 0 auto var(--space-lg);
+}
+
+.peta {
+  padding: 0 0 var(--space-xl);
+}
+
+.peta__map-wrap {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.peta__map-image {
+  max-width: 480px;
+  width: 100%;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+}
+
+.peta__labels {
+  position: absolute;
+  inset: 0;
+}
+
+.peta__label {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  max-width: 360px;
+}
+
+.peta__label--left {
+  right: 55%;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.peta__label--right {
+  left: 55%;
+  text-align: left;
+}
+
+.peta__label-connector {
+  flex-shrink: 0;
+  width: var(--space-md);
+  height: 2px;
+  background-color: #FFFFFF;
+  margin-top: 14px;
+}
+
+.peta__label--left .peta__label-connector {
+  border-top: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  background-color: transparent;
+  height: 28px;
+  margin-top: -8px;
+}
+
+.peta__label--right .peta__label-connector {
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  background-color: transparent;
+  height: 28px;
+  margin-top: -8px;
+}
+
+.peta__label-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: var(--space-xs);
+}
+
+.peta__label-products {
+  list-style: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+.peta__scale {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #FFFFFF;
+}
+
+.peta__scale-bar {
+  width: 140px;
+  height: 16px;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.peta__scale-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  margin-top: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  .peta__label {
+    max-width: 240px;
+  }
+
+  .peta__label-title {
+    font-size: 1.1rem;
+  }
+
+  .peta__label-products {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .peta__map-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .peta__labels {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .peta__label,
+  .peta__label--left,
+  .peta__label--right {
+    position: static;
+    flex-direction: row;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .peta__label--left .peta__label-connector,
+  .peta__label--right .peta__label-connector {
+    border: none;
+    background-color: var(--color-secondary);
+    width: 4px;
+    height: auto;
+    align-self: stretch;
+    margin: 0 var(--space-sm) 0 0;
+  }
+
+  .peta__scale {
+    position: static;
+    align-items: flex-start;
+    margin-top: var(--space-lg);
+  }
+}

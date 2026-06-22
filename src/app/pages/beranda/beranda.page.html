@@ -1,0 +1,35 @@
+<app-hero></app-hero>
+
+<app-sejarah></app-sejarah>
+
+<app-keunggulan></app-keunggulan>
+
+<app-khasiat></app-khasiat>
+
+<app-standar-kualitas></app-standar-kualitas>
+
+<main class="page-content">
+
+  <section class="produk-section">
+    <h2>Produk Unggulan</h2>
+
+    <div class="produk-grid">
+      <app-card
+        *ngFor="let produk of produkUnggulan"
+        [imageUrl]="produk.image"
+        [title]="produk.title"
+        [description]="produk.description">
+
+        <app-button
+          label="Lihat Detail"
+          variant="outline"
+          size="sm"
+          (clicked)="onLihatDetail(produk.title)">
+        </app-button>
+      </app-card>
+    </div>
+  </section>
+
+</main>
+
+<app-footer></app-footer>

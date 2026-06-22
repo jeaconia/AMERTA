@@ -1,0 +1,63 @@
+.khasiat {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-background);
+}
+
+.khasiat__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.khasiat__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.khasiat__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg) var(--space-md);
+}
+
+.khasiat__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.khasiat__icon-wrap {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.khasiat__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-primary);
+}
+
+.khasiat__item-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  line-height: 1.2;
+  margin-bottom: var(--space-xs);
+}
+
+.khasiat__item-description {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .khasiat__grid {
+    grid-template-columns: 1fr;
+  }
+}

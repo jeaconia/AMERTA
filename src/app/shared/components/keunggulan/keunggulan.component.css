@@ -1,0 +1,70 @@
+.keunggulan {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-background);
+}
+
+.keunggulan__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.keunggulan__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.keunggulan__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.keunggulan__card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.keunggulan__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.keunggulan__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.keunggulan__icon {
+  width: 56px;
+  height: 56px;
+  color: var(--color-primary);
+}
+
+.keunggulan__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: var(--space-xs);
+}
+
+.keunggulan__card-description {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .keunggulan__grid {
+    grid-template-columns: 1fr;
+  }
+}
