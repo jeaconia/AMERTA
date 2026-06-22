@@ -72,8 +72,8 @@ Kalau ingin menjalankan persis seperti di server production (termasuk Server-Sid
 src/
 ├── app/
 │   ├── pages/                  # Halaman dengan route sendiri
-│   │   ├── beranda/             # Halaman utama ("/")
-│   │   └── peta/                # Halaman peta wilayah ("/peta")
+│   │   ├── beranda/            # Halaman utama ("/")
+│   │   └── peta/               # Halaman peta wilayah ("/peta")
 │   ├── shared/components/      # Komponen reusable (navbar, hero, footer, dll.)
 │   ├── app.routes.ts           # Daftar routing
 │   └── app.component.ts        # Shell utama aplikasi
