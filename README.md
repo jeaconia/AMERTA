@@ -1,4 +1,4 @@
-# Desa Belok/Sidan — Website
+# Website Desa Belok/Sidan
 
 Website profil Desa Belok/Sidan, Kecamatan Petang, Kabupaten Badung, Provinsi Bali. Dibangun menggunakan Angular dengan Server-Side Rendering (SSR).
 
