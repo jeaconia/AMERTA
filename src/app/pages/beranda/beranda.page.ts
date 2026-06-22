@@ -4,6 +4,7 @@ import { ButtonComponent } from '../../shared/components/button/button.component
 import { CardComponent } from '../../shared/components/card/card.component';
 import { HeroComponent } from '../../shared/components/hero/hero.component';
 import { SejarahComponent } from '../../shared/components/sejarah/sejarah.component';
+import { TunasHijauComponent } from '../../shared/components/tunas-hijau/tunas-hijau.component';
 import { KeunggulanComponent } from '../../shared/components/keunggulan/keunggulan.component';
 import { KhasiatComponent } from '../../shared/components/khasiat/khasiat.component';
 import { StandarKualitasComponent } from '../../shared/components/standar-kualitas/standar-kualitas.component';
@@ -12,7 +13,7 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
 @Component({
   selector: 'app-beranda-page',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, CardComponent, HeroComponent, SejarahComponent, KeunggulanComponent, KhasiatComponent, StandarKualitasComponent, FooterComponent],
+  imports: [CommonModule, ButtonComponent, CardComponent, HeroComponent, SejarahComponent, TunasHijauComponent, KeunggulanComponent, KhasiatComponent, StandarKualitasComponent, FooterComponent],
   templateUrl: './beranda.page.html',
   styleUrl: './beranda.page.css'
 })

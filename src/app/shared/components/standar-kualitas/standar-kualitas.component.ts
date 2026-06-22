@@ -12,7 +12,7 @@ export class StandarKualitasComponent {
   @Input() title: string = 'Standar Kualitas';
 
   /** Gambar asparagus close-up, default placeholder */
-  @Input() imageUrl: string = 'assets/images/asparagus-kualitas.png';
+  @Input() imageUrl: string = 'assets/images/produk-asparagus2.png';
 
   /** Harga per kilogram, ditampilkan di dalam badge */
   @Input() price: string = 'Rp.60.000 / Kg';

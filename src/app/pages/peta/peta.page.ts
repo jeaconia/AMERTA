@@ -22,7 +22,7 @@ export interface BanjarDinas {
 })
 export class PetaPageComponent {
   /** Gambar peta wilayah desa, default placeholder */
-  @Input() mapImageUrl: string = 'assets/images/peta-wilayah.png';
+  @Input() mapImageUrl: string = 'assets/images/peta-belok-sidan.png';
 
   @Input() scaleMiles: string = '1 mi';
   @Input() scaleKm: string = '2 km';
