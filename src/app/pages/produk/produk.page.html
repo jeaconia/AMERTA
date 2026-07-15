@@ -1,0 +1,50 @@
+<div class="produk-page">
+
+  <div class="produk__navbar-wrap">
+    <app-navbar></app-navbar>
+  </div>
+
+  <section class="produk__banner">
+    <h1 class="produk__banner-title">{{ bannerTitle }}</h1>
+  </section>
+
+  <main class="produk__content">
+
+    <section class="produk__featured">
+      <h2 class="produk__featured-title">{{ featured.title }}</h2>
+      <p class="produk__featured-subtitle">{{ featured.subtitle }}</p>
+
+      <div class="produk__featured-image-wrap">
+        <img [src]="featured.image" [alt]="featured.title" class="produk__featured-image">
+      </div>
+
+      <a
+        [href]="featured.link"
+        class="produk__featured-link"
+        (click)="onLihatSelengkapnya(featured.title)">
+        Lihat Selengkapnya &rarr;
+      </a>
+    </section>
+
+    <section class="produk__grid">
+      <div class="produk__card" *ngFor="let produk of produkList">
+        <h3 class="produk__card-title">{{ produk.title }}</h3>
+
+        <div class="produk__card-image-wrap">
+          <img [src]="produk.image" [alt]="produk.title" class="produk__card-image">
+        </div>
+
+        <a
+          [href]="produk.link"
+          class="produk__card-link"
+          (click)="onLihatSelengkapnya(produk.title)">
+          Lihat Selengkapnya &rarr;
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<app-footer></app-footer>

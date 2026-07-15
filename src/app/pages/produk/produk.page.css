@@ -1,0 +1,168 @@
+.produk-page {
+  background-color: var(--color-background);
+}
+
+/* ==========================================================================
+   Banner hijau full-bleed
+   ========================================================================== */
+.produk__banner {
+  margin-top: var(--space-md);
+  padding: var(--space-xl) var(--space-md);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%);
+  text-align: center;
+}
+
+.produk__banner-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: #FFFFFF;
+  letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   Konten utama
+   ========================================================================== */
+.produk__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md) var(--space-xl);
+}
+
+/* Kartu produk unggulan utama (menonjol, menimpa sedikit ke banner) */
+.produk__featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+  padding: var(--space-xl) var(--space-lg);
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.produk__featured-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  color: var(--color-secondary);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.produk__featured-subtitle {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-top: var(--space-xs);
+}
+
+.produk__featured-image-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: var(--space-lg) 0;
+}
+
+.produk__featured-image {
+  max-width: 480px;
+  width: 100%;
+}
+
+.produk__featured-link {
+  align-self: flex-end;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.produk__featured-link:hover {
+  color: var(--color-primary);
+}
+
+/* Grid kartu produk lainnya */
+.produk__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.produk__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: var(--space-md);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produk__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.produk__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: var(--space-sm);
+}
+
+.produk__card-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--space-sm);
+}
+
+.produk__card-image {
+  width: 100%;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+.produk__card-link {
+  margin-top: auto;
+  padding-top: var(--space-xs);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.produk__card-link:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 992px) {
+  .produk__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .produk__featured {
+    padding: var(--space-lg) var(--space-md);
+    margin-top: -30px;
+  }
+
+  .produk__grid {
+    grid-template-columns: 1fr;
+  }
+}

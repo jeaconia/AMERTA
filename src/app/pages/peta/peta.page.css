@@ -3,11 +3,6 @@
   padding: var(--space-md) var(--space-md) 0;
 }
 
-.peta__navbar-wrap {
-  max-width: 1400px;
-  margin: 0 auto var(--space-lg);
-}
-
 .peta {
   padding: 0 0 var(--space-xl);
 }
