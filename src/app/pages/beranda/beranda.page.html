@@ -1,7 +1,8 @@
-<app-navbar></app-navbar>
+<div class="beranda-page">
+  <app-navbar></app-navbar>
 
-<section class="hero" [style.background-image]="'url(' + heroBackgroundUrl + ')'">
-  <div class="hero__content">
+  <section class="hero" [style.background-image]="'url(' + heroBackgroundUrl + ')'">
+    <div class="hero__content">
     <p class="hero__location">
       <svg class="hero__pin" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
@@ -126,7 +127,7 @@
         <span class="standar-kualitas__price">{{ kualitasPrice }}</span>
       </div>
     </div>
-    <p class="standar-kualitas__description">{{ kualitasDescriptionBefore }} <strong>{{ kualitasHighlightWord }}</strong>{{ kualitasDescriptionAfter }}</p>
+    <p class="standar-kualitas__description">Asparagus yang dihasilkan dari lahan pertanian Desa Belok/Sidan dikenal sebagai asparagus <strong>Grade A</strong>. Kualitas ini ditandai dengan batang yang lurus dan kokoh, warna hijau cerah yang seragam, serta ujung kuncup yang masih kencang dan segar.</p>
   </div>
 </section>
 
@@ -134,20 +135,20 @@
   <section class="produk-section">
     <h2>Produk Unggulan</h2>
     <div class="produk-grid">
-      <app-card
-        *ngFor="let produk of produkUnggulan"
-        [imageUrl]="produk.image"
-        [title]="produk.title"
-        [description]="produk.description">
-        <app-button
-          label="Lihat Detail"
-          variant="outline"
-          size="sm"
-          (clicked)="onLihatDetail(produk.title)">
-        </app-button>
-      </app-card>
+      <div class="produk__card" *ngFor="let produk of produkUnggulan">
+        <h3 class="produk__card-title">{{ produk.title }}</h3>
+
+        <div class="produk__card-image-wrap">
+          <img [src]="produk.image" [alt]="produk.title" class="produk__card-image">
+        </div>
+
+        <a class="produk__card-link" href="#" (click)="onLihatDetail(produk.title)">
+          Lihat Selengkapnya &rarr;
+        </a>
+      </div>
     </div>
   </section>
 </main>
+</div>
 
 <app-footer></app-footer>
