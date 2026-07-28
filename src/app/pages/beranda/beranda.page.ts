@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from '../../shared/components/button/button.component';
-import { CardComponent } from '../../shared/components/card/card.component';
+import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-beranda-page',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, CardComponent, NavbarComponent, FooterComponent],
+  imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent],
   templateUrl: './beranda.page.html',
   styleUrl: './beranda.page.css'
 })
@@ -78,21 +77,13 @@ export class BerandaPageComponent {
   kualitasDescriptionAfter = '';
 
   produkUnggulan = [
-    {
-      title: 'Asparagus',
-      image: 'assets/images/produk-asparagus.png',
-      description: 'Grade A, dibudidayakan langsung oleh petani lokal.'
-    },
-    {
-      title: 'Durian Musangking',
-      image: 'assets/images/produk-durian.png',
-      description: 'Hasil panen dataran tinggi Belok/Sidan.'
-    },
-    {
-      title: 'Kopi Arabika',
-      image: 'assets/images/produk-kopi.png',
-      description: 'Ditanam di Banjar Dinas Jempanang dan Lawak.'
-    }
+    {title: 'Asparagus',
+    subtitle: 'Sang Tunas Hijau Dari Dataran Tinggi',
+    image: 'assets/images/produk-asparagus2.png',
+    link: '/produk/asparagus'},
+    { title: 'Durian Musangking', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking' },
+    { title: 'Kopi Arabika', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika' },
+    { title: 'Bunga Gumitir', image: 'assets/images/produk-bunga-gumitir.png', link: '/produk/bunga-gumitir' },
   ];
 
   onLihatDetail(produk: string): void {

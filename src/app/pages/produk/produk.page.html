@@ -19,7 +19,7 @@
       </div>
 
       <a
-        [href]="featured.link"
+        [routerLink]="featured.link"
         class="produk__featured-link"
         (click)="onLihatSelengkapnya(featured.title)">
         Lihat Selengkapnya &rarr;
@@ -35,7 +35,7 @@
         </div>
 
         <a
-          [href]="produk.link"
+          [routerLink]="produk.link"
           class="produk__card-link"
           (click)="onLihatSelengkapnya(produk.title)">
           Lihat Selengkapnya &rarr;

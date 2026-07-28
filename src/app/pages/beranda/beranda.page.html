@@ -142,7 +142,7 @@
           <img [src]="produk.image" [alt]="produk.title" class="produk__card-image">
         </div>
 
-        <a class="produk__card-link" href="#" (click)="onLihatDetail(produk.title)">
+        <a class="produk__card-link" [routerLink]="produk.link" (click)="onLihatDetail(produk.title)">
           Lihat Selengkapnya &rarr;
         </a>
       </div>
