@@ -1,0 +1,43 @@
+<div class="peta-page">
+
+  <div class="peta__navbar-wrap">
+    <app-navbar></app-navbar>
+  </div>
+
+  <section class="peta">
+    <div class="peta__map-wrap">
+
+      <img [src]="mapImageUrl" alt="Peta wilayah Desa Belok/Sidan" class="peta__map-image">
+
+      <div class="peta__labels">
+        <div
+          class="peta__label peta__label--{{ banjar.side }}"
+          *ngFor="let banjar of banjarList"
+          [style.top.%]="banjar.top">
+
+          <span class="peta__label-connector"></span>
+
+          <div class="peta__label-content">
+            <h3 class="peta__label-title">{{ banjar.name }}</h3>
+            <ul class="peta__label-products">
+              <li *ngFor="let product of banjar.products">{{ product }}</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="peta__scale">
+        <span class="peta__scale-bar"></span>
+        <div class="peta__scale-labels">
+          <span>{{ scaleMiles }}</span>
+          <span>{{ scaleKm }}</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<app-footer></app-footer>
