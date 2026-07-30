@@ -6,7 +6,9 @@ import { ProdukDetailPageComponent } from './pages/produk-detail/produk-detail.p
 
 export const routes: Routes = [
   { path: '', component: BerandaPageComponent },
+  { path: 'beranda', redirectTo: '', pathMatch: 'full' },
   { path: 'produk', component: ProdukPageComponent, pathMatch: 'full' },
   { path: 'produk/:slug', component: ProdukDetailPageComponent },
   { path: 'peta', component: PetaPageComponent },
+  { path: '**', redirectTo: '' },
 ];
