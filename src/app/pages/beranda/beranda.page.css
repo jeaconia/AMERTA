@@ -9,7 +9,9 @@
 
 .hero {
   position: relative;
-  min-height: 520px;
+  min-height: 700px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   display: flex;
   align-items: center;
   justify-content: center;

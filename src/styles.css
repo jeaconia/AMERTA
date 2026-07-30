@@ -1,12 +1,16 @@
+/* Import Font Awesome from local package */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 /* ==========================================================================
    GLOBAL CSS VARIABLES — Desa Belok/Sidan Theme
    ========================================================================== */
+
 :root {
   --color-primary: #52854D;
   --color-secondary: #7DA761;
   --color-background: #FFFFFF;
 
-  --color-primary-dark: #3E6539;
+  --color-primary-dark: #2A3328;
   --color-surface-dark: #1F3A1C;
   --color-text: #1F2A1D;
   --color-text-muted: #5C6B57;
