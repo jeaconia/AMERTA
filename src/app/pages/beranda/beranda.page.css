@@ -1,51 +1,368 @@
-.beranda-page{position:relative}
-.hero{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;background:center/cover no-repeat var(--color-primary-dark)}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.05) 40%,rgba(0,0,0,.55))}
-.hero__content{position:relative;z-index:1;max-width:900px;padding:var(--space-xl) var(--space-lg) var(--space-lg);text-align:center;color:#fff}
-.hero__location{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;margin-bottom:var(--space-xs);font:400 .95rem/1 var(--font-body);opacity:.95;color:rgba(255,255,255,.9)}
-.hero__pin{flex-shrink:0}
-.hero__title{font:clamp(2.5rem,6vw,4.5rem)/1.05 var(--font-heading);letter-spacing:2px;color:#fff}
-.sejarah,.tunas-hijau,.keunggulan,.khasiat{padding:var(--space-xl) var(--space-md);background:var(--color-background)}
-.sejarah__container,.tunas-hijau__container{max-width:1100px;margin:0 auto;display:grid;gap:var(--space-lg);align-items:center}
-.sejarah__container{grid-template-columns:1.4fr .6fr}
-.tunas-hijau__container{grid-template-columns:.6fr 1.4fr}
-.sejarah__title,.tunas-hijau__title,.keunggulan__title,.khasiat__title{font:clamp(2rem,4vw,2.8rem)/1.1 var(--font-heading);color:var(--color-primary);margin-bottom:var(--space-md)}
-.sejarah__paragraph,.tunas-hijau__paragraph,.keunggulan__card-description,.khasiat__item-description{font:.95rem/1.7 var(--font-body);color:var(--color-text)}
-.sejarah__paragraph:last-child,.tunas-hijau__paragraph:last-child{margin-bottom:0}
-.sejarah__emblem-wrap,.tunas-hijau__image-wrap,.keunggulan__icon-wrap,.khasiat__icon-wrap{display:flex;justify-content:center;align-items:center}
-.sejarah__emblem{width:100%;max-width:220px}
-.tunas-hijau__image{width:100%;max-width:260px;transform:rotate(-4deg)}
-.keunggulan__container,.khasiat__container,.standar-kualitas__container{max-width:1100px;margin:0 auto}
-.keunggulan__title,.khasiat__title{margin-bottom:var(--space-lg);text-align:center}
-.keunggulan__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md)}
-.keunggulan__card{border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-lg) var(--space-md);text-align:center;transition:transform .2s ease,box-shadow .2s ease}
-.keunggulan__card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
-.keunggulan__icon{width:56px;height:56px;display:inline-flex;align-items:center;justify-content:center;font-size:32px;color:var(--color-primary);margin-bottom:var(--space-sm)}
-.keunggulan__card-title{font:1.3rem/1.2 var(--font-heading);color:var(--color-text);margin-bottom:var(--space-xs)}
-.khasiat{padding-top:var(--space-xl)}
-.khasiat__container{max-width:900px;text-align:center}
-.khasiat__grid{display:grid;grid-template-columns:repeat(2,minmax(280px,1fr));gap:var(--space-lg) var(--space-md);justify-items:center}
-.khasiat__item{display:flex;flex-direction:column;align-items:center;gap:var(--space-sm);text-align:center}
-.khasiat__icon{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;font-size:28px;color:var(--color-primary)}
-.khasiat__item-title{font:1.1rem/1.2 var(--font-heading);color:var(--color-secondary);margin-bottom:var(--space-xs)}
-.standar-kualitas{padding:var(--space-xl) var(--space-md);background:var(--gradient-hero);color:#fff}
-.standar-kualitas__container{text-align:center}
-.standar-kualitas__title{font:clamp(2rem,4vw,2.8rem)/1.1 var(--font-heading);margin-bottom:var(--space-lg);color:#fff}
-.standar-kualitas__image-wrap{position:relative;display:inline-flex;justify-content:center;align-items:center;margin-bottom:var(--space-lg)}
-.standar-kualitas__image{width:100%;max-width:420px}
-.standar-kualitas__badge{position:absolute;right:0;bottom:0;transform:translate(25%,25%);background:rgba(255,255,255,.95);padding:.8rem 1rem;border-radius:999px;color:var(--color-text);font-weight:700}
-.standar-kualitas__description{max-width:860px;margin:0 auto 1rem;font:.95rem/1.7 var(--font-body);color:rgba(255,255,255,.9)}
-.standar-kualitas__highlight{margin:0 auto;font:1.2rem/1.2 var(--font-heading);color:#fff}
-.page-content{max-width:1200px;margin:0 auto;padding:var(--space-lg) var(--space-md)}
-.produk-section{margin-top:var(--space-xl)}
-.produk-section h2{font:clamp(2.5rem,6vw,4rem)/1.1 var(--font-heading);margin-bottom:var(--space-lg);text-align:center}
-.produk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-md);margin-top:var(--space-lg)}
-.produk__card{display:flex;flex-direction:column;align-items:center;background:var(--color-background);border-radius:var(--radius-md);box-shadow:0 2px 12px rgba(0,0,0,.08);padding:var(--space-md);text-align:center;transition:transform .2s ease,box-shadow .2s ease}
-.produk__card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
-.produk__card-title{font:1.5rem/1.1 var(--font-heading);color:var(--color-primary-dark);text-transform:uppercase;margin-bottom:var(--space-sm)}
-.produk__card-image-wrap{display:flex;justify-content:center;align-items:center;width:100%;margin-bottom:var(--space-sm)}
-.produk__card-image{width:100%;max-width:170px;object-fit:contain}
-.produk__card-link{margin-top:auto;padding-top:var(--space-xs);font:500 .9rem/1.2 var(--font-body);color:var(--color-text);text-decoration:underline;text-underline-offset:3px}
-.produk__card-link:hover{color:var(--color-primary)}
-@media (max-width:992px){.produk-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:768px){.sejarah__container,.tunas-hijau__container{grid-template-columns:1fr;text-align:center}.sejarah__emblem-wrap{order:-1;max-width:160px;margin:0 auto var(--space-sm)}.tunas-hijau__image{max-width:200px}.keunggulan__grid,.khasiat__grid{grid-template-columns:1fr}}
+.beranda-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.beranda-page * {
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: center/cover no-repeat var(--color-primary-dark);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.05) 40%,
+    rgba(0, 0, 0, 0.55)
+  );
+}
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 900px);
+  max-width: 900px;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  text-align: center;
+  color: #fff;
+}
+.hero__location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: var(--space-xs);
+  font: 400 0.95rem/1 var(--font-body);
+  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero__pin {
+  flex-shrink: 0;
+}
+.hero__title {
+  font: clamp(2.5rem, 6vw, 4.5rem)/1.05 var(--font-heading);
+  letter-spacing: 2px;
+  color: #fff;
+}
+.sejarah,
+.tunas-hijau,
+.keunggulan,
+.khasiat {
+  padding: var(--space-xl) var(--space-md);
+  background: var(--color-background);
+}
+.sejarah__container,
+.tunas-hijau__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-lg);
+  align-items: center;
+}
+.sejarah__container {
+  grid-template-columns: 1.4fr 0.6fr;
+}
+.tunas-hijau__container {
+  grid-template-columns: 0.6fr 1.4fr;
+}
+.sejarah__title,
+.tunas-hijau__title,
+.keunggulan__title,
+.khasiat__title {
+  font: clamp(2rem, 4vw, 2.8rem)/1.1 var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+.sejarah__paragraph,
+.tunas-hijau__paragraph,
+.keunggulan__card-description,
+.khasiat__item-description {
+  font: 0.95rem/1.7 var(--font-body);
+  color: var(--color-text);
+}
+.sejarah__paragraph:last-child,
+.tunas-hijau__paragraph:last-child {
+  margin-bottom: 0;
+}
+.sejarah__emblem-wrap,
+.tunas-hijau__image-wrap,
+.keunggulan__icon-wrap,
+.khasiat__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sejarah__emblem {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+.tunas-hijau__image {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  transform: rotate(-4deg);
+}
+.keunggulan__container,
+.khasiat__container,
+.standar-kualitas__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.keunggulan__title,
+.khasiat__title {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+.keunggulan__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+.keunggulan__card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.keunggulan__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.keunggulan__icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+.keunggulan__card-title {
+  font: 1.3rem/1.2 var(--font-heading);
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+.khasiat {
+  padding-top: var(--space-xl);
+}
+.khasiat__container {
+  max-width: 900px;
+  text-align: center;
+}
+.khasiat__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: var(--space-lg) var(--space-md);
+  justify-items: center;
+}
+.khasiat__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+}
+.khasiat__icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--color-primary);
+}
+.khasiat__item-title {
+  font: 1.1rem/1.2 var(--font-heading);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-xs);
+}
+.standar-kualitas {
+  padding: var(--space-xl) var(--space-md);
+  background: var(--gradient-hero);
+  color: #fff;
+}
+.standar-kualitas__container {
+  text-align: center;
+}
+.standar-kualitas__title {
+  font: clamp(2rem, 4vw, 2.8rem)/1.1 var(--font-heading);
+  margin-bottom: var(--space-lg);
+  color: #fff;
+}
+.standar-kualitas__image-wrap {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: min(100%, 420px);
+  margin: 0 auto var(--space-lg);
+}
+.standar-kualitas__image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+}
+.standar-kualitas__badge {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  transform: none;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  color: var(--color-text);
+  font-weight: 700;
+}
+.standar-kualitas__description {
+  max-width: 860px;
+  margin: 0 auto 1rem;
+  font: 0.95rem/1.7 var(--font-body);
+  color: rgba(255, 255, 255, 0.9);
+}
+.standar-kualitas__highlight {
+  margin: 0 auto;
+  font: 1.2rem/1.2 var(--font-heading);
+  color: #fff;
+}
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+.produk-section {
+  margin-top: var(--space-xl);
+}
+.produk-section h2 {
+  font: clamp(2.5rem, 6vw, 4rem)/1.1 var(--font-heading);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.produk__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: var(--space-md);
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.produk__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.produk__card-title {
+  font: 1.5rem/1.1 var(--font-heading);
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+.produk__card-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--space-sm);
+}
+.produk__card-image {
+  width: 100%;
+  max-width: 170px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.produk__card-link {
+  margin-top: auto;
+  padding-top: var(--space-xs);
+  font: 500 0.9rem/1.2 var(--font-body);
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.produk__card-link:hover {
+  color: var(--color-primary);
+}
+@media (max-width: 992px) {
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .sejarah__container,
+  .tunas-hijau__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .sejarah__emblem-wrap {
+    order: -1;
+    max-width: 160px;
+    margin: 0 auto var(--space-sm);
+  }
+  .tunas-hijau__image {
+    max-width: 200px;
+  }
+  .keunggulan__grid,
+  .khasiat__grid {
+    grid-template-columns: 1fr;
+  }
+  .produk-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 460px;
+  }
+  .hero__content {
+    padding: var(--space-lg) var(--space-sm) var(--space-md);
+  }
+  .sejarah,
+  .tunas-hijau,
+  .keunggulan,
+  .khasiat,
+  .standar-kualitas {
+    padding-inline: var(--space-sm);
+  }
+  .page-content {
+    padding-inline: var(--space-sm);
+  }
+  .produk-grid {
+    grid-template-columns: 1fr;
+  }
+  .produk__card {
+    min-width: 0;
+  }
+  .standar-kualitas__badge {
+    right: 0.25rem;
+    bottom: 0.25rem;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
