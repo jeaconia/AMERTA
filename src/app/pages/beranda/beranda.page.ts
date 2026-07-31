@@ -78,8 +78,7 @@ export class BerandaPageComponent {
 
   produkUnggulan = [
     {title: 'Asparagus',
-    subtitle: 'Sang Tunas Hijau Dari Dataran Tinggi',
-    image: 'assets/images/produk-asparagus2.png',
+    image: 'assets/images/produk-asparagus.png',
     link: '/produk/asparagus'},
     { title: 'Durian Musangking', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking' },
     { title: 'Kopi Arabika', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika' },

@@ -32,7 +32,7 @@ export class PetaPageComponent {
 
   /** Daftar banjar dinas dan komoditas unggulannya, default sesuai referensi peta */
   @Input() banjarList: BanjarDinas[] = [
-    { name: 'Banjar Dinas Jempanang', products: ['Kopi Arabika', 'Alpukat'], top: 15, side: 'left', offsetX: 180, connectorLength: 100, connectorTop: 15 },
+    { name: 'Banjar Dinas Jempanang', products: ['Kopi Arabika', 'Alpukat'], top: 15, side: 'left', offsetX: 190, connectorLength: 100, connectorTop: 15 },
     { name: 'Banjar Dinas Bon', products: ['Anggrek', 'Sawi putih', 'Jeuk Siam Madu', 'Jeruk Brastagi'], top: 13, side: 'right', offsetX: 115, connectorLength: 125, connectorTop: 15 },
     { name: 'Banjar Dinas Sekarmukti', products: ['Bunga Gemitir', 'Gula Aren'], top: 30, side: 'left', offsetX: 90, connectorLength: 50, connectorTop: 15 },
     { name: 'Banjar Dinas Lawak', products: ['Kopi', 'Padi'], top: 30, side: 'right', offsetX: 100, connectorLength: 50, connectorTop: 15 },

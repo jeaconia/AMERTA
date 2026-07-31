@@ -8,6 +8,16 @@
   padding: 0 0 var(--space-xl);
 }
 
+.peta__title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  margin: 0 0 var(--space-xxs);
+  text-transform: uppercase;
+}
+
 .peta__map-wrap {
   position: relative;
   max-width: 1400px;
@@ -220,5 +230,7 @@
     position: static;
     align-items: flex-start;
     margin-top: var(--space-lg);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    margin: 0 0 var(--space-xxs);
   }
 }
