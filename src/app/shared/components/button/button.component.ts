@@ -9,7 +9,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css'
+  styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
   /** Warna tombol: 'primary' | 'secondary' | 'outline' */

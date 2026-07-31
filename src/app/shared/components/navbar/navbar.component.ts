@@ -12,7 +12,7 @@ export interface NavLink {
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
   @Input() logoUrl: string = 'assets/images/lambang-belok-sidan.png';

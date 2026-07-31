@@ -6,38 +6,33 @@
 
   <section class="peta">
     <div class="peta__map-wrap">
+      <div class="peta__map-frame">
+        <img [src]="mapImageUrl" alt="Peta wilayah Desa Belok/Sidan" class="peta__map-image">
 
-      <img [src]="mapImageUrl" alt="Peta wilayah Desa Belok/Sidan" class="peta__map-image">
+        <div class="peta__labels">
+          <div
+            class="peta__label peta__label--{{ banjar.side }}"
+            *ngFor="let banjar of banjarList"
+            [style.top.%]="banjar.top"
+            [style.left]="banjar.side === 'right' ? 'calc(50% + 1rem + ' + (banjar.offsetX ?? 0) + 'px)' : null"
+            [style.right]="banjar.side === 'left' ? 'calc(50% + 1rem + ' + (banjar.offsetX ?? 0) + 'px)' : null">
 
-      <div class="peta__labels">
-        <div
-          class="peta__label peta__label--{{ banjar.side }}"
-          *ngFor="let banjar of banjarList"
-          [style.top.%]="banjar.top">
+            <div class="peta__label-content">
+              <h3 class="peta__label-title">{{ banjar.name }}</h3>
+              <ul class="peta__label-products">
+                <li *ngFor="let product of banjar.products">{{ product }}</li>
+              </ul>
+            </div>
 
-          <span class="peta__label-connector"></span>
-
-          <div class="peta__label-content">
-            <h3 class="peta__label-title">{{ banjar.name }}</h3>
-            <ul class="peta__label-products">
-              <li *ngFor="let product of banjar.products">{{ product }}</li>
-            </ul>
+            <span
+              class="peta__label-connector"
+              [style.width.px]="banjar.connectorLength ?? 120"
+              [style.top.px]="banjar.connectorTop ?? 18"></span>
           </div>
-
         </div>
       </div>
-
-      <div class="peta__scale">
-        <span class="peta__scale-bar"></span>
-        <div class="peta__scale-labels">
-          <span>{{ scaleMiles }}</span>
-          <span>{{ scaleKm }}</span>
-        </div>
-      </div>
-
     </div>
   </section>
 
+  <app-footer></app-footer>
 </div>
-
-<app-footer></app-footer>

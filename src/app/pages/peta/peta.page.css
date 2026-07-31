@@ -16,6 +16,40 @@
   justify-content: center;
 }
 
+.peta__map-wrap--horizontal {
+  flex-direction: column;
+  align-items: center;
+}
+
+.peta__map-frame {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.peta__layout-control {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.peta__layout-control button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #FFFFFF;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.peta__layout-control button.active,
+.peta__layout-control button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .peta__map-image {
   max-width: 760px;
   width: 100%;
@@ -27,11 +61,83 @@
   inset: 0;
 }
 
+.peta__labels.peta__labels--horizontal {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
 .peta__label {
   position: absolute;
   display: flex;
   align-items: flex-start;
   max-width: 360px;
+  z-index: 1;
+}
+
+.peta__label-connector {
+  position: absolute;
+  height: 2px;
+  background-color: #FFFFFF;
+  display: block;
+  z-index: 0;
+}
+
+.peta__label-connector::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.peta__label--left .peta__label-connector {
+  left: calc(100% + 3px);
+}
+
+.peta__label--left .peta__label-connector::after {
+  left: calc(100% - 3px);
+}
+
+.peta__label--right .peta__label-connector {
+  right: calc(100% + 3px);
+}
+
+.peta__label--right .peta__label-connector::after {
+  right: calc(100% - 3px);
+}
+
+.peta__labels.peta__labels--horizontal .peta__label {
+  position: static;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 320px;
+  min-width: 240px;
+  width: auto;
+  padding: var(--space-md);
+  background-color: rgba(18, 27, 45, 0.9);
+  border-radius: 18px;
+}
+
+.peta__labels.peta__labels--horizontal .peta__label--left,
+.peta__labels.peta__labels--horizontal .peta__label--right {
+  right: auto;
+  left: auto;
+}
+
+.peta__labels.peta__labels--horizontal .peta__label-connector {
+  display: none;
+}
+
+.peta__labels.peta__labels--horizontal .peta__label-title {
+  margin-bottom: var(--space-xxs);
 }
 
 .peta__label--left {
@@ -45,29 +151,6 @@
   text-align: left;
 }
 
-.peta__label-connector {
-  flex-shrink: 0;
-  width: var(--space-md);
-  height: 2px;
-  background-color: #FFFFFF;
-  margin-top: 14px;
-}
-
-.peta__label--left .peta__label-connector {
-  border-top: 2px solid #FFFFFF;
-  border-right: 2px solid #FFFFFF;
-  background-color: transparent;
-  height: 28px;
-  margin-top: -8px;
-}
-
-.peta__label--right .peta__label-connector {
-  border-top: 2px solid #FFFFFF;
-  border-left: 2px solid #FFFFFF;
-  background-color: transparent;
-  height: 28px;
-  margin-top: -8px;
-}
 
 .peta__label-title {
   font-family: var(--font-heading);
@@ -84,34 +167,6 @@
   font-size: 0.95rem;
   color: #FFFFFF;
   line-height: 1.5;
-}
-
-.peta__scale {
-  position: absolute;
-  bottom: var(--space-sm);
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  color: #FFFFFF;
-}
-
-.peta__scale-bar {
-  width: 140px;
-  height: 16px;
-  border-left: 2px solid #FFFFFF;
-  border-right: 2px solid #FFFFFF;
-  border-bottom: 2px solid #FFFFFF;
-}
-
-.peta__scale-labels {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  margin-top: var(--space-xs);
-  font-family: var(--font-heading);
-  font-size: 1rem;
 }
 
 @media (max-width: 992px) {

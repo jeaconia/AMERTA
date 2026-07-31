@@ -9,7 +9,7 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
   standalone: true,
   imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent],
   templateUrl: './beranda.page.html',
-  styleUrl: './beranda.page.css'
+  styleUrls: ['./beranda.page.css']
 })
 export class BerandaPageComponent {
   heroBackgroundUrl = 'assets/images/background.png';

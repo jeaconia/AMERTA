@@ -12,7 +12,7 @@ export interface SocialLink {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
   @Input() villageName: string = 'Desa Belok/Sidan';

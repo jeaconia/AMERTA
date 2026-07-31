@@ -22,7 +22,7 @@ export interface ProdukItem {
   standalone: true,
   imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent],
   templateUrl: './produk.page.html',
-  styleUrl: './produk.page.css'
+  styleUrls: ['./produk.page.css']
 })
 export class ProdukPageComponent {
   @Input() bannerTitle: string = 'Produk Unggulan';

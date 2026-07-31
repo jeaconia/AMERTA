@@ -18,7 +18,7 @@ export interface ProdukDetailData {
   standalone: true,
   imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent],
   templateUrl: './produk-detail.page.html',
-  styleUrl: './produk-detail.page.css'
+  styleUrls: ['./produk-detail.page.css']
 })
 export class ProdukDetailPageComponent implements OnInit {
   detail: ProdukDetailData = {
