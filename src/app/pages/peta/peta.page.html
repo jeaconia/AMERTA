@@ -19,10 +19,14 @@
             [style.right]="banjar.side === 'left' ? 'calc(50% + 1rem + ' + (banjar.offsetX ?? 0) + 'px)' : null">
 
             <div class="peta__label-content">
-              <h3 class="peta__label-title">{{ banjar.name }}</h3>
+              <a class="peta__label-link" [href]="banjar.mapsUrl" target="_blank" rel="noopener noreferrer">
+                <h3 class="peta__label-title">{{ banjar.name }}</h3>
+              </a>
               <ul class="peta__label-products">
                 <li *ngFor="let product of banjar.products">{{ product }}</li>
               </ul>
+              <a class="peta__map-link" [href]="banjar.mapsUrl" target="_blank" rel="noopener noreferrer">
+              </a>
             </div>
 
             <span

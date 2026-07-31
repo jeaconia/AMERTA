@@ -27,20 +27,17 @@
     </section>
 
     <section class="produk__grid">
-      <div class="produk__card" *ngFor="let produk of produkList">
+      <a class="produk__card" *ngFor="let produk of produkList" [routerLink]="produk.link" (click)="onLihatSelengkapnya(produk.title)">
         <h3 class="produk__card-title">{{ produk.title }}</h3>
 
         <div class="produk__card-image-wrap">
           <img [src]="produk.image" [alt]="produk.title" class="produk__card-image">
         </div>
 
-        <a
-          [routerLink]="produk.link"
-          class="produk__card-link"
-          (click)="onLihatSelengkapnya(produk.title)">
+        <span class="produk__card-link">
           Lihat Selengkapnya &rarr;
-        </a>
-      </div>
+        </span>
+      </a>
     </section>
 
   </main>
