@@ -47,6 +47,9 @@
 
 html, body {
   height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -54,6 +57,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   line-height: 1.5;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 

@@ -12,15 +12,15 @@
       <ul class="footer__list">
         <li class="footer__item">
           <i class="fas fa-location-dot footer__icon"></i>
-          <span>{{ address }}</span>
+          <a class="footer__link" [href]="getAddressLink()" target="_blank" rel="noopener noreferrer">{{ address }}</a>
         </li>
         <li class="footer__item">
           <i class="fas fa-phone footer__icon"></i>
-          <span>{{ phone }}</span>
+          <a class="footer__link" [href]="'tel:' + phone">{{ phone }}</a>
         </li>
         <li class="footer__item">
           <i class="fas fa-envelope footer__icon"></i>
-          <span>{{ email }}</span>
+          <a class="footer__link" [href]="'mailto:' + email">{{ email }}</a>
         </li>
       </ul>
     </div>
@@ -33,7 +33,6 @@
           <i *ngIf="social.platform === 'instagram'" class="fab fa-instagram"></i>
           <i *ngIf="social.platform === 'facebook'" class="fab fa-facebook"></i>
           <i *ngIf="social.platform === 'youtube'" class="fab fa-youtube"></i>
-          <i *ngIf="social.platform === 'twitter'" class="fab fa-twitter"></i>
         </a>
       </div>
     </div>
