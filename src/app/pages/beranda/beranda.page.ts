@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
@@ -12,6 +12,8 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
   styleUrls: ['./beranda.page.css']
 })
 export class BerandaPageComponent implements OnInit, OnDestroy {
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+
   heroLocation = 'Kecamatan Petang, Kabupaten Badung, Provinsi Bali';
   heroTitle = 'Desa Belok/Sidan';
   heroImages = Array.from({ length: 11 }, (_, index) => `assets/images/hero-img (${index + 1}).png`);
@@ -19,6 +21,9 @@ export class BerandaPageComponent implements OnInit, OnDestroy {
   nextHeroIndex = 1;
   isHeroFading = false;
   private heroIntervalId: number | null = null;
+  private heroFadeTimeoutId: number | null = null;
+  private readonly heroFadeDuration = 600;
+  private readonly heroSwitchInterval = 1000;
 
   sejarahTitle = 'Sejarah Desa Belok/Sidan';
   sejarahParagraph1 = 'Pada zaman dahulu, Pulau Bali memiliki beberapa kerajaan yang cukup besar. Salah dua dari kerajaan tersebut adalah kerajaan Pahyangan dan kerajaan Buleleng. Suatu ketika, pecah pertempuran antara kerajaan Pahyangan dengan kerajaan Buleleng. Pada saat itu, penduduk Desa Lantang banyak yang melarikan diri karena desanya merupakan lalu lintas penyeberangan ke kerajaan Pahyangan sehingga dilalui pasukan kerajaan Buleleng.';
@@ -91,22 +96,57 @@ export class BerandaPageComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.randomizeHeroPair();
+      return;
+    }
+
+    this.randomizeHeroPair();
     this.heroIntervalId = window.setInterval(() => {
       this.isHeroFading = true;
-      this.nextHeroIndex = (this.activeHeroIndex + 1) % this.heroImages.length;
+      this.nextHeroIndex = this.getNextHeroIndex(this.activeHeroIndex);
 
-      window.setTimeout(() => {
+      if (this.heroFadeTimeoutId !== null) {
+        window.clearTimeout(this.heroFadeTimeoutId);
+      }
+
+      this.heroFadeTimeoutId = window.setTimeout(() => {
         this.activeHeroIndex = this.nextHeroIndex;
-        this.nextHeroIndex = (this.activeHeroIndex + 1) % this.heroImages.length;
+        this.nextHeroIndex = this.getNextHeroIndex(this.activeHeroIndex);
         this.isHeroFading = false;
-      }, 700);
-    }, 1000);
+        this.heroFadeTimeoutId = null;
+      }, this.heroFadeDuration);
+    }, this.heroSwitchInterval);
   }
 
   ngOnDestroy(): void {
     if (this.heroIntervalId !== null) {
       window.clearInterval(this.heroIntervalId);
+      this.heroIntervalId = null;
     }
+
+    if (this.heroFadeTimeoutId !== null) {
+      window.clearTimeout(this.heroFadeTimeoutId);
+      this.heroFadeTimeoutId = null;
+    }
+  }
+
+  private randomizeHeroPair(): void {
+    this.activeHeroIndex = this.getRandomHeroIndex();
+    this.nextHeroIndex = this.getNextHeroIndex(this.activeHeroIndex);
+  }
+
+  private getRandomHeroIndex(excludeIndex?: number): number {
+    const availableIndexes = this.heroImages
+      .map((_, index) => index)
+      .filter((index) => index !== excludeIndex);
+
+    return availableIndexes[Math.floor(Math.random() * availableIndexes.length)];
+  }
+
+  private getNextHeroIndex(currentIndex: number): number {
+    const nextIndex = Math.floor(Math.random() * this.heroImages.length);
+    return nextIndex === currentIndex ? (nextIndex + 1) % this.heroImages.length : nextIndex;
   }
 
   getHeroImageStyle(index: number): string {

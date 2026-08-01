@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnDestroy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
@@ -28,9 +28,62 @@ export interface BanjarDinas {
   templateUrl: './peta.page.html',
   styleUrl: './peta.page.css'
 })
-export class PetaPageComponent {
+export class PetaPageComponent implements AfterViewInit, OnDestroy {
   /** Gambar peta wilayah desa, default placeholder */
   @Input() mapImageUrl: string = 'assets/images/peta-belok-sidan.png';
+
+  /** Referensi ke bingkai peta, dipakai untuk mengukur lebar layar yang tersedia */
+  @ViewChild('mapFrame') mapFrameRef?: ElementRef<HTMLDivElement>;
+
+  /** Lebar rancangan asli peta (sama seperti versi web/desktop), dalam px */
+  readonly mapDesignWidth = 760;
+
+  /** Rasio tinggi:lebar gambar peta asli, dipakai supaya bingkai tidak "kosong" atau kepotong */
+  readonly mapAspectRatio = 6260 / 4428;
+
+  /** Skala saat ini (1 = ukuran penuh seperti di web) */
+  mapScale = 1;
+
+  /** Tinggi bingkai hasil perkalian tinggi asli dengan skala saat ini */
+  mapFrameHeight = this.mapDesignWidth * this.mapAspectRatio;
+
+  private resizeObserver?: ResizeObserver;
+
+  ngAfterViewInit(): void {
+    this.updateMapScale();
+
+    if (typeof ResizeObserver !== 'undefined' && this.mapFrameRef) {
+      this.resizeObserver = new ResizeObserver(() => this.updateMapScale());
+      this.resizeObserver.observe(this.mapFrameRef.nativeElement);
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.resizeObserver?.disconnect();
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.updateMapScale();
+  }
+
+  /**
+   * Menghitung skala peta berdasarkan lebar bingkai yang tersedia dibanding lebar rancangan asli (760px).
+   * Ini menjaga tata letak (posisi label, ukuran font, garis konektor) tetap identik dengan versi web,
+   * hanya diperkecil secara proporsional agar pas di layar mobile.
+   */
+  private updateMapScale(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const frameEl = this.mapFrameRef?.nativeElement;
+    const availableWidth = frameEl?.clientWidth || this.mapDesignWidth;
+
+    const scale = Math.min(1, availableWidth / this.mapDesignWidth);
+    this.mapScale = scale;
+    this.mapFrameHeight = this.mapDesignWidth * this.mapAspectRatio * scale;
+  }
 
   /** Daftar banjar dinas dan komoditas unggulannya, default sesuai referensi peta */
   @Input() banjarList: BanjarDinas[] = [

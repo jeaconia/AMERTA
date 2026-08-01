@@ -7,8 +7,8 @@
   <section class="peta">
     <h2 class="peta__title">Peta Hasil Bumi Desa Belok/Sidan</h2>
     <div class="peta__map-wrap">
-      <div class="peta__map-frame">
-        <div class="peta__map-content">
+      <div class="peta__map-frame" #mapFrame [style.height.px]="mapFrameHeight">
+        <div class="peta__map-content" [style.transform]="'scale(' + mapScale + ')'">
           <img [src]="mapImageUrl" alt="Peta wilayah Desa Belok/Sidan" class="peta__map-image">
 
           <div class="peta__labels">
