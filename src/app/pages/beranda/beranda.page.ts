@@ -24,7 +24,7 @@ export class BerandaPageComponent {
 
   tunasTitle = 'Sang Tunas Hijau Dari Dataran Tinggi';
   tunasImageUrl = 'assets/images/produk-asparagus2.png';
-  tunasParagraph1 = 'Di balik sejuknya dataran tinggi Bali, Desa Belok/Sidan menyimpan primadona kebanggaan berupa hamparan ladang Asparagus yang subur. Tanaman premium ini bukan sekadar hasil panen biasa, melainkan urat nadi penggerak ekonomi masyarakat setempat.';
+  tunasParagraph1 = 'Asparagus merupakan salah satu produk unggulan Desa Belok/Sidan yang dikenal karena kualitas premium, cita rasa segar, dan budidaya yang terjaga dengan baik. Selain memiliki nilai ekonomi tinggi, asparagus juga merupakan sayuran fungsional yang kaya akan komponen bioaktif yang berperan sebagai antioksidan alami dan berpotensi memberikan berbagai manfaat bagi kesehatan.';
   tunasParagraph2 = 'Demi menjaga kualitasnya agar selalu juara, perawatannya menuntut presisi tinggi, termasuk penerapan inovasi sistem pengairan cerdas yang mampu menjaga kelembapan secara akurat.';
 
   keunggulanTitle = 'Keunggulan Asparagus';

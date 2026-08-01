@@ -21,18 +21,7 @@ export interface ProdukDetailData {
   styleUrls: ['./produk-detail.page.css']
 })
 export class ProdukDetailPageComponent implements OnInit {
-  detail: ProdukDetailData = {
-    slug: 'asparagus',
-    title: 'Asparagus',
-    subtitle: 'Sang Tunas Hijau Dari Dataran Tinggi',
-    image: 'assets/images/produk-asparagus2.png',
-    description: 'Asparagus merupakan salah satu produk unggulan Desa Belok/Sidan yang dikenal karena kualitas premium dan budidayanya yang terjaga.',
-    highlights: [
-      'Ditanam di dataran tinggi yang sejuk',
-      'Dipanen dengan standar kualitas premium',
-      'Menjadi sumber ekonomi utama masyarakat lokal'
-    ]
-  };
+  detail!: ProdukDetailData;
 
   produkDetails: ProdukDetailData[] = [
     {
@@ -40,7 +29,7 @@ export class ProdukDetailPageComponent implements OnInit {
       title: 'Asparagus',
       subtitle: 'Sang Tunas Hijau Dari Dataran Tinggi',
       image: 'assets/images/produk-asparagus2.png',
-      description: 'Asparagus merupakan salah satu produk unggulan Desa Belok/Sidan yang dikenal karena kualitas premium, rasa segar, dan budidaya yang terjaga dengan baik.',
+      description: 'Asparagus merupakan salah satu produk unggulan Desa Belok/Sidan yang dikenal karena kualitas premium, cita rasa segar, dan budidaya yang terjaga dengan baik. Selain memiliki nilai ekonomi tinggi, asparagus juga merupakan sayuran fungsional yang kaya akan komponen bioaktif yang berperan sebagai antioksidan alami dan berpotensi memberikan berbagai manfaat bagi kesehatan.',
       highlights: [
         'Ditanam di dataran tinggi yang sejuk',
         'Dipanen dengan standar kualitas premium',
