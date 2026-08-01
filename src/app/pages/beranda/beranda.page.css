@@ -12,6 +12,7 @@
   min-height: 700px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  margin-bottom: var(--space-xs);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,9 +92,12 @@
 .khasiat__item-description {
   font: 1rem/1.8 var(--font-body);
   color: var(--color-text);
+  margin-bottom: var(--space-xs);
 }
 .sejarah__paragraph:last-child,
-.tunas-hijau__paragraph:last-child {
+.tunas-hijau__paragraph:last-child,
+.keunggulan__card-description:last-child,
+.khasiat__item-description:last-child {
   margin-bottom: 0;
 }
 .sejarah__emblem-wrap,
@@ -106,7 +110,7 @@
 }
 .sejarah__emblem {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
   display: block;
 }

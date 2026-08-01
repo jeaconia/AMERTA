@@ -22,7 +22,7 @@ export class FooterComponent {
   }
 
   @Input() about: string =
-    'Lahir dari sejarah penyatuan wilayah pada 1957, Desa Belok/Sidan kini bertransformasi menjadi dataran tinggi yang mengubah hamparan ladang asparagus premium menjadi penggerak utama ekonomi warga.';
+    'Desa Belok/Sidan merupakan kawasan dataran tinggi yang menjadikan hamparan perkebunan sebagai salah satu penggerak utama perekonomian masyarakat.';
 
   @Input() address: string = 'Kantor Perbekel Desa Belok Sidan, Kecamatan Petang, Kabupaten Badung';
 
