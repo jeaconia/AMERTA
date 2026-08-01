@@ -1,9 +1,12 @@
 <div class="beranda-page">
   <app-navbar></app-navbar>
 
-  <section class="hero" [class.is-fading]="isHeroFading">
-    <div class="hero__image hero__image--active" [style.background-image]="getHeroImageStyle(activeHeroIndex)"></div>
-    <div class="hero__image hero__image--next" [style.background-image]="getHeroImageStyle(nextHeroIndex)"></div>
+  <section class="hero">
+    <div
+      class="hero__image"
+      *ngFor="let image of heroImages; let i = index"
+      [class.hero__image--active]="i === activeHeroIndex()"
+      [style.background-image]="getHeroImageStyle(i)"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__location">

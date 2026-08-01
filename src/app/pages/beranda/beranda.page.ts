@@ -1,4 +1,4 @@
-import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, DestroyRef, Inject, OnInit, PLATFORM_ID, signal } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
@@ -11,19 +11,23 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
   templateUrl: './beranda.page.html',
   styleUrls: ['./beranda.page.css']
 })
-export class BerandaPageComponent implements OnInit, OnDestroy {
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
-
+export class BerandaPageComponent implements OnInit {
   heroLocation = 'Kecamatan Petang, Kabupaten Badung, Provinsi Bali';
   heroTitle = 'Desa Belok/Sidan';
   heroImages = Array.from({ length: 11 }, (_, index) => `assets/images/hero-img (${index + 1}).png`);
-  activeHeroIndex = 0;
-  nextHeroIndex = 1;
-  isHeroFading = false;
-  private heroIntervalId: number | null = null;
-  private heroFadeTimeoutId: number | null = null;
-  private readonly heroFadeDuration = 600;
-  private readonly heroSwitchInterval = 1000;
+
+  // Signal dipakai (bukan variabel biasa) supaya perubahan di dalam setInterval
+  // tetap otomatis memicu re-render di Angular versi zoneless (tanpa zone.js).
+  activeHeroIndex = signal(0);
+
+  private heroIntervalId: ReturnType<typeof setInterval> | null = null;
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    private destroyRef: DestroyRef
+  ) {
+    this.destroyRef.onDestroy(() => this.clearHeroTimers());
+  }
 
   sejarahTitle = 'Sejarah Desa Belok/Sidan';
   sejarahParagraph1 = 'Pada zaman dahulu, Pulau Bali memiliki beberapa kerajaan yang cukup besar. Salah dua dari kerajaan tersebut adalah kerajaan Pahyangan dan kerajaan Buleleng. Suatu ketika, pecah pertempuran antara kerajaan Pahyangan dengan kerajaan Buleleng. Pada saat itu, penduduk Desa Lantang banyak yang melarikan diri karena desanya merupakan lalu lintas penyeberangan ke kerajaan Pahyangan sehingga dilalui pasukan kerajaan Buleleng.';
@@ -96,57 +100,22 @@ export class BerandaPageComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit(): void {
+    // Carousel hanya perlu berjalan di browser; saat SSR, window/timer tidak relevan
+    // dan justru bisa menyisakan interval "hantu" di server kalau tetap dijalankan.
     if (!isPlatformBrowser(this.platformId)) {
-      this.randomizeHeroPair();
       return;
     }
 
-    this.randomizeHeroPair();
-    this.heroIntervalId = window.setInterval(() => {
-      this.isHeroFading = true;
-      this.nextHeroIndex = this.getNextHeroIndex(this.activeHeroIndex);
-
-      if (this.heroFadeTimeoutId !== null) {
-        window.clearTimeout(this.heroFadeTimeoutId);
-      }
-
-      this.heroFadeTimeoutId = window.setTimeout(() => {
-        this.activeHeroIndex = this.nextHeroIndex;
-        this.nextHeroIndex = this.getNextHeroIndex(this.activeHeroIndex);
-        this.isHeroFading = false;
-        this.heroFadeTimeoutId = null;
-      }, this.heroFadeDuration);
-    }, this.heroSwitchInterval);
+    this.heroIntervalId = setInterval(() => {
+      this.activeHeroIndex.update(current => (current + 1) % this.heroImages.length);
+    }, 5000);
   }
 
-  ngOnDestroy(): void {
+  private clearHeroTimers(): void {
     if (this.heroIntervalId !== null) {
-      window.clearInterval(this.heroIntervalId);
+      clearInterval(this.heroIntervalId);
       this.heroIntervalId = null;
     }
-
-    if (this.heroFadeTimeoutId !== null) {
-      window.clearTimeout(this.heroFadeTimeoutId);
-      this.heroFadeTimeoutId = null;
-    }
-  }
-
-  private randomizeHeroPair(): void {
-    this.activeHeroIndex = this.getRandomHeroIndex();
-    this.nextHeroIndex = this.getNextHeroIndex(this.activeHeroIndex);
-  }
-
-  private getRandomHeroIndex(excludeIndex?: number): number {
-    const availableIndexes = this.heroImages
-      .map((_, index) => index)
-      .filter((index) => index !== excludeIndex);
-
-    return availableIndexes[Math.floor(Math.random() * availableIndexes.length)];
-  }
-
-  private getNextHeroIndex(currentIndex: number): number {
-    const nextIndex = Math.floor(Math.random() * this.heroImages.length);
-    return nextIndex === currentIndex ? (nextIndex + 1) % this.heroImages.length : nextIndex;
   }
 
   getHeroImageStyle(index: number): string {
