@@ -53,25 +53,25 @@ export class BerandaPageComponent implements OnInit, OnDestroy {
   khasiatTitle = 'Khasiat Asparagus';
   khasiatItems = [
     {
-      icon: 'nutrisi',
-      title: 'Kaya Nutrisi',
-      description: 'Mengandung vitamin A, C, E, dan K yang baik untuk tubuh.'
-    },
-    {
       icon: 'antioksidan',
       title: 'Sumber Antioksidan',
-      description: 'Membantu melindungi tubuh dari radikal bebas.'
+      description: 'Polifenol dan flavonoid berperan sebagai antioksidan alami yang membantu melindungi sel tubuh dari kerusakan akibat radikal bebas.'
     },
     {
-      icon: 'jantung',
-      title: 'Baik untuk Kesehatan Jantung',
-      description: 'Mendukung kesehatan jantung.'
+      icon: 'kolesterol',
+      title: 'Menurunkan Kadar Kolesterol',
+      description: 'Saponin yang terdapat pada asparagus dilaporkan memiliki potensi membantu menurunkan kadar kolesterol (hipokolesterolemik) serta memiliki aktivitas antitumor.'
     },
     {
-      icon: 'pencernaan',
-      title: 'Mendukung Sistem Pencernaan',
-      description: 'Serat alami membantu melancarkan pencernaan.'
-    }
+      icon: 'usus',
+      title: 'Mendukung Kesehatan Usus',
+      description: 'Senyawa fenolik berpotensi mendukung kesehatan usus karena dapat dimetabolisme oleh mikrobiota usus menjadi senyawa yang bermanfaat bagi tubuh.'
+    },
+    {
+      icon: 'neurodegeneratif',
+      title: 'Melindungi dari Penyakit Neurodegeneratif',
+      description: 'Asam kafeat memiliki aktivitas antioksidan yang dapat membantu menghambat peroksidasi lipid dan berpotensi memberikan efek protektif terhadap penyakit neurodegeneratif.'
+    },
   ];
 
   kualitasTitle = 'Standar Kualitas';

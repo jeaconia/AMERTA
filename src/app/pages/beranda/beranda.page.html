@@ -47,9 +47,9 @@
     <div class="keunggulan__grid">
       <div class="keunggulan__card" *ngFor="let item of keunggulanItems">
         <div class="keunggulan__icon-wrap">
-          <span *ngIf="item.icon === 'budidaya'" class="material-symbols-outlined keunggulan__icon" aria-hidden="true" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">psychiatry</span>
-          <span *ngIf="item.icon === 'kualitas'" class="material-symbols-outlined keunggulan__icon" aria-hidden="true" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">temp_preferences_eco</span>
-          <span *ngIf="item.icon === 'dataran'" class="material-symbols-outlined keunggulan__icon" aria-hidden="true" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">landscape_2</span>
+          <i *ngIf="item.icon === 'budidaya'" class="fa-solid fa-users keunggulan__icon" aria-hidden="true"></i>
+          <i *ngIf="item.icon === 'kualitas'" class="fa-solid fa-leaf keunggulan__icon" aria-hidden="true"></i>
+          <i *ngIf="item.icon === 'dataran'" class="fa-solid fa-mountain-city keunggulan__icon" aria-hidden="true"></i>
         </div>
         <h3 class="keunggulan__card-title">{{ item.title }}</h3>
         <p class="keunggulan__card-description">{{ item.description }}</p>
@@ -64,10 +64,10 @@
     <div class="khasiat__grid">
       <div class="khasiat__item" *ngFor="let item of khasiatItems">
         <div class="khasiat__icon-wrap">
-          <span *ngIf="item.icon === 'nutrisi'" class="material-symbols-outlined khasiat__icon" aria-hidden="true" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">metabolism</span>
-          <span *ngIf="item.icon === 'antioksidan'" class="material-symbols-outlined khasiat__icon" aria-hidden="true" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">verified_user</span>
-          <span *ngIf="item.icon === 'jantung'" class="material-symbols-outlined khasiat__icon" aria-hidden="true" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">heart_check</span>
-          <span *ngIf="item.icon === 'pencernaan'" class="material-symbols-outlined khasiat__icon" aria-hidden="true" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">gastroenterology</span>
+          <i *ngIf="item.icon === 'neurodegeneratif'" class="fa-solid fa-bolt khasiat__icon" aria-hidden="true"></i>
+          <i *ngIf="item.icon === 'antioksidan'" class="fa-solid fa-shield-heart khasiat__icon" aria-hidden="true"></i>
+          <i *ngIf="item.icon === 'kolesterol'" class="fa-solid fa-heart-pulse khasiat__icon" aria-hidden="true"></i>
+          <i *ngIf="item.icon === 'usus'" class="fa-solid fa-bacteria khasiat__icon" aria-hidden="true"></i>
         </div>
         <div class="khasiat__text">
           <h3 class="khasiat__item-title">{{ item.title }}</h3>
