@@ -36,6 +36,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  overflow: visible;
+}
+
+.peta__map-content {
+  position: relative;
+  width: 760px;
+  margin: 0 auto;
 }
 
 .peta__layout-control {
@@ -61,8 +68,9 @@
 }
 
 .peta__map-image {
-  max-width: 760px;
-  width: 100%;
+  width: 760px;
+  max-width: 100%;
+  display: block;
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
 }
 
@@ -203,52 +211,94 @@
   }
 
   .peta__label-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .peta__label-products {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 
 @media (max-width: 768px) {
+  .peta-page {
+    padding-inline: var(--space-sm);
+  }
+
+  .peta {
+    padding-bottom: var(--space-lg);
+  }
+
+  .peta__title {
+    margin-bottom: var(--space-sm);
+  }
+
   .peta__map-wrap {
-    flex-direction: column;
-    align-items: center;
+    overflow: visible;
+    justify-content: center;
+  }
+
+  .peta__layout-control {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .peta__layout-control button {
+    width: 100%;
+    max-width: 180px;
+    padding: 0.65rem 0.8rem;
+  }
+
+  .peta__map-frame {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .peta__map-content {
+    transform: scale(0.68);
+    transform-origin: top center;
+    width: 760px;
+    margin: 0 auto;
   }
 
   .peta__labels {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-    margin-top: var(--space-md);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .peta__title {
+    font-size: 2rem;
   }
 
-  .peta__label,
-  .peta__label--left,
-  .peta__label--right {
-    position: static;
-    flex-direction: row;
-    text-align: left;
-    max-width: 100%;
+  .peta__layout-control button {
+    max-width: none;
   }
 
-  .peta__label--left .peta__label-connector,
-  .peta__label--right .peta__label-connector {
-    border: none;
-    background-color: var(--color-secondary);
-    width: 4px;
-    height: auto;
-    align-self: stretch;
-    margin: 0 var(--space-sm) 0 0;
+  .peta__map-frame {
+    height: calc(900px * 0.65);
   }
 
-  .peta__scale {
-    position: static;
-    align-items: flex-start;
-    margin-top: var(--space-lg);
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
-    margin: 0 0 var(--space-xxs);
+  .peta__map-content {
+    transform: scale(0.65);
+  }
+
+  .peta__label {
+    max-width: 320px;
+    padding: 0.5rem;
+  }
+
+  .peta__label-title {
+    font-size: 0.85rem;
+  }
+
+  .peta__label-products {
+    font-size: 0.7rem;
+  }
+
+  .peta__labels.peta__labels--horizontal .peta__label {
+    min-width: 0;
   }
 }

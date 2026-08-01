@@ -52,13 +52,22 @@ html, body {
   overscroll-behavior-y: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-background);
   color: var(--color-text);
   line-height: 1.5;
   min-height: 100vh;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
+}
+
+button, input, textarea, select {
+  font: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,4 +84,17 @@ a {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --navbar-offset-top: 12px;
+  }
+
+  body {
+    font-size: 15px;
+  }
 }

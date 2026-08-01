@@ -23,4 +23,14 @@ export class NavbarComponent {
     { label: 'Produk', path: '/produk' },
     { label: 'Peta', path: '/peta' },
   ];
+
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
 }

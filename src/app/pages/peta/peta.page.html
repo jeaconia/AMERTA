@@ -8,31 +8,32 @@
     <h2 class="peta__title">Peta Hasil Bumi Desa Belok/Sidan</h2>
     <div class="peta__map-wrap">
       <div class="peta__map-frame">
-        <img [src]="mapImageUrl" alt="Peta wilayah Desa Belok/Sidan" class="peta__map-image">
+        <div class="peta__map-content">
+          <img [src]="mapImageUrl" alt="Peta wilayah Desa Belok/Sidan" class="peta__map-image">
 
-        <div class="peta__labels">
-          <div
-            class="peta__label peta__label--{{ banjar.side }}"
-            *ngFor="let banjar of banjarList"
-            [style.top.%]="banjar.top"
-            [style.left]="banjar.side === 'right' ? 'calc(50% + 1rem + ' + (banjar.offsetX ?? 0) + 'px)' : null"
-            [style.right]="banjar.side === 'left' ? 'calc(50% + 1rem + ' + (banjar.offsetX ?? 0) + 'px)' : null">
+          <div class="peta__labels">
+            <div
+              class="peta__label peta__label--{{ banjar.side }}"
+              *ngFor="let banjar of banjarList"
+              [style.top.%]="banjar.top"
+              [style.left]="banjar.side === 'right' ? 'calc(50% + 1rem + ' + (banjar.offsetX ?? 0) + 'px)' : null"
+              [style.right]="banjar.side === 'left' ? 'calc(50% + 1rem + ' + (banjar.offsetX ?? 0) + 'px)' : null">
 
-            <div class="peta__label-content">
-              <a class="peta__label-link" [href]="banjar.mapsUrl" target="_blank" rel="noopener noreferrer">
-                <h3 class="peta__label-title">{{ banjar.name }}</h3>
-              </a>
-              <ul class="peta__label-products">
-                <li *ngFor="let product of banjar.products">{{ product }}</li>
-              </ul>
-              <a class="peta__map-link" [href]="banjar.mapsUrl" target="_blank" rel="noopener noreferrer">
-              </a>
+              <div class="peta__label-content">
+                <a class="peta__label-link" [href]="banjar.mapsUrl" target="_blank" rel="noopener noreferrer">
+                  <h3 class="peta__label-title">{{ banjar.name }}</h3>
+                </a>
+                <ul class="peta__label-products">
+                  <li *ngFor="let product of banjar.products">{{ product }}</li>
+                </ul>
+                <a class="peta__map-link" [href]="banjar.mapsUrl" target="_blank" rel="noopener noreferrer"></a>
+              </div>
+
+              <span
+                class="peta__label-connector"
+                [style.width.px]="banjar.connectorLength ?? 120"
+                [style.top.px]="banjar.connectorTop ?? 18"></span>
             </div>
-
-            <span
-              class="peta__label-connector"
-              [style.width.px]="banjar.connectorLength ?? 120"
-              [style.top.px]="banjar.connectorTop ?? 18"></span>
           </div>
         </div>
       </div>

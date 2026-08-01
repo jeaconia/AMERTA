@@ -371,13 +371,24 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .hero {
-    min-height: 460px;
+    min-height: 520px;
   }
+
   .hero__content {
     padding: var(--space-lg) var(--space-sm) var(--space-md);
   }
+
+  .hero__location {
+    font-size: 0.85rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.8rem, 12vw, 3.8rem);
+    letter-spacing: 1px;
+  }
+
   .sejarah,
   .tunas-hijau,
   .keunggulan,
@@ -385,18 +396,91 @@
   .standar-kualitas {
     padding-inline: var(--space-sm);
   }
+
+  .sejarah__container,
+  .tunas-hijau__container {
+    gap: var(--space-md);
+  }
+
+  .sejarah__paragraph,
+  .tunas-hijau__paragraph,
+  .keunggulan__card-description,
+  .khasiat__item-description {
+    font-size: 0.95rem;
+  }
+
+  .keunggulan__grid,
+  .khasiat__grid {
+    gap: var(--space-sm);
+  }
+
+  .keunggulan__card {
+    padding: var(--space-sm);
+  }
+
   .page-content {
     padding-inline: var(--space-sm);
   }
+
   .produk-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
+
   .produk__card {
     min-width: 0;
+    padding: var(--space-sm);
   }
+
   .produk__card-image-wrap {
     min-height: 120px;
   }
+
+  .standar-kualitas__badge {
+    right: 0.25rem;
+    bottom: 0.25rem;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 460px;
+  }
+
+  .hero__content {
+    padding: var(--space-lg) var(--space-sm) var(--space-md);
+  }
+
+  .hero__title {
+    font-size: clamp(2.3rem, 11vw, 3rem);
+  }
+
+  .sejarah,
+  .tunas-hijau,
+  .keunggulan,
+  .khasiat,
+  .standar-kualitas {
+    padding-inline: var(--space-sm);
+  }
+
+  .page-content {
+    padding-inline: var(--space-sm);
+  }
+
+  .produk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .produk__card {
+    min-width: 0;
+  }
+
+  .produk__card-image-wrap {
+    min-height: 120px;
+  }
+
   .standar-kualitas__badge {
     right: 0.25rem;
     bottom: 0.25rem;
