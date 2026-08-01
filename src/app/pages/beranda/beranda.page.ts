@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
@@ -11,10 +11,14 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
   templateUrl: './beranda.page.html',
   styleUrls: ['./beranda.page.css']
 })
-export class BerandaPageComponent {
-  heroBackgroundUrl = 'assets/images/background.png';
+export class BerandaPageComponent implements OnInit, OnDestroy {
   heroLocation = 'Kecamatan Petang, Kabupaten Badung, Provinsi Bali';
   heroTitle = 'Desa Belok/Sidan';
+  heroImages = Array.from({ length: 11 }, (_, index) => `assets/images/hero-img (${index + 1}).png`);
+  activeHeroIndex = 0;
+  nextHeroIndex = 1;
+  isHeroFading = false;
+  private heroIntervalId: number | null = null;
 
   sejarahTitle = 'Sejarah Desa Belok/Sidan';
   sejarahParagraph1 = 'Pada zaman dahulu, Pulau Bali memiliki beberapa kerajaan yang cukup besar. Salah dua dari kerajaan tersebut adalah kerajaan Pahyangan dan kerajaan Buleleng. Suatu ketika, pecah pertempuran antara kerajaan Pahyangan dengan kerajaan Buleleng. Pada saat itu, penduduk Desa Lantang banyak yang melarikan diri karena desanya merupakan lalu lintas penyeberangan ke kerajaan Pahyangan sehingga dilalui pasukan kerajaan Buleleng.';
@@ -85,6 +89,29 @@ export class BerandaPageComponent {
     { title: 'Kopi Arabika', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika' },
     { title: 'Bunga Gumitir', image: 'assets/images/produk-bunga-gumitir.png', link: '/produk/bunga-gumitir' },
   ];
+
+  ngOnInit(): void {
+    this.heroIntervalId = window.setInterval(() => {
+      this.isHeroFading = true;
+      this.nextHeroIndex = (this.activeHeroIndex + 1) % this.heroImages.length;
+
+      window.setTimeout(() => {
+        this.activeHeroIndex = this.nextHeroIndex;
+        this.nextHeroIndex = (this.activeHeroIndex + 1) % this.heroImages.length;
+        this.isHeroFading = false;
+      }, 700);
+    }, 1000);
+  }
+
+  ngOnDestroy(): void {
+    if (this.heroIntervalId !== null) {
+      window.clearInterval(this.heroIntervalId);
+    }
+  }
+
+  getHeroImageStyle(index: number): string {
+    return `url("${this.heroImages[index]}")`;
+  }
 
   onLihatDetail(produk: string): void {
     console.log('Lihat detail untuk:', produk);
