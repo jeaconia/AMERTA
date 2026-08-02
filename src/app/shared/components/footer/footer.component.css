@@ -126,8 +126,58 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: var(--space-lg) var(--space-sm) 0;
+  }
+
   .footer__container {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
+    gap: var(--space-sm);
+    padding-bottom: var(--space-md);
+  }
+
+  .footer__brand {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.8px;
+  }
+
+  .footer__about {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .footer__heading {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer__list {
+    gap: var(--space-xs);
+  }
+
+  .footer__item {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .footer__icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 1px;
+  }
+
+  .footer__social-link {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .footer__bottom {
+    padding: var(--space-xs) 0;
+  }
+
+  .footer__copyright {
+    font-size: 0.72rem;
   }
 }

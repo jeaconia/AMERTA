@@ -372,9 +372,24 @@
   .tunas-hijau__image {
     max-width: 200px;
   }
-  .keunggulan__grid,
+  .keunggulan__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm);
+    justify-items: center;
+  }
+
+  .keunggulan__card {
+    width: min(100%, 220px);
+  }
+
+  .keunggulan__card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
   .khasiat__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm);
   }
   .produk-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -431,12 +446,33 @@
     padding: var(--space-sm);
   }
 
+  .keunggulan__card-title {
+    font-size: 1.2rem;
+  }
+
+  .keunggulan__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 32px;
+    margin-bottom: var(--space-xs);
+  }
+
+  .khasiat__item-title {
+    font-size: 1.2rem;
+  }
+
+  .khasiat__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 32px;
+  }
+
   .page-content {
     padding-inline: var(--space-sm);
   }
 
   .produk-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-sm);
   }
 
@@ -483,7 +519,7 @@
   }
 
   .produk-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .produk__card {
