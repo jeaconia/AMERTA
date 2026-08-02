@@ -39,7 +39,7 @@ export class ProdukPageComponent {
   @Input() produkList: ProdukItem[] = [
     { title: 'Asparagus', image: 'assets/images/produk-asparagus.png', link: '/produk/asparagus' },
     { title: 'Alpukat', image: 'assets/images/produk-alpukat.png', link: '/produk/alpukat' },
-    { title: 'Baya Inggris', image: 'assets/images/produk-baya inggris.png', link: '/produk/baya-inggris' },
+    { title: 'Bayam Inggris', image: 'assets/images/produk-bayam inggris.png', link: '/produk/bayam-inggris' },
     { title: 'Bunga Anggrek', image: 'assets/images/produk-bunga anggrek.png', link: '/produk/bunga-anggrek' },
     { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir' },
     { title: 'Cabai', image: 'assets/images/produk-cabai.png', link: '/produk/cabai' },

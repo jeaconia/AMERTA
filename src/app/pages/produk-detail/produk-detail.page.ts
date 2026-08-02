@@ -97,11 +97,11 @@ export class ProdukDetailPageComponent implements OnInit {
       ]
     },
     {
-      slug: 'baya-inggris',
-      title: 'Baya Inggris',
+      slug: 'bayam-inggris',
+      title: 'Bayam Inggris',
       subtitle: 'Buah beri kecil dengan rasa asam-manis khas',
-      image: 'assets/images/produk-baya inggris.png',
-      description: 'Baya Inggris menjadi salah satu produk hortikultura unggulan yang memberikan variasi buah segar dengan kandungan antioksidan tinggi.',
+      image: 'assets/images/produk-bayam inggris.png',
+      description: 'Bayam Inggris menjadi salah satu produk hortikultura unggulan yang memberikan variasi buah segar dengan kandungan antioksidan tinggi.',
       highlights: [
         'Sumber vitamin C alami',
         'Baik untuk olahan minuman dan selai',
@@ -185,7 +185,7 @@ export class ProdukDetailPageComponent implements OnInit {
       title: 'Sawi Putih',
       subtitle: 'Sayuran hijau renyah dan segar untuk menu sehat',
       image: 'assets/images/produk-sawi putih.png',
-      description: 'Sawi Putih segar diproduksi untuk kebutuhan konsumsi sehari-hari dan pasar lokal, menambah variasi sayuran sehat di masyarakat.',
+      description: 'Chinese cabbage (sawi putih) merupakan salah satu sayuran yang kaya akan berbagai zat gizi penting dan banyak dikonsumsi sebagai sumber nutrisi sehari-hari. Berdasarkan penelitian Horticulturae (2023), sawi putih mengandung vitamin, mineral, gula alami, serat, protein, serta asam amino yang berperan dalam mendukung kesehatan tubuh. Kandungan nutrisi tersebut menjadikan sawi putih sebagai salah satu sayuran yang memiliki nilai gizi tinggi dan baik untuk dikonsumsi secara rutin.',
       highlights: [
         'Tekstur renyah dan warna cerah',
         'Sumber serat dan vitamin',
