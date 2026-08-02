@@ -332,6 +332,27 @@
 .produk__card-link:hover {
   color: var(--color-primary);
 }
+.produk-section-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+.produk-section-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.75rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font: 600 1rem/1.2 var(--font-body);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.produk-section-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
 @media (max-width: 992px) {
   .produk-grid {
     grid-template-columns: repeat(2, 1fr);
