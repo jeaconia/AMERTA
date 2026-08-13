@@ -5,29 +5,65 @@
 
   <section class="produk-detail__hero">
     <div class="produk-detail__hero-content">
-      <p class="produk-detail__eyebrow">Produk Unggulan</p>
       <h1 class="produk-detail__title">{{ detail.title }}</h1>
-      <p class="produk-detail__subtitle">{{ detail.subtitle }}</p>
+      <div class="produk-detail__badges" *ngIf="badges.length">
+        <span
+          class="produk-detail__badge"
+          *ngFor="let badge of badges"
+          [ngClass]="'produk-detail__badge--' + badge.type">
+          {{ badge.label }}
+        </span>
+      </div>
     </div>
   </section>
 
   <main class="produk-detail__content">
-    <div class="produk-detail__image-wrap">
-      <img [src]="detail.image" [alt]="detail.title" class="produk-detail__image">
-    </div>
-
-    <div class="produk-detail__body">
-      <p class="produk-detail__description">{{ detail.description }}</p>
-
-      <div class="produk-detail__highlights">
-        <h2 class="produk-detail__highlights-title">Keunggulan</h2>
-        <ul>
-          <li *ngFor="let item of detail.highlights">{{ item }}</li>
-        </ul>
+    <div class="produk-detail__top-grid">
+      <div class="produk-detail__image-wrap">
+        <img [src]="detail.image" [alt]="detail.title" class="produk-detail__image">
       </div>
 
-      <a routerLink="/produk" class="produk-detail__back-link">&larr; Lihat Produk Lainnya</a>
+      <div class="produk-detail__intro-card">
+        <p class="produk-detail__intro-text">{{ detail.description }}</p>
+      </div>
     </div>
+
+    <section class="produk-detail__section" *ngIf="detail.highlights?.length">
+      <h2 class="produk-detail__section-title">Keunggulan {{ detail.title }}</h2>
+      <div class="produk-detail__highlight-grid">
+        <div class="produk-detail__highlight-card" *ngFor="let item of detail.highlights; let i = index">
+          <div class="produk-detail__highlight-icon">
+            <i class="fa-solid" [ngClass]="resolveHighlightIcon(item, i)"></i>
+          </div>
+          <h3 class="produk-detail__highlight-title" *ngIf="highlightTitle(item) as title">{{ title }}</h3>
+          <p class="produk-detail__highlight-text">{{ highlightDescription(item) }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="produk-detail__section" *ngIf="detail.nutritionItems?.length">
+      <h2 class="produk-detail__section-title">Khasiat {{ detail.title }}</h2>
+      <div class="produk-detail__nutrition-grid">
+        <div class="produk-detail__nutrition-card" *ngFor="let item of detail.nutritionItems; let i = index">
+          <div class="produk-detail__nutrition-icon">
+            <i class="fa-solid" [ngClass]="resolveNutritionIcon(item, i)"></i>
+          </div>
+          <div class="produk-detail__nutrition-copy">
+            <h3 class="produk-detail__nutrition-title">{{ item.title }}</h3>
+            <p class="produk-detail__nutrition-desc">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="produk-detail__info-card" *ngIf="detail.farmInfo">
+      <h2 class="produk-detail__info-title">petani dan perkebunan</h2>
+      <ul class="produk-detail__list produk-detail__list--farm">
+        <li><strong>Luas pertanian:</strong> {{ detail.farmInfo.hectares }}</li>
+        <li><strong>Sebaran wilayah:</strong> {{ detail.farmInfo.distribution }}</li>
+        <li><strong>Ciri tanah dan iklim:</strong> {{ detail.farmInfo.soilClimate }}</li>
+      </ul>
+    </section>
   </main>
 </div>
 

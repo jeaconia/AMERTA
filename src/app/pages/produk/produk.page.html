@@ -6,11 +6,28 @@
 
   <section class="produk__banner">
     <h1 class="produk__banner-title">{{ bannerTitle }}</h1>
+
+    <!-- Filter Pills -->
+    <div class="produk__filter-pills">
+      <button
+        type="button"
+        class="produk__pill"
+        *ngFor="let option of tipeTanamanOptions"
+        [class.produk__pill--active]="selectedTipeTanaman === option.key"
+        (click)="toggleTipeTanaman(option.key)">
+        {{ option.label }}
+      </button>
+    </div>
   </section>
 
   <main class="produk__content">
 
-    <section class="produk__featured">
+    <div class="produk__filter-results" *ngIf="selectedTipeTanaman || selectedBanjar">
+      Menampilkan {{ filteredProdukList.length }} dari {{ produkList.length }} produk
+      <button class="produk__filter-reset" (click)="clearFilters()">Reset Filter</button>
+    </div>
+
+    <section class="produk__featured" *ngIf="isFeaturedVisible">
       <h2 class="produk__featured-title">{{ featured.title }}</h2>
       <p class="produk__featured-subtitle">{{ featured.subtitle }}</p>
 
@@ -27,7 +44,7 @@
     </section>
 
     <section class="produk__grid">
-      <a class="produk__card" *ngFor="let produk of produkList" [routerLink]="produk.link" (click)="onLihatSelengkapnya(produk.title)">
+      <a class="produk__card" *ngFor="let produk of filteredProdukList" [routerLink]="produk.link" (click)="onLihatSelengkapnya(produk.title)">
         <h3 class="produk__card-title">{{ produk.title }}</h3>
 
         <div class="produk__card-image-wrap">

@@ -1,116 +1,273 @@
 .produk-detail-page {
   position: relative;
   min-height: 100vh;
-  background: var(--color-background);
+  background: #f7f7f7;
 }
 
 .produk-detail__navbar-wrap {
-  background: var(--color-background);
+  background: #f7f7f7;
 }
 
 .produk-detail__hero {
   padding: calc(var(--navbar-clearance) + var(--space-sm)) var(--space-md) var(--space-md);
   background: var(--gradient-hero);
   color: var(--color-background);
+  text-align: center;
 }
 
 .produk-detail__hero-content {
   max-width: 960px;
   margin: 0 auto;
-}
-
-.produk-detail__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
 }
 
 .produk-detail__title {
   font-family: var(--font-heading);
-  font-size: clamp(4.5rem, 5vw, 3rem);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   letter-spacing: 1.2px;
   color: var(--color-background);
-}
-
-.produk-detail__subtitle {
-  font-size: 1.05rem;
   margin: 0;
 }
 
+.produk-detail__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.produk-detail__badge {
+  padding: 0.4rem 1rem;
+  font: 600 0.85rem var(--font-body);
+  border-radius: 999px;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.produk-detail__badge--tipe {
+  color: #2e7d32;
+}
+
+.produk-detail__badge--banjar {
+  color: #1565c0;
+}
+
 .produk-detail__content {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: var(--space-lg) var(--space-md) var(--space-xl);
+  padding: 1.5rem 1.25rem 3rem;
   display: grid;
-  gap: var(--space-md);
+  gap: 1.6rem;
+}
+
+.produk-detail__top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.produk-detail__image-wrap,
+.produk-detail__intro-card,
+.produk-detail__info-card {
+  background: #ffffff;
+  border-radius: 1.3rem;
+  min-height: 290px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .produk-detail__image-wrap {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
-  background: var(--color-background);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-md);
+  overflow: hidden;
+  padding: 1rem;
 }
 
 .produk-detail__image {
   width: auto;
-  max-width: 90%;
+  max-width: 92%;
   height: auto;
   display: block;
   margin: 0 auto;
   object-fit: contain;
-  object-position: center center;
 }
 
-.produk-detail__body {
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+.produk-detail__intro-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.produk-detail__intro-text {
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.7;
+  color: #1d1d1d;
+  text-align: left;
+}
+
+/* Keunggulan & Khasiat sections */
+.produk-detail__section {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.produk-detail__section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--color-primary-dark);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Keunggulan: bordered icon cards */
+.produk-detail__highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+.produk-detail__highlight-card {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 1.1rem;
+  padding: 1.75rem 1.25rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produk-detail__highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.produk-detail__highlight-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background: rgba(82, 133, 77, 0.1);
+  color: var(--color-primary);
+  font-size: 1.6rem;
 }
 
-.produk-detail__description {
-  font-size: 1rem;
-  line-height: 1.7;
+.produk-detail__highlight-text {
+  margin: 0;
   color: var(--color-text);
+  line-height: 1.6;
+  font-size: 0.98rem;
 }
 
-.produk-detail__highlights-title {
+.produk-detail__highlight-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.3px;
+}
+
+/* Khasiat: icon + text rows */
+.produk-detail__nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.produk-detail__nutrition-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.produk-detail__nutrition-icon {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(82, 133, 77, 0.1);
+  color: var(--color-primary);
+  font-size: 1.35rem;
+}
+
+.produk-detail__nutrition-title {
+  margin: 0 0 0.3rem;
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  color: var(--color-primary);
-  margin-bottom: var(--space-xs);
-  margin-top: var(--space-md);
-}
-
-.produk-detail__highlights ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--color-text-muted);
-}
-
-.produk-detail__highlights li + li {
-  margin-top: var(--space-xs);
-}
-
-.produk-detail__back-link {
-  display: inline-block;
-  margin-top: var(--space-md);
-  color: var(--color-primary);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.produk-detail__back-link:hover {
+  font-weight: 500;
   color: var(--color-primary-dark);
+  letter-spacing: 0.3px;
+}
+
+.produk-detail__nutrition-desc {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.produk-detail__info-card {
+  min-height: 110px;
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.produk-detail__info-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  color: #1a1a1a;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.produk-detail__list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.produk-detail__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+}
+
+.produk-detail__list strong {
+  color: var(--color-primary);
+}
+
+.produk-detail__list--farm li {
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -122,27 +279,29 @@
     padding: var(--space-md) var(--space-sm) var(--space-xl);
   }
 
-  .produk-detail__title {
-    font-size: clamp(2.4rem, 8vw, 3rem);
+  .produk-detail__top-grid {
+    grid-template-columns: 1fr;
   }
 
-  .produk-detail__subtitle {
-    font-size: 0.95rem;
+  .produk-detail__title {
+    font-size: clamp(2.4rem, 8vw, 3rem);
   }
 
   .produk-detail__image {
     max-width: 100%;
   }
 
-  .produk-detail__body {
-    padding: var(--space-sm);
+  .produk-detail__image-wrap,
+  .produk-detail__intro-card,
+  .produk-detail__info-card {
+    min-height: 220px;
   }
-}
 
-@media (min-width: 768px) {
-  .produk-detail__content {
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-    gap: var(--space-lg);
+  .produk-detail__highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .produk-detail__nutrition-grid {
+    grid-template-columns: 1fr;
   }
 }

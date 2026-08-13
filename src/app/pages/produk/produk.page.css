@@ -10,12 +10,13 @@
 
 .produk__banner {
   position: relative;
-  min-height: 220px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--space-md);
   padding: calc(var(--navbar-clearance) + var(--space-md)) var(--space-md) var(--space-lg);
   background: var(--gradient-hero);
   text-align: center;
@@ -29,10 +30,70 @@
   margin: 0;
 }
 
+/* Filter Pills */
+.produk__filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 900px;
+}
+
+.produk__pill {
+  padding: 0.7rem 1.4rem;
+  font: 500 0.95rem var(--font-body);
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.produk__pill:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.produk__pill--active {
+  background: #ffffff;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
 .produk__content {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--space-lg) var(--space-md) var(--space-xl);
+}
+
+.produk__filter-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  font: 500 0.9rem var(--font-body);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.produk__filter-reset {
+  padding: 0.5rem 0.9rem;
+  font: 600 0.85rem var(--font-body);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.produk__filter-reset:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
 }
 
 .produk__featured {
@@ -164,12 +225,21 @@
 
 @media (max-width: 768px) {
   .produk__banner {
-    min-height: 190px;
     padding: calc(var(--navbar-clearance) + var(--space-sm)) var(--space-sm) var(--space-lg);
   }
 
   .produk__content {
     padding: var(--space-md) var(--space-sm) var(--space-xl);
+  }
+
+  .produk__pill {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  .produk__filter-results {
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 
   .produk__featured {
