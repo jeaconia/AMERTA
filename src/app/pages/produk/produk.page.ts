@@ -43,20 +43,20 @@ export interface ProdukItem {
   banjar: Banjar[];
 }
 
-/** Daftar produk unggulan — sumber data tunggal, dipakai juga oleh halaman detail produk untuk badge kategori/banjar */
+/** Daftar produk unggulan — sumber data tunggal, dipakai juga oleh halaman detail produk untuk badge kategori/banjar.
+ * Sebaran banjar mengikuti tabel "Potensi Wilayah Desa Belok Sidan". */
 export const PRODUK_LIST: ProdukItem[] = [
   { title: 'Asparagus', image: 'assets/images/produk-asparagus.png', link: '/produk/asparagus', tipeTanaman: ['hortikultura-sayur'], banjar: ['selantang', 'sidan', 'sidan-kawan', 'penikit'] },
-  { title: 'Alpukat', image: 'assets/images/produk-alpukat.png', link: '/produk/alpukat', tipeTanaman: ['hortikultura-buah'], banjar: ['jempanang'] },
+  { title: 'Alpukat', image: 'assets/images/produk-alpukat.png', link: '/produk/alpukat', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
   { title: 'Bayam Inggris', image: 'assets/images/produk-bayam inggris.png', link: '/produk/bayam-inggris', tipeTanaman: ['hortikultura-sayur'], banjar: ['belok'] },
-  { title: 'Bunga Anggrek', image: 'assets/images/produk-bunga anggrek.png', link: '/produk/bunga-anggrek', tipeTanaman: ['tanaman-hias'], banjar: ['bon'] },
-  { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir', tipeTanaman: ['tanaman-hias'], banjar: ['sekarmukti'] },
-  { title: 'Cabai', image: 'assets/images/produk-cabai.png', link: '/produk/cabai', tipeTanaman: ['hortikultura-sayur'], banjar: ['sidan-kawan'] },
-  { title: 'Durian Musangking', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking', tipeTanaman: ['hortikultura-buah'], banjar: ['penikit'] },
+  { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir', tipeTanaman: ['tanaman-hias'], banjar: ['sekarmukti', 'lawak', 'belok', 'selantang', 'sidan'] },
+  { title: 'Cabai', image: 'assets/images/produk-cabai.png', link: '/produk/cabai', tipeTanaman: ['hortikultura-sayur'], banjar: ['bon', 'jempanang', 'sekarmukti', 'sidan'] },
+  { title: 'Durian Musangking', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking', tipeTanaman: ['hortikultura-buah'], banjar: ['selantang', 'sidan', 'sidan-kawan', 'penikit'] },
   { title: 'Gula Aren', image: 'assets/images/produk-gula aren.png', link: '/produk/gula-aren', tipeTanaman: ['tanaman-perkebunan'], banjar: ['sekarmukti'] },
   { title: 'Jeruk Brastagi', image: 'assets/images/produk-jeruk brastagi.png', link: '/produk/jeruk-brastagi', tipeTanaman: ['hortikultura-buah'], banjar: ['bon'] },
-  { title: 'Jeruk Siam Madu', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'sidan-kawan'] },
-  { title: 'Kopi Arabika', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika', tipeTanaman: ['tanaman-perkebunan'], banjar: ['jempanang', 'lawak', 'sidan'] },
-  { title: 'Padi', image: 'assets/images/produk-padi.png', link: '/produk/padi', tipeTanaman: ['tanaman-pangan'], banjar: ['lawak', 'penikit'] },
+  { title: 'Jeruk Siam Madu', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
+  { title: 'Kopi Arabika', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika', tipeTanaman: ['tanaman-perkebunan'], banjar: ['jempanang', 'bon', 'sekarmukti', 'lawak', 'belok', 'selantang', 'sidan', 'sidan-kawan', 'penikit'] },
+  { title: 'Padi', image: 'assets/images/produk-padi.png', link: '/produk/padi', tipeTanaman: ['tanaman-pangan'], banjar: ['sidan', 'sidan-kawan', 'penikit'] },
   { title: 'Sawi Putih', image: 'assets/images/produk-sawi putih.png', link: '/produk/sawi-putih', tipeTanaman: ['hortikultura-sayur'], banjar: ['bon'] },
   { title: 'Sayur Hortikultura', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/sayur-hortikultura', tipeTanaman: ['hortikultura-sayur'], banjar: ['selantang'] },
   { title: 'Timun Jepang', image: 'assets/images/produk-timun jepang.png', link: '/produk/timun-jepang', tipeTanaman: ['hortikultura-sayur'], banjar: ['belok'] },

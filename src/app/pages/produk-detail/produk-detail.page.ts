@@ -323,38 +323,6 @@ export class ProdukDetailPageComponent implements OnInit {
       ]
     },
     {
-      slug: 'bunga-anggrek',
-      title: 'Bunga Anggrek',
-      subtitle: 'Keindahan bunga anggrek yang elegan dan eksotis',
-      image: 'assets/images/produk-bunga anggrek.png',
-      description: 'Bunga Anggrek di Desa Belok/Sidan menambah nilai estetika dan menjadi pilihan tanaman hias premium untuk pasar lokal dan pariwisata.',
-      shortDescription: 'Bunga Anggrek Desa Belok/Sidan tumbuh dengan bentuk kelopak yang elegan dan warna yang beragam. Dibudidayakan sebagai tanaman hias premium dengan perawatan yang teliti dan terjaga kualitasnya.',
-      nutritionItems: [
-        {
-          title: 'Nilai Estetika Tinggi',
-          description: 'Bentuk dan warna bunga yang eksotis menjadikannya elemen dekorasi bernilai jual tinggi.'
-        },
-        {
-          title: 'Potensi Terapi Relaksasi',
-          description: 'Keindahan visual anggrek dipercaya dapat memberikan efek menenangkan bagi penikmatnya.'
-        },
-        {
-          title: 'Daya Tahan Bunga Lama',
-          description: 'Anggrek memiliki masa mekar yang relatif panjang dibanding bunga hias lainnya.'
-        }
-      ],
-      farmInfo: {
-        hectares: 'Sekitar 5 hektar area budidaya anggrek dikembangkan menggunakan rumah naungan (greenhouse sederhana) di Desa Belok/Sidan.',
-        distribution: 'Budidaya terpusat pada kelompok tani hias yang tersebar di beberapa dusun dengan akses kelembapan terjaga.',
-        soilClimate: 'Media tanam yang porous dengan kelembapan terjaga serta iklim sejuk dan teduh mendukung pertumbuhan anggrek yang optimal.'
-      },
-      highlights: [
-        'Bentuk dan warna yang menawan',
-        'Tumbuh baik di dataran tinggi',
-        'Cocok untuk dekorasi dan hadiah'
-      ]
-    },
-    {
       slug: 'cabai',
       title: 'Cabai',
       subtitle: 'Cabai segar dengan warna cerah dan rasa pedas khas',
