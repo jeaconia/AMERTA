@@ -23,6 +23,25 @@ export interface ProdukFarmInfo {
   soilClimate: string;
 }
 
+export interface ProdukVarietyAttribute {
+  label: string;
+  value: string;
+}
+
+export interface ProdukVarietyItem {
+  name: string;
+  tagline?: string;
+  attributes: ProdukVarietyAttribute[];
+}
+
+export interface ProdukVarietyComparison {
+  /** Judul section, mis. "Kopi Arabika vs Kopi Robusta" */
+  title: string;
+  /** Kalimat pengantar singkat tentang perbandingan jenis */
+  description?: string;
+  variants: ProdukVarietyItem[];
+}
+
 export interface ProdukDetailData {
   slug: string;
   title: string;
@@ -32,6 +51,8 @@ export interface ProdukDetailData {
   shortDescription?: string;
   nutritionItems?: ProdukNutrisiItem[];
   farmInfo?: ProdukFarmInfo;
+  /** Perbandingan jenis/varietas dari hasil bumi yang sama (mis. Kopi Arabika vs Kopi Robusta) */
+  varietyComparison?: ProdukVarietyComparison;
   /** Boleh berupa teks polos, atau objek { title, description, icon } seperti pada section "Keunggulan" di Beranda */
   highlights: (string | ProdukHighlightItem)[];
 }
@@ -104,6 +125,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Sebaran budidaya tersebar di beberapa dusun dan kawasan pertanian dataran tinggi di Kecamatan Petang, dengan fokus pada area yang memiliki suhu sejuk dan tingkat kelembapan stabil.',
         soilClimate: 'Tanah umumnya bersifat subur dengan tekstur yang baik untuk akar tanaman, sementara iklim dingin, curah hujan cukup, dan ketinggian lokasi mendukung pertumbuhan asparagus yang kuat dan berkualitas.'
       },
+      varietyComparison: {
+        title: 'Asparagus Hijau vs Asparagus Putih',
+        description: 'Kedua jenis asparagus ini berasal dari tanaman yang sama, namun cara budidayanya membuat rasa, tekstur, dan tampilannya berbeda.',
+        variants: [
+          {
+            name: 'Asparagus Hijau',
+            attributes: [
+              { label: 'Rasa', value: 'Renyah dengan sedikit rasa pahit yang segar' },
+              { label: 'Aroma', value: 'Aroma rumput yang khas dan cukup tajam' },
+              { label: 'Bentuk & Tekstur', value: 'Batang ramping, kulit tipis, tekstur renyah' },
+              { label: 'Warna', value: 'Hijau cerah karena tumbuh terpapar sinar matahari' }
+            ]
+          },
+          {
+            name: 'Asparagus Putih',
+            attributes: [
+              { label: 'Rasa', value: 'Lebih lembut dan manis, hampir tanpa rasa pahit' },
+              { label: 'Aroma', value: 'Aroma lebih halus dan ringan' },
+              { label: 'Bentuk & Tekstur', value: 'Batang lebih gemuk dengan tekstur lebih empuk' },
+              { label: 'Warna', value: 'Putih pucat karena ditimbun tanah selama tumbuh (etiolasi)' }
+            ]
+          }
+        ]
+      },
       highlights: [
         {
           icon: 'budidaya',
@@ -152,6 +197,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Sebaran tanaman durian terkonsentrasi di dusun-dusun dengan kontur lahan berbukit dan akses air yang baik di Kecamatan Petang.',
         soilClimate: 'Tanah vulkanik yang subur dan gembur, dipadukan dengan iklim tropis lembap serta curah hujan tinggi, sangat mendukung pertumbuhan pohon durian berkualitas.'
       },
+      varietyComparison: {
+        title: 'Durian Musang King vs Durian Montong',
+        description: 'Dua varietas durian unggulan ini punya karakter rasa dan bentuk yang cukup mudah dibedakan.',
+        variants: [
+          {
+            name: 'Durian Musang King',
+            attributes: [
+              { label: 'Rasa', value: 'Manis legit berpadu pahit khas yang kuat di akhir' },
+              { label: 'Aroma', value: 'Sangat tajam dan menyengat' },
+              { label: 'Bentuk & Tekstur', value: 'Daging tebal, biji kecil (kempes), tekstur creamy lembut' },
+              { label: 'Warna', value: 'Kuning keemasan pekat' }
+            ]
+          },
+          {
+            name: 'Durian Montong',
+            attributes: [
+              { label: 'Rasa', value: 'Manis dominan dengan sedikit rasa pahit' },
+              { label: 'Aroma', value: 'Lebih ringan dibanding Musang King' },
+              { label: 'Bentuk & Tekstur', value: 'Daging tebal namun lebih kering dan padat' },
+              { label: 'Warna', value: 'Kuning pucat hingga kuning muda' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Diolah dan dipanen dengan standar kebersihan ketat',
         'Bisa menjadi pilihan produk premium untuk wisata kuliner',
@@ -183,6 +252,32 @@ export class ProdukDetailPageComponent implements OnInit {
         hectares: 'Sekitar 80 hektar lahan perkebunan kopi arabika dikelola oleh kelompok tani di dataran tinggi Desa Belok/Sidan.',
         distribution: 'Perkebunan kopi tersebar di area lereng pegunungan Kecamatan Petang yang memiliki ketinggian dan kemiringan lahan ideal.',
         soilClimate: 'Tanah andosol yang subur serta iklim sejuk dengan suhu stabil dan curah hujan merata mendukung pertumbuhan biji kopi arabika berkualitas tinggi.'
+      },
+      varietyComparison: {
+        title: 'Kopi Arabika vs Kopi Robusta',
+        description: 'Dua jenis kopi paling populer ini memiliki perbedaan mencolok dari segi rasa, bentuk biji, hingga tempat tumbuhnya.',
+        variants: [
+          {
+            name: 'Kopi Arabika',
+            attributes: [
+              { label: 'Rasa', value: 'Lembut, sedikit asam segar dengan sentuhan rasa buah atau bunga' },
+              { label: 'Aroma', value: 'Harum kompleks, cenderung floral dan fruity' },
+              { label: 'Bentuk Biji', value: 'Lonjong dengan garis tengah bergelombang' },
+              { label: 'Kadar Kafein', value: 'Lebih rendah, sekitar 1-1,5%' },
+              { label: 'Habitat Tumbuh', value: 'Optimal di dataran tinggi 700-2000 mdpl dengan suhu sejuk' }
+            ]
+          },
+          {
+            name: 'Kopi Robusta',
+            attributes: [
+              { label: 'Rasa', value: 'Lebih pahit, kuat, dan cenderung earthy' },
+              { label: 'Aroma', value: 'Lebih tajam, menyerupai kacang panggang' },
+              { label: 'Bentuk Biji', value: 'Bulat dengan garis tengah lurus' },
+              { label: 'Kadar Kafein', value: 'Lebih tinggi, sekitar 2-2,7%' },
+              { label: 'Habitat Tumbuh', value: 'Dapat tumbuh di dataran rendah hingga menengah, lebih tahan hama' }
+            ]
+          }
+        ]
       },
       highlights: [
         'Tumbuh di lahan pegunungan yang cocok untuk kopi',
@@ -216,6 +311,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Penanaman terpusat di dusun-dusun dengan akses sinar matahari yang cukup sepanjang hari untuk mendukung pertumbuhan bunga.',
         soilClimate: 'Tanah gembur dengan drainase baik serta iklim sejuk dan cerah sangat mendukung pertumbuhan bunga gemitir yang optimal.'
       },
+      varietyComparison: {
+        title: 'Gemitir Kuning vs Gemitir Oranye',
+        description: 'Kedua warna gemitir ini sama-sama populer, namun memiliki perbedaan pada bentuk kelopak, aroma, dan kegunaannya.',
+        variants: [
+          {
+            name: 'Gemitir Kuning',
+            attributes: [
+              { label: 'Aroma', value: 'Lebih lembut dan segar' },
+              { label: 'Bentuk & Tekstur', value: 'Kelopak rapat dan bulat sempurna' },
+              { label: 'Warna', value: 'Kuning cerah keemasan' },
+              { label: 'Kegunaan', value: 'Umum dipakai untuk canang dan dekorasi sehari-hari' }
+            ]
+          },
+          {
+            name: 'Gemitir Oranye',
+            attributes: [
+              { label: 'Aroma', value: 'Lebih kuat dan khas' },
+              { label: 'Bentuk & Tekstur', value: 'Kelopak lebih besar dan agak mekar terbuka' },
+              { label: 'Warna', value: 'Oranye pekat kemerahan' },
+              { label: 'Kegunaan', value: 'Sering dipakai pada upacara adat karena warnanya mencolok' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Menonjolkan identitas budaya dan alam desa',
         'Memiliki nilai estetika yang tinggi',
@@ -247,6 +366,30 @@ export class ProdukDetailPageComponent implements OnInit {
         hectares: 'Sekitar 20 hektar lahan budidaya vanili dikembangkan sebagai tanaman rambatan di kebun campuran warga.',
         distribution: 'Sebaran tanaman vanili banyak ditemukan di pekarangan dan kebun agroforestri Desa Belok/Sidan yang teduh.',
         soilClimate: 'Tanah subur dengan naungan pohon pelindung serta kelembapan udara tinggi dan suhu hangat mendukung pertumbuhan tanaman vanili.'
+      },
+      varietyComparison: {
+        title: 'Vanili Planifolia vs Vanili Tahitensis',
+        description: 'Dua jenis vanili yang paling banyak dibudidayakan ini berbeda dari segi rasa, aroma, dan bentuk polongnya.',
+        variants: [
+          {
+            name: 'Vanili Planifolia',
+            attributes: [
+              { label: 'Rasa', value: 'Manis creamy dengan rasa vanila klasik yang kuat' },
+              { label: 'Aroma', value: 'Aroma manis khas vanila yang pekat' },
+              { label: 'Bentuk & Tekstur', value: 'Polong ramping dan panjang, cokelat gelap setelah fermentasi' },
+              { label: 'Kegunaan', value: 'Favorit untuk kue, cokelat, dan minuman' }
+            ]
+          },
+          {
+            name: 'Vanili Tahitensis',
+            attributes: [
+              { label: 'Rasa', value: 'Lebih ringan dengan sentuhan rasa bunga dan buah' },
+              { label: 'Aroma', value: 'Aroma floral dan fruity yang khas' },
+              { label: 'Bentuk & Tekstur', value: 'Polong lebih pendek dan gemuk, kulit lebih tebal' },
+              { label: 'Kegunaan', value: 'Sering dipakai pada parfum dan hidangan gourmet' }
+            ]
+          }
+        ]
       },
       highlights: [
         'Memiliki nilai ekonomi yang signifikan',
@@ -284,6 +427,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Tanaman alpukat tersebar di kebun-kebun warga dan lahan perbukitan Kecamatan Petang dengan drainase yang baik.',
         soilClimate: 'Tanah subur berstruktur gembur serta iklim sejuk dengan curah hujan cukup mendukung pertumbuhan pohon alpukat yang produktif.'
       },
+      varietyComparison: {
+        title: 'Alpukat Mentega vs Alpukat Ijo Panjang',
+        description: 'Dua varietas alpukat lokal populer ini punya perbedaan pada tekstur daging, rasa, dan bentuk buahnya.',
+        variants: [
+          {
+            name: 'Alpukat Mentega',
+            attributes: [
+              { label: 'Rasa', value: 'Creamy legit, sedikit manis seperti mentega' },
+              { label: 'Bentuk & Tekstur', value: 'Daging tebal, lembut, dan halus seperti mentega' },
+              { label: 'Warna', value: 'Kulit hijau tua, daging kuning mentega' },
+              { label: 'Bentuk Buah', value: 'Bulat lonjong dengan biji kecil' }
+            ]
+          },
+          {
+            name: 'Alpukat Ijo Panjang',
+            attributes: [
+              { label: 'Rasa', value: 'Lebih ringan dan sedikit berair' },
+              { label: 'Bentuk & Tekstur', value: 'Daging lebih padat dan sedikit berserat' },
+              { label: 'Warna', value: 'Kulit hijau muda mengkilap, daging hijau kekuningan' },
+              { label: 'Bentuk Buah', value: 'Lonjong memanjang dengan biji lebih besar' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Kaya vitamin dan lemak sehat',
         'Cocok untuk jus, salad, dan paté',
@@ -315,6 +482,30 @@ export class ProdukDetailPageComponent implements OnInit {
         hectares: 'Sekitar 10 hektar lahan budidaya bayam inggris dikembangkan di area dataran tinggi Desa Belok/Sidan.',
         distribution: 'Penanaman terpusat di dusun-dusun dengan suhu sejuk yang mendukung pembungaan dan pembuahan optimal.',
         soilClimate: 'Tanah gembur kaya humus serta iklim sejuk dengan suhu stabil mendukung pertumbuhan tanaman bayam inggris yang subur.'
+      },
+      varietyComparison: {
+        title: 'Strawberry California vs Strawberry Festival',
+        description: 'Dua varietas stroberi yang umum ditanam petani ini berbeda dari segi rasa, bentuk, dan daya simpannya.',
+        variants: [
+          {
+            name: 'Strawberry California',
+            attributes: [
+              { label: 'Rasa', value: 'Manis dengan sedikit asam segar' },
+              { label: 'Bentuk & Tekstur', value: 'Buah besar berbentuk kerucut memanjang, renyah berair' },
+              { label: 'Warna', value: 'Merah cerah merata' },
+              { label: 'Ciri Khas', value: 'Tahan simpan lebih lama, cocok dijual segar' }
+            ]
+          },
+          {
+            name: 'Strawberry Festival',
+            attributes: [
+              { label: 'Rasa', value: 'Asam-manis lebih seimbang dan aromatik' },
+              { label: 'Bentuk & Tekstur', value: 'Buah lebih kecil, bentuk agak bulat, tekstur lembut' },
+              { label: 'Warna', value: 'Merah mengilap dengan sedikit gradasi oranye' },
+              { label: 'Ciri Khas', value: 'Produktivitas tinggi dan tahan cuaca dataran tinggi tropis' }
+            ]
+          }
+        ]
       },
       highlights: [
         'Sumber vitamin C alami',
@@ -348,6 +539,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Penanaman cabai tersebar di lahan terbuka dengan sinar matahari penuh di beberapa dusun Kecamatan Petang.',
         soilClimate: 'Tanah gembur dengan drainase baik serta iklim hangat dan curah hujan sedang mendukung produktivitas tanaman cabai.'
       },
+      varietyComparison: {
+        title: 'Cabai Rawit vs Cabai Keriting',
+        description: 'Dua jenis cabai yang paling banyak dicari ini punya perbedaan mencolok dari segi tingkat kepedasan, bentuk, dan kegunaannya di dapur.',
+        variants: [
+          {
+            name: 'Cabai Rawit',
+            attributes: [
+              { label: 'Rasa', value: 'Sangat pedas dan tajam' },
+              { label: 'Bentuk & Tekstur', value: 'Ukuran kecil, memanjang lurus, kulit tipis' },
+              { label: 'Warna', value: 'Hijau saat muda, merah menyala saat matang' },
+              { label: 'Kegunaan', value: 'Cocok untuk sambal dan bumbu pedas' }
+            ]
+          },
+          {
+            name: 'Cabai Keriting',
+            attributes: [
+              { label: 'Rasa', value: 'Pedas sedang dengan aroma lebih kuat' },
+              { label: 'Bentuk & Tekstur', value: 'Lebih panjang dan bergelombang, kulit lebih tebal' },
+              { label: 'Warna', value: 'Merah cerah mengilap' },
+              { label: 'Kegunaan', value: 'Umum untuk bumbu dasar masakan dan sambal goreng' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Dipanen secara selektif',
         'Aroma pedas tajam dan segar',
@@ -379,6 +594,30 @@ export class ProdukDetailPageComponent implements OnInit {
         hectares: 'Sekitar 30 hektar area pohon aren tumbuh alami di kawasan perbukitan Desa Belok/Sidan.',
         distribution: 'Pohon aren tersebar di lahan-lahan konservasi dan tepi hutan yang dikelola turun-temurun oleh warga setempat.',
         soilClimate: 'Tanah lembap berbukit dengan naungan alami serta iklim tropis sejuk mendukung pertumbuhan pohon aren yang menghasilkan nira berkualitas.'
+      },
+      varietyComparison: {
+        title: 'Gula Aren Cetak vs Gula Semut',
+        description: 'Diolah dari bahan yang sama, kedua bentuk olahan gula aren ini berbeda dari segi tekstur, rasa, dan cara pakainya.',
+        variants: [
+          {
+            name: 'Gula Aren Cetak',
+            attributes: [
+              { label: 'Rasa', value: 'Manis legit dengan karamel yang kuat' },
+              { label: 'Bentuk & Tekstur', value: 'Padat, dicetak dalam bentuk batok/silinder, tekstur keras' },
+              { label: 'Warna', value: 'Cokelat pekat kehitaman' },
+              { label: 'Daya Simpan', value: 'Cukup awet, mudah dipotong sesuai kebutuhan' }
+            ]
+          },
+          {
+            name: 'Gula Semut',
+            attributes: [
+              { label: 'Rasa', value: 'Manis lebih ringan dan lembut di lidah' },
+              { label: 'Bentuk & Tekstur', value: 'Berbentuk butiran halus seperti kristal' },
+              { label: 'Warna', value: 'Cokelat keemasan lebih terang' },
+              { label: 'Daya Simpan', value: 'Mudah larut, praktis untuk minuman dan bahan dapur' }
+            ]
+          }
+        ]
       },
       highlights: [
         'Tidak menggunakan bahan kimia',
@@ -412,6 +651,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Perkebunan tersebar di lereng-lereng bukit dengan sirkulasi udara baik di Kecamatan Petang.',
         soilClimate: 'Tanah subur berdrainase baik serta iklim sejuk dengan suhu stabil mendukung pertumbuhan jeruk yang manis dan berair.'
       },
+      varietyComparison: {
+        title: 'Jeruk Brastagi vs Jeruk Siam Madu',
+        description: 'Dua jenis jeruk unggulan Desa Belok/Sidan ini punya karakter rasa, tekstur kulit, dan ukuran buah yang berbeda.',
+        variants: [
+          {
+            name: 'Jeruk Brastagi',
+            attributes: [
+              { label: 'Rasa', value: 'Manis-kecut seimbang dengan sedikit rasa asam segar' },
+              { label: 'Bentuk & Tekstur', value: 'Kulit tebal dan agak kasar, daging berair banyak' },
+              { label: 'Warna', value: 'Kulit oranye kehijauan' },
+              { label: 'Ciri Khas', value: 'Ukuran buah lebih besar, cocok untuk diperas jadi jus' }
+            ]
+          },
+          {
+            name: 'Jeruk Siam Madu',
+            attributes: [
+              { label: 'Rasa', value: 'Manis dominan dengan aroma harum khas' },
+              { label: 'Bentuk & Tekstur', value: 'Kulit tipis dan mudah dikupas, daging lembut' },
+              { label: 'Warna', value: 'Kulit oranye cerah merata' },
+              { label: 'Ciri Khas', value: 'Ukuran lebih kecil, praktis dikonsumsi langsung sebagai buah meja' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Ditanam di iklim pegunungan yang sejuk',
         'Buah tebal dan berair',
@@ -444,6 +707,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Sebaran tanaman terkonsentrasi di dusun-dusun dengan ketinggian sedang dan paparan sinar matahari yang cukup.',
         soilClimate: 'Tanah subur dengan pH seimbang serta iklim sejuk dan curah hujan merata mendukung rasa manis khas jeruk siam madu.'
       },
+      varietyComparison: {
+        title: 'Jeruk Siam Madu vs Jeruk Brastagi',
+        description: 'Dua jenis jeruk unggulan Desa Belok/Sidan ini punya karakter rasa, tekstur kulit, dan ukuran buah yang berbeda.',
+        variants: [
+          {
+            name: 'Jeruk Siam Madu',
+            attributes: [
+              { label: 'Rasa', value: 'Manis dominan dengan aroma harum khas' },
+              { label: 'Bentuk & Tekstur', value: 'Kulit tipis dan mudah dikupas, daging lembut' },
+              { label: 'Warna', value: 'Kulit oranye cerah merata' },
+              { label: 'Ciri Khas', value: 'Ukuran lebih kecil, praktis dikonsumsi langsung sebagai buah meja' }
+            ]
+          },
+          {
+            name: 'Jeruk Brastagi',
+            attributes: [
+              { label: 'Rasa', value: 'Manis-kecut seimbang dengan sedikit rasa asam segar' },
+              { label: 'Bentuk & Tekstur', value: 'Kulit tebal dan agak kasar, daging berair banyak' },
+              { label: 'Warna', value: 'Kulit oranye kehijauan' },
+              { label: 'Ciri Khas', value: 'Ukuran buah lebih besar, cocok untuk diperas jadi jus' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Rasa manis alami',
         'Aroma buah yang kuat',
@@ -475,6 +762,30 @@ export class ProdukDetailPageComponent implements OnInit {
         hectares: 'Sekitar 150 hektar lahan sawah aktif digunakan untuk budidaya padi di Desa Belok/Sidan.',
         distribution: 'Sawah tersebar mengikuti sistem subak tradisional di dataran dan lembah subur Kecamatan Petang.',
         soilClimate: 'Tanah aluvial yang subur dengan pengairan sawah yang teratur serta iklim tropis mendukung dua hingga tiga kali masa tanam per tahun.'
+      },
+      varietyComparison: {
+        title: 'Beras Putih Pulen vs Beras Merah',
+        description: 'Dua jenis beras hasil panen padi desa ini berbeda dari segi rasa, tekstur, dan kandungan gizinya.',
+        variants: [
+          {
+            name: 'Beras Putih Pulen',
+            attributes: [
+              { label: 'Rasa', value: 'Pulen dan gurih netral, cocok untuk nasi sehari-hari' },
+              { label: 'Bentuk & Tekstur', value: 'Butiran putih bersih, tekstur lembut saat matang' },
+              { label: 'Warna', value: 'Putih bersih' },
+              { label: 'Kandungan', value: 'Karbohidrat tinggi dengan indeks glikemik sedang-tinggi' }
+            ]
+          },
+          {
+            name: 'Beras Merah',
+            attributes: [
+              { label: 'Rasa', value: 'Sedikit pera dengan aroma gurih khas (nutty)' },
+              { label: 'Bentuk & Tekstur', value: 'Butiran lebih keras dan berserat' },
+              { label: 'Warna', value: 'Cokelat kemerahan alami karena kulit ari masih menempel' },
+              { label: 'Kandungan', value: 'Kaya serat dan antioksidan, indeks glikemik lebih rendah' }
+            ]
+          }
+        ]
       },
       highlights: [
         'Diproduksi oleh petani setempat',
@@ -512,6 +823,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Penanaman tersebar di beberapa dusun dengan suhu sejuk yang mendukung pertumbuhan daun yang renyah.',
         soilClimate: 'Tanah gembur kaya bahan organik serta iklim sejuk dengan kelembapan cukup mendukung pertumbuhan sawi putih yang optimal.'
       },
+      varietyComparison: {
+        title: 'Sawi Putih vs Sawi Hijau (Pokcoy)',
+        description: 'Dua jenis sawi yang sering ditanam berdampingan ini berbeda dari segi rasa, bentuk daun, dan kegunaannya di dapur.',
+        variants: [
+          {
+            name: 'Sawi Putih',
+            attributes: [
+              { label: 'Rasa', value: 'Renyah dan sedikit manis, rasa netral' },
+              { label: 'Bentuk & Tekstur', value: 'Daun lebar bergelombang, tersusun rapat membentuk krop' },
+              { label: 'Warna', value: 'Putih kehijauan pucat' },
+              { label: 'Kegunaan', value: 'Cocok untuk sup, tumisan, dan fermentasi seperti kimchi' }
+            ]
+          },
+          {
+            name: 'Sawi Hijau (Pokcoy)',
+            attributes: [
+              { label: 'Rasa', value: 'Sedikit lebih pahit dan segar' },
+              { label: 'Bentuk & Tekstur', value: 'Daun lebih kecil, tangkai ramping, tidak membentuk krop rapat' },
+              { label: 'Warna', value: 'Hijau tua merata' },
+              { label: 'Kegunaan', value: 'Umum untuk tumisan cepat dan pelengkap mie' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Tekstur renyah dan warna cerah',
         'Sumber serat dan vitamin',
@@ -544,6 +879,30 @@ export class ProdukDetailPageComponent implements OnInit {
         distribution: 'Lahan tanam tersebar di berbagai dusun dengan pola tanam bergilir untuk menjaga kesuburan tanah.',
         soilClimate: 'Tanah subur dengan struktur gembur serta iklim sejuk dataran tinggi mendukung keragaman jenis sayuran yang tumbuh optimal.'
       },
+      varietyComparison: {
+        title: 'Sayuran Daun vs Sayuran Buah',
+        description: 'Dua kelompok besar sayuran hortikultura ini berbeda dari segi rasa, tekstur, dan lama waktu panennya.',
+        variants: [
+          {
+            name: 'Sayuran Daun',
+            attributes: [
+              { label: 'Rasa', value: 'Ringan dan segar, ada yang sedikit pahit' },
+              { label: 'Bentuk & Tekstur', value: 'Helaian daun tipis dengan tangkai lunak' },
+              { label: 'Contoh', value: 'Sawi, bayam, kangkung' },
+              { label: 'Waktu Panen', value: 'Umumnya lebih cepat, sekitar 20-30 hari' }
+            ]
+          },
+          {
+            name: 'Sayuran Buah',
+            attributes: [
+              { label: 'Rasa', value: 'Lebih bervariasi, dari manis hingga gurih' },
+              { label: 'Bentuk & Tekstur', value: 'Berdaging dan berair dengan kulit lebih tebal' },
+              { label: 'Contoh', value: 'Timun, tomat, cabai' },
+              { label: 'Waktu Panen', value: 'Membutuhkan waktu tanam lebih lama hingga berbuah' }
+            ]
+          }
+        ]
+      },
       highlights: [
         'Hasil panen bervariasi',
         'Segar langsung dari pertanian',
@@ -575,6 +934,30 @@ export class ProdukDetailPageComponent implements OnInit {
         hectares: 'Sekitar 18 hektar lahan budidaya timun jepang dikembangkan menggunakan sistem para-para (rambatan).',
         distribution: 'Penanaman tersebar di lahan terbuka dengan sinar matahari cukup di beberapa dusun Desa Belok/Sidan.',
         soilClimate: 'Tanah gembur dengan drainase baik serta iklim hangat dan penyiraman teratur mendukung pertumbuhan timun yang renyah dan segar.'
+      },
+      varietyComparison: {
+        title: 'Timun Jepang vs Timun Lokal',
+        description: 'Dibandingkan dengan timun lokal biasa, timun Jepang punya bentuk, rasa, dan tekstur yang cukup berbeda.',
+        variants: [
+          {
+            name: 'Timun Jepang',
+            attributes: [
+              { label: 'Rasa', value: 'Renyah, segar, dan minim rasa pahit' },
+              { label: 'Bentuk & Tekstur', value: 'Memanjang dan ramping dengan kulit tipis halus' },
+              { label: 'Warna', value: 'Hijau tua mengilap' },
+              { label: 'Ciri Khas', value: 'Kadar air tinggi, cocok untuk salad dan acar' }
+            ]
+          },
+          {
+            name: 'Timun Lokal',
+            attributes: [
+              { label: 'Rasa', value: 'Sedikit lebih pahit, terutama di bagian ujung' },
+              { label: 'Bentuk & Tekstur', value: 'Lebih pendek dan gemuk, kulit lebih tebal berbintil' },
+              { label: 'Warna', value: 'Hijau muda hingga hijau bergaris' },
+              { label: 'Ciri Khas', value: 'Lebih tahan lama disimpan, umum untuk lalapan' }
+            ]
+          }
+        ]
       },
       highlights: [
         'Tekstur renyah dan segar',

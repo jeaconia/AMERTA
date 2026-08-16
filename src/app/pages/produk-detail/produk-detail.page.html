@@ -28,6 +28,26 @@
       </div>
     </div>
 
+    <section class="produk-detail__section" *ngIf="detail.varietyComparison as variety">
+      <h2 class="produk-detail__section-title">{{ variety.title }}</h2>
+      <p class="produk-detail__variety-desc" *ngIf="variety.description">{{ variety.description }}</p>
+      <div class="produk-detail__variety-grid">
+        <ng-container *ngFor="let item of variety.variants; let last = last">
+          <div class="produk-detail__variety-card">
+            <h3 class="produk-detail__variety-name">{{ item.name }}</h3>
+            <p class="produk-detail__variety-tagline" *ngIf="item.tagline">{{ item.tagline }}</p>
+            <ul class="produk-detail__variety-attrs">
+              <li class="produk-detail__variety-attr" *ngFor="let attr of item.attributes">
+                <span class="produk-detail__variety-attr-label">{{ attr.label }}</span>
+                <span class="produk-detail__variety-attr-value">{{ attr.value }}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="produk-detail__variety-vs" *ngIf="!last">VS</div>
+        </ng-container>
+      </div>
+    </section>
+
     <section class="produk-detail__section" *ngIf="detail.highlights?.length">
       <h2 class="produk-detail__section-title">Keunggulan {{ detail.title }}</h2>
       <div class="produk-detail__highlight-grid">
