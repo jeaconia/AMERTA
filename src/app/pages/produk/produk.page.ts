@@ -89,9 +89,8 @@ export class ProdukPageComponent {
   /** Daftar produk unggulan lainnya, ditampilkan dalam grid kartu */
   @Input() produkList: ProdukItem[] = PRODUK_LIST;
 
-  // Filter state — hanya satu kategori tanaman yang bisa dipilih dalam satu waktu
+  // Filter state — hanya kategori tanaman yang bisa dipilih
   selectedTipeTanaman: TipeTanaman | null = null;
-  selectedBanjar: Banjar | null = null;
 
   // Lists untuk filter UI
   tipeTanamanOptions: Array<{ key: TipeTanaman; label: string }> = [
@@ -102,39 +101,26 @@ export class ProdukPageComponent {
     { key: 'tanaman-hias', label: TIPE_TANAMAN_LABELS['tanaman-hias'] }
   ];
 
-  banjarOptions: Array<{ key: Banjar; label: string }> = [
-    { key: 'jempanang', label: BANJAR_LABELS['jempanang'] },
-    { key: 'bon', label: BANJAR_LABELS['bon'] },
-    { key: 'sekarmukti', label: BANJAR_LABELS['sekarmukti'] },
-    { key: 'lawak', label: BANJAR_LABELS['lawak'] },
-    { key: 'belok', label: BANJAR_LABELS['belok'] },
-    { key: 'selantang', label: BANJAR_LABELS['selantang'] },
-    { key: 'sidan', label: BANJAR_LABELS['sidan'] },
-    { key: 'sidan-kawan', label: BANJAR_LABELS['sidan-kawan'] },
-    { key: 'penikit', label: BANJAR_LABELS['penikit'] }
-  ];
-
   get filteredProdukList(): ProdukItem[] {
-    if (!this.selectedTipeTanaman && !this.selectedBanjar) {
+    if (!this.selectedTipeTanaman) {
       return this.produkList;
     }
 
-    return this.produkList.filter(produk => {
-      const matchesTipe = !this.selectedTipeTanaman ||
-        produk.tipeTanaman.includes(this.selectedTipeTanaman);
-      const matchesBanjar = !this.selectedBanjar ||
-        produk.banjar.includes(this.selectedBanjar);
-
-      return matchesTipe && matchesBanjar;
-    });
+    return this.produkList.filter(produk =>
+      produk.tipeTanaman.includes(this.selectedTipeTanaman as TipeTanaman)
+    );
   }
 
   /** Apakah kartu produk unggulan (featured) sesuai dengan filter yang aktif saat ini */
   get isFeaturedVisible(): boolean {
-    if (!this.selectedTipeTanaman) {
-      return true;
+    const featuredProduk = this.produkList.find((produk) => produk.link === this.featured.link);
+
+    if (!featuredProduk) {
+      return !this.selectedTipeTanaman;
     }
-    return this.featured.tipeTanaman.includes(this.selectedTipeTanaman);
+
+    return !this.selectedTipeTanaman ||
+      featuredProduk.tipeTanaman.includes(this.selectedTipeTanaman as TipeTanaman);
   }
 
   toggleTipeTanaman(tipe: TipeTanaman): void {
@@ -142,13 +128,8 @@ export class ProdukPageComponent {
     this.selectedTipeTanaman = this.selectedTipeTanaman === tipe ? null : tipe;
   }
 
-  toggleBanjar(banjar: Banjar): void {
-    this.selectedBanjar = this.selectedBanjar === banjar ? null : banjar;
-  }
-
   clearFilters(): void {
     this.selectedTipeTanaman = null;
-    this.selectedBanjar = null;
   }
 
   onLihatSelengkapnya(title: string): void {

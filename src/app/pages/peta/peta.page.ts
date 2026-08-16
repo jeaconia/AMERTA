@@ -26,7 +26,7 @@ export interface BanjarDinas {
   standalone: true,
   imports: [CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './peta.page.html',
-  styleUrl: './peta.page.css'
+  styleUrls: ['./peta.page.css']
 })
 export class PetaPageComponent implements AfterViewInit, OnDestroy {
   /** Gambar peta wilayah desa, default placeholder */

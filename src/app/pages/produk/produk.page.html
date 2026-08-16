@@ -12,6 +12,13 @@
       <button
         type="button"
         class="produk__pill"
+        [class.produk__pill--active]="!selectedTipeTanaman"
+        (click)="clearFilters()">
+        Semua
+      </button>
+      <button
+        type="button"
+        class="produk__pill"
         *ngFor="let option of tipeTanamanOptions"
         [class.produk__pill--active]="selectedTipeTanaman === option.key"
         (click)="toggleTipeTanaman(option.key)">
@@ -21,11 +28,6 @@
   </section>
 
   <main class="produk__content">
-
-    <div class="produk__filter-results" *ngIf="selectedTipeTanaman || selectedBanjar">
-      Menampilkan {{ filteredProdukList.length }} dari {{ produkList.length }} produk
-      <button class="produk__filter-reset" (click)="clearFilters()">Reset Filter</button>
-    </div>
 
     <section class="produk__featured" *ngIf="isFeaturedVisible">
       <h2 class="produk__featured-title">{{ featured.title }}</h2>
@@ -56,6 +58,10 @@
         </span>
       </a>
     </section>
+
+    <div class="produk__filter-results" *ngIf="selectedTipeTanaman">
+      Menampilkan {{ filteredProdukList.length }} dari {{ produkList.length }} produk
+    </div>
 
   </main>
 

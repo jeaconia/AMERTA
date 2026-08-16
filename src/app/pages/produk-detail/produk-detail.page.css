@@ -59,7 +59,7 @@
 .produk-detail__content {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 1.5rem 1.25rem 3rem;
+  padding: 2rem 1.25rem;
   display: grid;
   gap: 1.6rem;
 }
@@ -128,8 +128,9 @@
 
 /* Keunggulan: bordered icon cards */
 .produk-detail__highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.1rem;
 }
 
@@ -143,6 +144,8 @@
   align-items: center;
   text-align: center;
   gap: 1rem;
+  flex: 0 1 calc(33.333% - 1.1rem * 2 / 3);
+  max-width: calc(33.333% - 1.1rem * 2 / 3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -181,8 +184,9 @@
 
 /* Khasiat: icon + text rows */
 .produk-detail__nutrition-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem 2rem;
 }
 
@@ -190,6 +194,8 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  flex: 0 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
 }
 
 .produk-detail__nutrition-icon {
@@ -276,7 +282,7 @@
   }
 
   .produk-detail__content {
-    padding: var(--space-md) var(--space-sm) var(--space-xl);
+    padding: var(--space-md) var(--space-sm);
   }
 
   .produk-detail__top-grid {
@@ -297,11 +303,13 @@
     min-height: 220px;
   }
 
-  .produk-detail__highlight-grid {
-    grid-template-columns: 1fr;
+  .produk-detail__highlight-card {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
-  .produk-detail__nutrition-grid {
-    grid-template-columns: 1fr;
+  .produk-detail__nutrition-card {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
