@@ -89,7 +89,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
   @Input() banjarList: BanjarDinas[] = [
     {
       name: 'Banjar Dinas Jempanang',
-      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam dan Siam Madu', 'Cabai Rawit'],
+      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam', 'Cabai Rawit'],
       mapsUrl: 'https://maps.app.goo.gl/jwj5Dd14bLEZYH6W6',
       top: 13,
       side: 'left',
@@ -99,7 +99,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Banjar Dinas Bon',
-      products: ['Kopi Arabika', 'Lemon', 'Alpukat', 'Jeruk Siam dan Siam Madu', 'Cabai Besar'],
+      products: ['Kopi Arabika', 'Lemon', 'Alpukat', 'Jeruk Siam', 'Cabai Besar'],
       mapsUrl: 'https://maps.app.goo.gl/Lo2TSkNQGH2sR63DA',
       top: 13,
       side: 'right',
@@ -109,7 +109,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Banjar Dinas Sekarmukti',
-      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam dan Siam Madu', 'Cabai Rawit', 'Bunga Gemitir'],
+      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam', 'Cabai Rawit', 'Bunga Gemitir'],
       mapsUrl: 'https://maps.app.goo.gl/BdXRwcR7S3NsVQcy9',
       top: 33,
       side: 'left',
@@ -119,7 +119,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Banjar Dinas Lawak',
-      products: ['Kopi Arabika', 'Lemon', 'Alpukat', 'Jeruk Siam dan Siam Madu', 'Bunga Gemitir'],
+      products: ['Kopi Arabika', 'Lemon', 'Alpukat', 'Jeruk Siam', 'Bunga Gemitir'],
       mapsUrl: 'https://maps.app.goo.gl/6UZtSYs941E4EJ737',
       top: 30,
       side: 'right',
@@ -129,7 +129,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Banjar Dinas Belok',
-      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam dan Siam Madu', 'Bunga Gemitir'],
+      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam', 'Bunga Gemitir'],
       mapsUrl: 'https://maps.app.goo.gl/EgcrEXpZdCzvimTw5',
       top: 45,
       side: 'right',
