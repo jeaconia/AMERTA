@@ -48,12 +48,11 @@ export interface ProdukItem {
 export const PRODUK_LIST: ProdukItem[] = [
   { title: 'Alpukat', image: 'assets/images/produk-alpukat.png', link: '/produk/alpukat', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
   { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir', tipeTanaman: ['tanaman-hias'], banjar: ['sekarmukti', 'lawak', 'belok', 'selantang', 'sidan'] },
-  { title: 'Cabai Besar', image: 'assets/images/produk-cabai besar.png', link: '/produk/cabai-besar', tipeTanaman: ['hortikultura-sayur'], banjar: ['bon', 'jempanang', 'sekarmukti', 'sidan'] },
-  { title: 'Cabai Rawit', image: 'assets/images/produk-cabai rawit.png', link: '/produk/cabai-rawit', tipeTanaman: ['hortikultura-sayur'], banjar: ['bon', 'jempanang', 'sekarmukti', 'sidan'] },
-  { title: 'Durian Musangking', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking', tipeTanaman: ['hortikultura-buah'], banjar: ['selantang', 'sidan', 'sidan-kawan', 'penikit'] },
-  { title: 'Jeruk Siam', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
+  { title: 'Cabai', image: 'assets/images/produk-cabai besar.png', link: '/produk/cabai', tipeTanaman: ['hortikultura-sayur'], banjar: ['bon', 'jempanang', 'sekarmukti', 'sidan'] },
+  { title: 'Durian', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking', tipeTanaman: ['hortikultura-buah'], banjar: ['selantang', 'sidan', 'sidan-kawan', 'penikit'] },
+  { title: 'Jeruk', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
   { title: 'Lemon', image: 'assets/images/produk-lemon.png', link: '/produk/lemon', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'lawak'] },
-  { title: 'Kopi Arabika', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika', tipeTanaman: ['tanaman-perkebunan'], banjar: ['jempanang', 'bon', 'sekarmukti', 'lawak', 'belok', 'selantang', 'sidan', 'sidan-kawan', 'penikit'] },
+  { title: 'Kopi', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika', tipeTanaman: ['tanaman-perkebunan'], banjar: ['jempanang', 'bon', 'sekarmukti', 'lawak', 'belok', 'selantang', 'sidan', 'sidan-kawan', 'penikit'] },
   { title: 'Padi', image: 'assets/images/produk-padi.png', link: '/produk/padi', tipeTanaman: ['tanaman-pangan'], banjar: ['sidan', 'sidan-kawan', 'penikit'] },
 ];
 

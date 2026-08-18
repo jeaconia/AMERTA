@@ -94,8 +94,8 @@ export class BerandaPageComponent implements OnInit {
     {title: 'Asparagus',
     image: 'assets/images/produk-asparagus.png',
     link: '/produk/asparagus'},
-    { title: 'Durian Musangking', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking' },
-    { title: 'Kopi Arabika', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika' },
+    { title: 'Jeruk', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu' },
+    { title: 'Kopi', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika' },
     { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir' },
   ];
 

@@ -78,11 +78,34 @@
 
     <section class="produk-detail__info-card" *ngIf="detail.farmInfo">
       <h2 class="produk-detail__info-title">petani dan perkebunan</h2>
-      <ul class="produk-detail__list produk-detail__list--farm">
-        <li><strong>Luas pertanian:</strong> {{ detail.farmInfo.hectares }}</li>
-        <li><strong>Sebaran wilayah:</strong> {{ detail.farmInfo.distribution }}</li>
-        <li><strong>Ciri tanah dan iklim:</strong> {{ detail.farmInfo.soilClimate }}</li>
-      </ul>
+
+      <ng-container *ngIf="detail.farmInfo.largeChili || detail.farmInfo.birdEyeChili; else standardFarmInfo">
+        <div class="produk-detail__farm-group" *ngIf="detail.farmInfo.largeChili as largeChili">
+          <h3 class="produk-detail__farm-subtitle">{{ largeChili.title || 'Cabai Besar' }}</h3>
+          <ul class="produk-detail__list produk-detail__list--farm">
+            <li><strong>Luas budidaya:</strong> {{ largeChili.hectares }}</li>
+            <li><strong>Sebaran wilayah:</strong> {{ largeChili.distribution }}</li>
+            <li><strong>Ciri tanah dan iklim:</strong> {{ largeChili.soilClimate }}</li>
+          </ul>
+        </div>
+
+        <div class="produk-detail__farm-group" *ngIf="detail.farmInfo.birdEyeChili as birdEyeChili">
+          <h3 class="produk-detail__farm-subtitle">{{ birdEyeChili.title || 'Cabai Rawit' }}</h3>
+          <ul class="produk-detail__list produk-detail__list--farm">
+            <li><strong>Luas budidaya:</strong> {{ birdEyeChili.hectares }}</li>
+            <li><strong>Sebaran wilayah:</strong> {{ birdEyeChili.distribution }}</li>
+            <li><strong>Ciri tanah dan iklim:</strong> {{ birdEyeChili.soilClimate }}</li>
+          </ul>
+        </div>
+      </ng-container>
+
+      <ng-template #standardFarmInfo>
+        <ul class="produk-detail__list produk-detail__list--farm">
+          <li><strong>Luas budidaya:</strong> {{ detail.farmInfo.hectares }}</li>
+          <li><strong>Sebaran wilayah:</strong> {{ detail.farmInfo.distribution }}</li>
+          <li><strong>Ciri tanah dan iklim:</strong> {{ detail.farmInfo.soilClimate }}</li>
+        </ul>
+      </ng-template>
     </section>
   </main>
 </div>

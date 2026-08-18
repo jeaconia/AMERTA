@@ -17,10 +17,19 @@ export interface ProdukHighlightItem {
   description: string;
 }
 
-export interface ProdukFarmInfo {
+export interface ProdukFarmDetail {
+  title?: string;
   hectares: string;
   distribution: string;
   soilClimate: string;
+}
+
+export interface ProdukFarmInfo {
+  hectares?: string;
+  distribution?: string;
+  soilClimate?: string;
+  largeChili?: ProdukFarmDetail;
+  birdEyeChili?: ProdukFarmDetail;
 }
 
 export interface ProdukVarietyAttribute {
@@ -169,7 +178,7 @@ export class ProdukDetailPageComponent implements OnInit {
     },
     {
       slug: 'durian-musangking',
-      title: 'Durian Musangking',
+      title: 'Durian',
       subtitle: 'Kelezatan khas dataran tinggi Belok/Sidan',
       image: 'assets/images/produk-durian.png',
       description: 'Durian Musangking menjadi primadona karena aroma khasnya yang kuat, daging tebal, dan cita rasa yang lezat.',
@@ -198,7 +207,7 @@ export class ProdukDetailPageComponent implements OnInit {
         soilClimate: 'Tanah vulkanik yang subur dan gembur, dipadukan dengan iklim tropis lembap serta curah hujan tinggi, sangat mendukung pertumbuhan pohon durian berkualitas.'
       },
       varietyComparison: {
-        title: 'Durian Musang King vs Durian Montong',
+        title: 'Durian Musang King vs Durian Kane',
         description: 'Dua varietas durian unggulan ini punya karakter rasa dan bentuk yang cukup mudah dibedakan.',
         variants: [
           {
@@ -211,7 +220,7 @@ export class ProdukDetailPageComponent implements OnInit {
             ]
           },
           {
-            name: 'Durian Montong',
+            name: 'Durian Kane',
             attributes: [
               { label: 'Rasa', value: 'Manis dominan dengan sedikit rasa pahit' },
               { label: 'Aroma', value: 'Lebih ringan dibanding Musang King' },
@@ -249,9 +258,9 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: 'Sekitar 80 hektar lahan perkebunan kopi arabika dikelola oleh kelompok tani di dataran tinggi Desa Belok/Sidan.',
-        distribution: 'Perkebunan kopi tersebar di area lereng pegunungan Kecamatan Petang yang memiliki ketinggian dan kemiringan lahan ideal.',
-        soilClimate: 'Tanah andosol yang subur serta iklim sejuk dengan suhu stabil dan curah hujan merata mendukung pertumbuhan biji kopi arabika berkualitas tinggi.'
+        hectares: 'Sekitar 454 hektar lahan perkebunan kopi arabika dikelola oleh kelompok tani di dataran tinggi Desa Belok/Sidan.',
+        distribution: 'Perkebunan kopi tersebar di seluruh banjar desa Belok/Sidan yang memiliki ketinggian dan kemiringan lahan ideal.',
+        soilClimate: 'Tanah andosol yang subur serta iklim sejuk dengan suhu stabil dan curah hujan merata mendukung pertumbuhan biji kopi berkualitas tinggi.'
       },
       varietyComparison: {
         title: 'Kopi Arabika vs Kopi Robusta',
@@ -265,6 +274,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Bentuk Biji', value: 'Lonjong dengan garis tengah bergelombang' },
               { label: 'Kadar Kafein', value: 'Lebih rendah, sekitar 1-1,5%' },
               { label: 'Habitat Tumbuh', value: 'Optimal di dataran tinggi 700-2000 mdpl dengan suhu sejuk' }
+              //{ label: ''}
             ]
           },
           {
@@ -285,183 +295,351 @@ export class ProdukDetailPageComponent implements OnInit {
         'Mendukung ekonomi petani lokal'
       ]
     },
+
     {
       slug: 'bunga-gemitir',
+
       title: 'Bunga Gemitir',
-      subtitle: 'Pesona alam yang menjadi kebanggaan desa',
+
+      subtitle: 'Bunga khas Bali untuk persembahyangan, upacara adat, dan hiasan',
+
       image: 'assets/images/produk-bunga-gemitir.png',
-      description: 'Bunga Gemitir hadir sebagai produk alam yang menawan dan sering dijadikan simbol keindahan lingkungan Desa Belok/Sidan.',
-      shortDescription: 'Bunga Gemitir (marigold) tumbuh subur di Desa Belok/Sidan dengan warna kuning-oranye yang cerah. Selain bernilai estetika tinggi, bunga ini juga digunakan dalam upacara adat dan memiliki potensi manfaat kesehatan.',
+
+      description: 'Bunga Gemitir (Tagetes) merupakan salah satu bunga yang banyak dimanfaatkan oleh masyarakat Bali sebagai sarana persembahyangan, sesajen, dan berbagai upacara adat keagamaan. Selain memiliki warna kuning dan oranye yang cerah, bunga gemitir juga digunakan sebagai hiasan untuk memperindah canang, upakara, serta berbagai kegiatan masyarakat.',
+
+      shortDescription: 'Bunga Gemitir menjadi bagian penting dalam kehidupan masyarakat Bali, terutama sebagai sarana sembahyang dan pelengkap berbagai upacara adat serta hari raya keagamaan. Warna bunganya yang cerah juga menjadikannya sebagai pilihan untuk hiasan canang, sesajen, dekorasi, dan berbagai kegiatan masyarakat.',
+
       nutritionItems: [
         {
-          title: 'Sumber Antioksidan',
-          description: 'Kandungan lutein dan zeaxanthin pada bunga gemitir berperan sebagai antioksidan alami.'
+          title: 'Sarana Persembahyangan',
+          description: 'Bunga gemitir digunakan sebagai salah satu sarana dalam persembahyangan masyarakat Hindu di Bali dan dapat menjadi bagian dari rangkaian canang serta sesajen.'
         },
+
         {
-          title: 'Mendukung Kesehatan Mata',
-          description: 'Senyawa karotenoid dilaporkan berpotensi membantu menjaga kesehatan mata.'
+          title: 'Hiasan Canang dan Sesajen',
+          description: 'Warna bunga gemitir yang cerah membuatnya banyak digunakan untuk memperindah canang, banten, dan berbagai bentuk sesajen.'
         },
+
         {
-          title: 'Bersifat Anti-inflamasi',
-          description: 'Ekstrak bunga gemitir secara tradisional digunakan untuk membantu meredakan peradangan ringan.'
+          title: 'Upacara Adat dan Hari Raya',
+          description: 'Kebutuhan bunga gemitir meningkat ketika masyarakat melaksanakan upacara adat maupun hari raya keagamaan karena bunga digunakan sebagai bagian dari sarana upacara.'
+        },
+
+        {
+          title: 'Dekorasi Kegiatan Masyarakat',
+          description: 'Selain untuk persembahyangan, bunga gemitir dapat digunakan sebagai bunga hias dan dekorasi dalam berbagai kegiatan masyarakat.'
         }
       ],
+
       farmInfo: {
-        hectares: 'Sekitar 15 hektar lahan budidaya bunga gemitir tersebar di pekarangan dan kebun warga Desa Belok/Sidan.',
-        distribution: 'Penanaman terpusat di dusun-dusun dengan akses sinar matahari yang cukup sepanjang hari untuk mendukung pertumbuhan bunga.',
-        soilClimate: 'Tanah gembur dengan drainase baik serta iklim sejuk dan cerah sangat mendukung pertumbuhan bunga gemitir yang optimal.'
+        hectares: 'Luas budidaya bunga gemitir di Desa Belok/Sidan bersifat fluktuatif dan dapat berubah mengikuti kebutuhan masyarakat serta permintaan pasar.',
+
+        distribution: 'Bunga gemitir dibudidayakan oleh petani pada lahan pertanian dan kebun warga dengan kondisi lingkungan yang mendukung pertumbuhan tanaman.',
+
+        soilClimate: 'Tanaman gemitir dapat tumbuh pada berbagai kondisi tanah dan umumnya berkembang baik pada tanah dengan drainase yang baik serta mendapatkan cahaya matahari yang cukup.'
       },
+
       varietyComparison: {
-        title: 'Gemitir Kuning vs Gemitir Oranye',
-        description: 'Kedua warna gemitir ini sama-sama populer, namun memiliki perbedaan pada bentuk kelopak, aroma, dan kegunaannya.',
+        title: 'Bunga Antasena vs Bunga Garuda',
+
+        description: 'Bunga Gemitir di Desa Belok/Sidan memiliki beberapa varietas yang dibudidayakan oleh petani, di antaranya Bunga Antasena dan Bunga Garuda. Perbedaan kedua varietas dapat dilihat terutama dari warna bunga dan tinggi tanaman, sedangkan pemanfaatannya pada dasarnya tetap sama, yaitu sebagai bunga hias serta sarana persembahyangan dan upacara adat.',
+
         variants: [
           {
-            name: 'Gemitir Kuning',
+            name: 'Bunga Antasena',
+
             attributes: [
-              { label: 'Aroma', value: 'Lebih lembut dan segar' },
-              { label: 'Bentuk & Tekstur', value: 'Kelopak rapat dan bulat sempurna' },
-              { label: 'Warna', value: 'Kuning cerah keemasan' },
-              { label: 'Kegunaan', value: 'Umum dipakai untuk canang dan dekorasi sehari-hari' }
+              {
+                label: 'Warna Bunga',
+                value: 'Karakteristik warna bunga mengikuti ciri varietas Antasena yang dibudidayakan oleh petani Desa Belok/Sidan.'
+              },
+
+              {
+                label: 'Tinggi Tanaman',
+                value: 'Memiliki karakteristik tinggi tanaman yang menjadi salah satu pembeda dari varietas Garuda.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Digunakan sebagai bunga hias, sarana sembahyang, canang, sesajen, serta berbagai kegiatan upacara adat dan keagamaan.'
+              }
             ]
           },
+
           {
-            name: 'Gemitir Oranye',
+            name: 'Bunga Garuda',
+
             attributes: [
-              { label: 'Aroma', value: 'Lebih kuat dan khas' },
-              { label: 'Bentuk & Tekstur', value: 'Kelopak lebih besar dan agak mekar terbuka' },
-              { label: 'Warna', value: 'Oranye pekat kemerahan' },
-              { label: 'Kegunaan', value: 'Sering dipakai pada upacara adat karena warnanya mencolok' }
+              {
+                label: 'Warna Bunga',
+                value: 'Memiliki karakteristik warna bunga yang menjadi salah satu pembeda dari varietas Antasena.'
+              },
+
+              {
+                label: 'Tinggi Tanaman',
+                value: 'Memiliki karakteristik tinggi tanaman yang menjadi salah satu pembeda dari varietas Antasena.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Digunakan sebagai bunga hias, sarana sembahyang, canang, sesajen, serta berbagai kegiatan upacara adat dan keagamaan.'
+              }
             ]
           }
         ]
       },
+
       highlights: [
-        'Menonjolkan identitas budaya dan alam desa',
-        'Memiliki nilai estetika yang tinggi',
-        'Dapat dikembangkan sebagai produk wisata dan kerajinan'
+        'Digunakan sebagai sarana persembahyangan masyarakat Bali',
+        'Menjadi bagian dari canang, sesajen, dan upakara',
+        'Banyak digunakan dalam upacara adat dan hari raya keagamaan',
+        'Memiliki nilai estetika sebagai bunga hias dan dekorasi',
+        'Kebutuhan budidaya dapat meningkat menjelang upacara dan hari raya'
       ]
     },
-
     {
       slug: 'alpukat',
+
       title: 'Alpukat',
-      subtitle: 'Buah hijau yang kaya nutrisi dan tekstur lembut',
+
+      subtitle: 'Buah kaya nutrisi dengan daging lembut dan rasa khas',
+
       image: 'assets/images/produk-alpukat.png',
-      description: 'Alpukat Desa Belok/Sidan dipanen matang sempurna, menawarkan tekstur lembut dan cita rasa yang kaya untuk konsumsi segar maupun olahan.',
-      shortDescription: 'Alpukat Desa Belok/Sidan tumbuh subur di dataran tinggi, menghasilkan buah dengan daging lembut, warna hijau kekuningan, dan rasa creamy yang khas. Dipanen pada tingkat kematangan optimal untuk kualitas terbaik.',
+
+      description: 'Alpukat (Persea americana) merupakan buah yang dikenal memiliki daging lembut dengan kandungan lemak yang tinggi. Buah ini memiliki beragam bentuk, warna kulit, ukuran, dan karakteristik rasa tergantung pada varietasnya. Alpukat dapat dikonsumsi secara langsung maupun diolah menjadi berbagai jenis makanan dan minuman.',
+
+      shortDescription: 'Alpukat Desa Belok/Sidan dibudidayakan pada lingkungan yang mendukung pertumbuhan tanaman alpukat. Buah alpukat memiliki daging yang lembut dengan kandungan lemak tak jenuh tunggal, serat, vitamin, dan mineral. Karakteristik buah dapat berbeda berdasarkan varietas, seperti Alpukat Mentega dan Alpukat Hass.',
+
       nutritionItems: [
         {
-          title: 'Kaya Lemak Sehat',
-          description: 'Kandungan lemak tak jenuh tunggal pada alpukat baik untuk kesehatan jantung.'
+          title: 'Kaya Lemak Tak Jenuh',
+          description: 'Alpukat merupakan sumber lemak tak jenuh tunggal yang menjadi salah satu karakteristik utama kandungan gizinya.'
         },
+
         {
-          title: 'Sumber Vitamin E',
-          description: 'Vitamin E dan antioksidan lain membantu menjaga kesehatan kulit dan melawan radikal bebas.'
+          title: 'Sumber Serat',
+          description: 'Alpukat mengandung serat pangan yang dapat menjadi bagian dari pola makan bergizi seimbang.'
         },
+
         {
-          title: 'Mendukung Pencernaan',
-          description: 'Serat alami pada alpukat membantu melancarkan sistem pencernaan.'
+          title: 'Mengandung Vitamin dan Mineral',
+          description: 'Alpukat mengandung berbagai vitamin dan mineral, termasuk vitamin E, vitamin K, kalium, dan magnesium.'
         },
+
         {
-          title: 'Sumber Kalium',
-          description: 'Kandungan kalium membantu menjaga keseimbangan cairan tubuh dan tekanan darah.'
+          title: 'Mengandung Antioksidan',
+          description: 'Alpukat mengandung berbagai senyawa seperti karotenoid yang berkontribusi terhadap nilai gizinya.'
         }
       ],
+
       farmInfo: {
         hectares: 'Sekitar 35 hektar lahan perkebunan alpukat dikelola oleh petani di dataran tinggi Desa Belok/Sidan.',
-        distribution: 'Tanaman alpukat tersebar di kebun-kebun warga dan lahan perbukitan Kecamatan Petang dengan drainase yang baik.',
-        soilClimate: 'Tanah subur berstruktur gembur serta iklim sejuk dengan curah hujan cukup mendukung pertumbuhan pohon alpukat yang produktif.'
+
+        distribution: 'Tanaman alpukat tersebar di kebun-kebun warga dan lahan perbukitan Kecamatan Petang dengan kondisi lahan yang mendukung pertumbuhan tanaman.',
+
+        soilClimate: 'Lingkungan dengan tanah yang subur, drainase yang baik, serta kondisi iklim yang sesuai mendukung pertumbuhan tanaman alpukat dan produksi buah.'
       },
+
       varietyComparison: {
-        title: 'Alpukat Mentega vs Alpukat Ijo Panjang',
-        description: 'Dua varietas alpukat lokal populer ini punya perbedaan pada tekstur daging, rasa, dan bentuk buahnya.',
+        title: 'Alpukat Mentega vs Alpukat Hass',
+
+        description: 'Alpukat memiliki berbagai varietas dengan karakteristik buah yang berbeda. Alpukat Mentega dikenal dengan daging buah yang lembut dan bersih ketika matang, sedangkan Alpukat Hass memiliki kulit bertekstur kasar yang berubah menjadi ungu kehitaman saat matang serta daging berwarna hijau pucat hingga kuning-hijau.',
+
         variants: [
           {
             name: 'Alpukat Mentega',
+
             attributes: [
-              { label: 'Rasa', value: 'Creamy legit, sedikit manis seperti mentega' },
-              { label: 'Bentuk & Tekstur', value: 'Daging tebal, lembut, dan halus seperti mentega' },
-              { label: 'Warna', value: 'Kulit hijau tua, daging kuning mentega' },
-              { label: 'Bentuk Buah', value: 'Bulat lonjong dengan biji kecil' }
+              {
+                label: 'Tekstur',
+                value: 'Daging buah lembut, halus, dan bersih ketika matang.'
+              },
+
+              {
+                label: 'Kulit',
+                value: 'Kulit dapat berubah dari hijau menuju hijau keunguan hingga ungu ketika matang.'
+              },
+
+              {
+                label: 'Karakteristik Buah',
+                value: 'Memiliki daging buah yang lembut dan dikenal dengan karakter rasa yang legit ketika matang.'
+              },
+
+              {
+                label: 'Kondisi Lingkungan',
+                value: 'Lebih sesuai dikembangkan pada kondisi dataran yang lebih rendah dengan lingkungan tumbuh yang sesuai.'
+              }
             ]
           },
+
           {
-            name: 'Alpukat Ijo Panjang',
+            name: 'Alpukat Hass',
+
             attributes: [
-              { label: 'Rasa', value: 'Lebih ringan dan sedikit berair' },
-              { label: 'Bentuk & Tekstur', value: 'Daging lebih padat dan sedikit berserat' },
-              { label: 'Warna', value: 'Kulit hijau muda mengkilap, daging hijau kekuningan' },
-              { label: 'Bentuk Buah', value: 'Lonjong memanjang dengan biji lebih besar' }
+              {
+                label: 'Tekstur',
+                value: 'Daging buah memiliki tekstur lembut dan kaya dengan kandungan minyak yang relatif tinggi.'
+              },
+
+              {
+                label: 'Kulit',
+                value: 'Kulit berwarna hijau gelap dan bertekstur kasar, kemudian berubah menjadi ungu kehitaman ketika matang.'
+              },
+
+              {
+                label: 'Karakteristik Buah',
+                value: 'Buah berukuran sekitar 200–300 gram dengan daging berwarna hijau pucat di bagian dekat kulit dan semakin kuning-hijau menuju bagian tengah.'
+              },
+
+              {
+                label: 'Kondisi Lingkungan',
+                value: 'Dapat tumbuh baik pada lingkungan dengan drainase tanah yang baik, sinar matahari yang cukup, serta kondisi yang sejuk. Di Desa Belok/Sidan, varietas Hass dapat ditonjolkan sebagai varietas yang sesuai untuk area dataran tinggi, terutama pada ketinggian sekitar 800 mdpl ke atas.'
+              }
             ]
           }
         ]
       },
+
       highlights: [
-        'Kaya vitamin dan lemak sehat',
-        'Cocok untuk jus, salad, dan paté',
-        'Produk buah lokal dengan permintaan tinggi'
+        'Kaya lemak tak jenuh, serat, vitamin, dan mineral',
+        'Memiliki karakteristik buah yang berbeda berdasarkan varietas',
+        'Alpukat Mentega dikenal dengan daging buah yang lembut dan legit',
+        'Alpukat Hass memiliki kulit kasar yang berubah menjadi ungu kehitaman saat matang',
+        'Cocok dikonsumsi segar maupun diolah menjadi berbagai hidangan'
       ]
     },
-
     {
-      slug: 'cabai-besar',
-      title: 'Cabai Besar',
-      subtitle: 'Cabai besar dengan warna cerah dan rasa pedas sedang',
+      slug: 'cabai',
+
+      title: 'Cabai',
+
+      subtitle: 'Komoditas pedas yang dibudidayakan petani Desa Belok/Sidan',
+
       image: 'assets/images/produk-cabai besar.png',
-      description: 'Cabai besar lokal Desa Belok/Sidan memiliki buah lebih besar dengan rasa pedas sedang, cocok untuk berbagai olahan masakan.',
-      shortDescription: 'Cabai Besar dipanen segar dengan ukuran buah lebih besar dan kulit lebih tebal, sering dipakai sebagai bahan sambal matang dan olahan sayur.',
-      nutritionItems: [
-        { title: 'Sumber Vitamin C', description: 'Cabai segar mengandung vitamin C yang tinggi untuk mendukung sistem imun tubuh.' },
-        { title: 'Mengandung Capsaicin', description: 'Senyawa capsaicin berperan memberikan rasa pedas serta berpotensi membantu meningkatkan metabolisme.' },
-        { title: 'Bersifat Antioksidan', description: 'Kandungan beta-karoten dan flavonoid membantu melawan radikal bebas dalam tubuh.' }
-      ],
-      farmInfo: {
-        hectares: 'Sekitar 25 hektar lahan pertanian cabai dikelola secara musiman oleh petani Desa Belok/Sidan.',
-        distribution: 'Penanaman cabai tersebar di lahan terbuka dengan sinar matahari penuh di beberapa dusun Kecamatan Petang.',
-        soilClimate: 'Tanah gembur dengan drainase baik serta iklim hangat dan curah hujan sedang mendukung produktivitas tanaman cabai.'
-      },
-      varietyComparison: {
-        title: 'Cabai Besar vs Cabai Keriting',
-        description: 'Perbandingan antara cabai besar dan cabai keriting dari segi bentuk, tekstur, dan kegunaan.',
-        variants: [
-          { name: 'Cabai Besar', attributes: [ { label: 'Rasa', value: 'Pedas sedang' }, { label: 'Bentuk & Tekstur', value: 'Buah lebih besar dengan kulit lebih tebal' }, { label: 'Warna', value: 'Merah cerah' }, { label: 'Kegunaan', value: 'Cocok untuk sambal matang, olahan tumis' } ] },
-          { name: 'Cabai Keriting', attributes: [ { label: 'Rasa', value: 'Pedas sedang dengan aroma lebih kuat' }, { label: 'Bentuk & Tekstur', value: 'Lebih panjang dan bergelombang, kulit lebih tebal' }, { label: 'Warna', value: 'Merah cerah mengilap' }, { label: 'Kegunaan', value: 'Umum untuk bumbu dasar masakan dan sambal goreng' } ] }
-        ]
-      },
-      highlights: [ 'Dipanen secara selektif', 'Aroma pedas tajam dan segar', 'Komoditas penting untuk pasar lokal' ]
-    },
-    {
-      slug: 'cabai-rawit',
-      title: 'Cabai Rawit',
-      subtitle: 'Cabai kecil dengan tingkat kepedasan tinggi',
-      image: 'assets/images/produk-cabai rawit.png',
-      description: 'Cabai rawit dikenal karena tingkat kepedasannya yang tinggi dan sering dipakai sebagai bahan utama sambal tradisional.',
-      shortDescription: 'Cabai Rawit dipanen segar, berukuran kecil namun sangat pedas, sering digunakan sebagai penambah cita rasa pedas pada sambal dan masakan lokal.',
-      nutritionItems: [
-        { title: 'Sumber Vitamin C', description: 'Cabai segar mengandung vitamin C yang tinggi untuk mendukung sistem imun tubuh.' },
-        { title: 'Mengandung Capsaicin', description: 'Senyawa capsaicin berperan memberikan rasa pedas serta berpotensi membantu meningkatkan metabolisme.' },
-        { title: 'Bersifat Antioksidan', description: 'Kandungan beta-karoten dan flavonoid membantu melawan radikal bebas dalam tubuh.' }
-      ],
-      farmInfo: {
-        hectares: 'Sekitar 25 hektar lahan pertanian cabai dikelola secara musiman oleh petani Desa Belok/Sidan.',
-        distribution: 'Penanaman cabai tersebar di lahan terbuka dengan sinar matahari penuh di beberapa dusun Kecamatan Petang.',
-        soilClimate: 'Tanah gembur dengan drainase baik serta iklim hangat dan curah hujan sedang mendukung produktivitas tanaman cabai.'
-      },
-      varietyComparison: {
-        title: 'Cabai Rawit vs Cabai Keriting',
-        description: 'Dua jenis cabai yang paling banyak dicari ini punya perbedaan mencolok dari segi tingkat kepedasan, bentuk, dan kegunaannya di dapur.',
-        variants: [
-          { name: 'Cabai Rawit', attributes: [ { label: 'Rasa', value: 'Sangat pedas dan tajam' }, { label: 'Bentuk & Tekstur', value: 'Ukuran kecil, memanjang lurus, kulit tipis' }, { label: 'Warna', value: 'Hijau saat muda, merah menyala saat matang' }, { label: 'Kegunaan', value: 'Cocok untuk sambal dan bumbu pedas' } ] },
-          { name: 'Cabai Keriting', attributes: [ { label: 'Rasa', value: 'Pedas sedang dengan aroma lebih kuat' }, { label: 'Bentuk & Tekstur', value: 'Lebih panjang dan bergelombang, kulit lebih tebal' }, { label: 'Warna', value: 'Merah cerah mengilap' }, { label: 'Kegunaan', value: 'Umum untuk bumbu dasar masakan dan sambal goreng' } ] }
-        ]
-      },
-      highlights: [ 'Dipanen secara selektif', 'Aroma pedas tajam dan segar', 'Komoditas penting untuk pasar lokal' ]
-    },
-    
 
+      description: 'Cabai merupakan salah satu komoditas pertanian yang dibudidayakan oleh masyarakat Desa Belok/Sidan. Jenis cabai yang banyak dibahas meliputi cabai besar dan cabai rawit. Keduanya memiliki karakteristik buah, tingkat kepedasan, serta pemanfaatan yang berbeda dalam kebutuhan pangan sehari-hari.',
+
+      shortDescription: 'Cabai besar banyak dibudidayakan di Banjar Bon, sedangkan cabai rawit ditanam di seluruh banjar di Desa Belok/Sidan. Kedua jenis cabai dimanfaatkan sebagai bahan masakan dan bumbu, dengan perbedaan utama pada ukuran buah, bentuk, dan tingkat kepedasannya.',
+
+      nutritionItems: [
+        {
+          title: 'Mengandung Capsaicin',
+          description: 'Capsaicin merupakan senyawa yang memberikan rasa pedas khas pada cabai.'
+        },
+
+        {
+          title: 'Sumber Vitamin',
+          description: 'Cabai mengandung berbagai vitamin dan senyawa yang menjadi bagian dari nilai gizi buah cabai.'
+        },
+
+        {
+          title: 'Mengandung Senyawa Antioksidan',
+          description: 'Cabai mengandung berbagai senyawa seperti karotenoid dan vitamin yang berkontribusi terhadap nilai gizinya.'
+        }
+      ],
+
+      farmInfo: {
+        largeChili: {
+          title: 'Budidaya Cabai Besar',
+          hectares: 'Data luas lahan cabai besar disajikan secara khusus berdasarkan data petani dan perkebunan cabai besar di Desa Belok/Sidan.',
+          distribution: 'Cabai besar banyak dibudidayakan oleh petani di Banjar Bon.',
+          soilClimate: 'Tanaman cabai membutuhkan lingkungan tumbuh dengan kondisi tanah yang mendukung pertumbuhan, drainase yang baik, serta mendapatkan cahaya matahari yang cukup.'
+        },
+
+        birdEyeChili: {
+          title: 'Budidaya Cabai Rawit',
+          hectares: 'Data luas lahan cabai rawit disajikan secara terpisah berdasarkan data petani dan perkebunan cabai rawit di Desa Belok/Sidan.',
+          distribution: 'Cabai rawit dibudidayakan di seluruh banjar yang terdapat di Desa Belok/Sidan.',
+          soilClimate: 'Cabai rawit dapat dibudidayakan pada lahan dengan kondisi tanah yang mendukung pertumbuhan tanaman serta mendapatkan cahaya matahari yang cukup.'
+        }
+      },
+
+      varietyComparison: {
+        title: 'Cabai Besar vs Cabai Rawit',
+
+        description: 'Cabai besar dan cabai rawit merupakan dua jenis cabai yang dibudidayakan di Desa Belok/Sidan. Keduanya sama-sama digunakan sebagai bahan pangan dan bumbu masakan, tetapi memiliki perbedaan terutama pada ukuran buah, bentuk, dan tingkat kepedasan.',
+
+        variants: [
+          {
+            name: 'Cabai Besar',
+
+            attributes: [
+              {
+                label: 'Ukuran',
+                value: 'Memiliki ukuran buah yang relatif lebih besar dibandingkan cabai rawit.'
+              },
+
+              {
+                label: 'Bentuk',
+                value: 'Buah umumnya berbentuk memanjang dengan ukuran yang lebih besar.'
+              },
+
+              {
+                label: 'Tingkat Kepedasan',
+                value: 'Memiliki tingkat kepedasan yang bervariasi tergantung jenis dan kultivarnya.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Digunakan sebagai bahan masakan, bumbu, sambal, dan berbagai olahan pangan.'
+              },
+
+              {
+                label: 'Budidaya di Desa',
+                value: 'Banyak dibudidayakan oleh petani di Banjar Bon.'
+              }
+            ]
+          },
+
+          {
+            name: 'Cabai Rawit',
+
+            attributes: [
+              {
+                label: 'Ukuran',
+                value: 'Memiliki buah yang relatif kecil dibandingkan cabai besar.'
+              },
+
+              {
+                label: 'Bentuk',
+                value: 'Buah umumnya berukuran kecil dan memanjang dengan bentuk yang dapat bervariasi.'
+              },
+
+              {
+                label: 'Tingkat Kepedasan',
+                value: 'Dikenal memiliki rasa yang sangat pedas dan menjadi salah satu ciri khas cabai rawit.'
+              },
+
+              {
+                label: 'Warna',
+                value: 'Warna buah dapat berubah sesuai tingkat kematangan, dari hijau hingga merah.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Banyak digunakan sebagai bahan sambal, bumbu masakan, dan berbagai olahan makanan.'
+              },
+
+              {
+                label: 'Budidaya di Desa',
+                value: 'Dibudidayakan di seluruh banjar di Desa Belok/Sidan.'
+              }
+            ]
+          }
+        ]
+      },
+
+      highlights: [
+        'Cabai besar banyak dibudidayakan di Banjar Bon',
+        'Cabai rawit ditanam di seluruh banjar Desa Belok/Sidan',
+        'Memiliki karakteristik ukuran dan tingkat kepedasan yang berbeda',
+        'Digunakan sebagai bumbu dan bahan berbagai olahan pangan',
+        'Menjadi salah satu komoditas pertanian masyarakat Desa Belok/Sidan'
+      ]
+    },
     {
       slug: 'jeruk-siam-madu',
-      title: 'Jeruk Siam',
+      title: 'Jeruk',
       subtitle: 'Jeruk manis unik dengan aroma harum khas',
       image: 'assets/images/produk-jeruk siam madu.png',
       description: 'Jeruk Siam memadukan rasa manis dan aroma wangi, ideal sebagai buah segar dan bahan minuman sehat.' ,
@@ -539,14 +717,14 @@ export class ProdukDetailPageComponent implements OnInit {
       farmInfo: {
         hectares: 'Sekitar 150 hektar lahan sawah aktif digunakan untuk budidaya padi di Desa Belok/Sidan.',
         distribution: 'Sawah tersebar mengikuti sistem subak tradisional di dataran dan lembah subur Kecamatan Petang.',
-        soilClimate: 'Tanah aluvial yang subur dengan pengairan sawah yang teratur serta iklim tropis mendukung dua hingga tiga kali masa tanam per tahun.'
+        soilClimate: 'Tanah aluvial yang subur dengan pengairan sawah yang teratur serta iklim tropis mendukung dua kali masa tanam per tahun.'
       },
       varietyComparison: {
         title: 'Beras Putih Pulen vs Beras Merah',
         description: 'Dua jenis beras hasil panen padi desa ini berbeda dari segi rasa, tekstur, dan kandungan gizinya.',
         variants: [
           {
-            name: 'Beras Putih Pulen',
+            name: 'Beras Putih Pelita',
             attributes: [
               { label: 'Rasa', value: 'Pulen dan gurih netral, cocok untuk nasi sehari-hari' },
               { label: 'Bentuk & Tekstur', value: 'Butiran putih bersih, tekstur lembut saat matang' },
@@ -555,7 +733,7 @@ export class ProdukDetailPageComponent implements OnInit {
             ]
           },
           {
-            name: 'Beras Merah',
+            name: 'Beras Putih Ciherang',
             attributes: [
               { label: 'Rasa', value: 'Sedikit pera dengan aroma gurih khas (nutty)' },
               { label: 'Bentuk & Tekstur', value: 'Butiran lebih keras dan berserat' },
@@ -588,11 +766,10 @@ export class ProdukDetailPageComponent implements OnInit {
         soilClimate: 'Tanah subur dan iklim sejuk hingga sedang mendukung pertumbuhan lemon.'
       },
       varietyComparison: {
-        title: 'Lemon vs Jeruk Siam',
-        description: 'Perbandingan sederhana antara lemon dan jeruk siam.',
+        title: 'Lemon California',
+        description: 'Perbandingan sederhana antara lemon California',
         variants: [
-          { name: 'Lemon', attributes: [ { label: 'Rasa', value: 'Asam segar' }, { label: 'Ciri Khas', value: 'Kulit lebih tipis, aroma tajam' } ] },
-          { name: 'Jeruk Siam', attributes: [ { label: 'Rasa', value: 'Manis lembut' }, { label: 'Ciri Khas', value: 'Aroma harum, cocok dimakan langsung' } ] }
+          { name: 'Lemon California', attributes: [ { label: 'Rasa', value: 'Asam segar' }, { label: 'Ciri Khas', value: 'Kulit lebih tipis, aroma tajam' } ] }
         ]
       },
       highlights: [
