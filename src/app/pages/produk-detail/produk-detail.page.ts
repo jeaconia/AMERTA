@@ -177,125 +177,232 @@ export class ProdukDetailPageComponent implements OnInit {
       ]
     },
     {
-      slug: 'durian-musangking',
+      slug: 'durian',
+
       title: 'Durian',
-      subtitle: 'Kelezatan khas dataran tinggi Belok/Sidan',
+
+      subtitle: 'Buah tropis khas Belok/Sidan dengan beragam varietas',
+
       image: 'assets/images/produk-durian.png',
-      description: 'Durian Musangking menjadi primadona karena aroma khasnya yang kuat, daging tebal, dan cita rasa yang lezat.',
-      shortDescription: 'Durian Musangking adalah durian unggulan dengan daging buah tebal berwarna kuning keemasan, tekstur lembut, dan rasa manis legit berpadu sedikit pahit yang khas. Tumbuh subur di dataran tinggi Desa Belok/Sidan dengan aroma yang kuat dan menggoda.',
+
+      description: 'Durian merupakan salah satu komoditas buah yang mulai diminati untuk dibudidayakan di Desa Belok/Sidan. Potensi durian terutama terdapat di Banjar Selantang. Beberapa jenis durian yang terdapat di wilayah Belok/Sidan antara lain Durian Black Thorn, Durian Kane, Durian Musang King, dan durian lokal.',
+
+      shortDescription: 'Durian Kane menjadi salah satu varietas yang lebih populer di Belok/Sidan karena dinilai dapat tumbuh relatif stabil pada berbagai kondisi ketinggian di wilayah tersebut. Selain Durian Kane, terdapat pula Durian Black Thorn, Durian Musang King yang relatif baru masuk, serta berbagai durian lokal yang dibudidayakan oleh masyarakat.',
+
       nutritionItems: [
         {
-          title: 'Sumber Energi Alami',
-          description: 'Kandungan karbohidrat dan gula alami pada durian memberikan asupan energi yang cepat diserap tubuh.'
+          title: 'Sumber Energi',
+          description: 'Durian mengandung karbohidrat dan gula alami yang dapat menjadi sumber energi dari makanan.'
         },
+
         {
-          title: 'Kaya Antioksidan',
-          description: 'Senyawa flavonoid dan vitamin C membantu melawan radikal bebas serta menjaga daya tahan tubuh.'
+          title: 'Mengandung Vitamin dan Mineral',
+          description: 'Daging buah durian mengandung berbagai vitamin dan mineral yang berkontribusi terhadap nilai gizinya.'
         },
+
         {
-          title: 'Mendukung Kesehatan Tulang',
-          description: 'Kandungan kalium dan mineral lain berperan dalam menjaga kepadatan dan kekuatan tulang.'
+          title: 'Mengandung Serat',
+          description: 'Durian mengandung serat pangan yang menjadi bagian dari kandungan gizi buah.'
         },
+
         {
-          title: 'Sumber Serat',
-          description: 'Serat alami pada daging durian membantu melancarkan proses pencernaan.'
+          title: 'Mengandung Senyawa Antioksidan',
+          description: 'Durian mengandung vitamin dan berbagai senyawa yang memiliki aktivitas antioksidan.'
         }
       ],
+
       farmInfo: {
-        hectares: 'Sekitar 45 hektar lahan perkebunan durian tersebar di kawasan berbukit Desa Belok/Sidan.',
-        distribution: 'Sebaran tanaman durian terkonsentrasi di dusun-dusun dengan kontur lahan berbukit dan akses air yang baik di Kecamatan Petang.',
-        soilClimate: 'Tanah vulkanik yang subur dan gembur, dipadukan dengan iklim tropis lembap serta curah hujan tinggi, sangat mendukung pertumbuhan pohon durian berkualitas.'
+        hectares: 'Luas budidaya durian di Desa Belok/Sidan dapat berubah mengikuti perkembangan budidaya dan jumlah petani yang menanam durian.',
+
+        distribution: 'Potensi budidaya durian terutama terdapat di Banjar Selantang. Banjar Bon tidak termasuk wilayah yang memiliki potensi durian sehingga tidak digunakan sebagai wilayah sebaran komoditas ini.',
+
+        soilClimate: 'Tanaman durian membutuhkan kondisi lingkungan yang sesuai, termasuk tanah yang memiliki drainase baik, ketersediaan air yang cukup, serta kondisi iklim yang mendukung pertumbuhan tanaman.'
       },
+
       varietyComparison: {
-        title: 'Durian Musang King vs Durian Kane',
-        description: 'Dua varietas durian unggulan ini punya karakter rasa dan bentuk yang cukup mudah dibedakan.',
+        title: 'Durian Lokal vs Durian Kane',
+
+        description: 'Durian lokal dan Durian Kane merupakan dua jenis yang dapat ditemukan dalam budidaya durian di wilayah Belok/Sidan. Durian Kane menjadi salah satu varietas yang lebih populer di wilayah tersebut karena dinilai dapat tumbuh relatif stabil pada berbagai kondisi ketinggian.',
+
         variants: [
           {
-            name: 'Durian Musang King',
+            name: 'Durian Lokal',
+
             attributes: [
-              { label: 'Rasa', value: 'Manis legit berpadu pahit khas yang kuat di akhir' },
-              { label: 'Aroma', value: 'Sangat tajam dan menyengat' },
-              { label: 'Bentuk & Tekstur', value: 'Daging tebal, biji kecil (kempes), tekstur creamy lembut' },
-              { label: 'Warna', value: 'Kuning keemasan pekat' }
+              {
+                label: 'Karakteristik',
+                value: 'Memiliki karakter buah yang dapat berbeda-beda sesuai dengan pohon dan varietas lokal yang dibudidayakan oleh masyarakat.'
+              },
+
+              {
+                label: 'Rasa',
+                value: 'Karakter rasa bervariasi, mulai dari manis hingga memiliki perpaduan rasa khas masing-masing durian lokal.'
+              },
+
+              {
+                label: 'Tekstur',
+                value: 'Tekstur daging buah dapat bervariasi sesuai dengan jenis dan tingkat kematangan buah.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Dikonsumsi secara langsung dan dapat menjadi bagian dari hasil perkebunan serta produk buah lokal masyarakat.'
+              }
             ]
           },
+
           {
             name: 'Durian Kane',
+
             attributes: [
-              { label: 'Rasa', value: 'Manis dominan dengan sedikit rasa pahit' },
-              { label: 'Aroma', value: 'Lebih ringan dibanding Musang King' },
-              { label: 'Bentuk & Tekstur', value: 'Daging tebal namun lebih kering dan padat' },
-              { label: 'Warna', value: 'Kuning pucat hingga kuning muda' }
+              {
+                label: 'Popularitas',
+                value: 'Menjadi salah satu varietas durian yang lebih populer di wilayah Belok/Sidan dibandingkan Musang King.'
+              },
+
+              {
+                label: 'Karakteristik Tanaman',
+                value: 'Memiliki karakter pohon yang relatif kecil sehingga dapat menjadi pilihan untuk budidaya pada lahan yang sesuai.'
+              },
+
+              {
+                label: 'Karakteristik Buah',
+                value: 'Dikenal mampu menghasilkan buah berukuran besar meskipun memiliki ukuran pohon yang relatif kecil.'
+              },
+
+              {
+                label: 'Kondisi Tumbuh',
+                value: 'Dinilai dapat tumbuh relatif stabil pada berbagai kondisi ketinggian di wilayah Belok/Sidan.'
+              }
             ]
           }
         ]
       },
+
       highlights: [
-        'Diolah dan dipanen dengan standar kebersihan ketat',
-        'Bisa menjadi pilihan produk premium untuk wisata kuliner',
-        'Mewakili kekayaan hasil bumi desa'
+        'Potensi durian terutama terdapat di Banjar Selantang',
+        'Durian Kane menjadi salah satu varietas yang lebih populer di Belok/Sidan',
+        'Terdapat Durian Black Thorn, Kane, Musang King, dan durian lokal',
+        'Musang King relatif baru masuk ke wilayah Belok/Sidan',
+        'Durian menjadi salah satu komoditas yang mulai diminati petani di Belok/Sidan'
       ]
     },
     {
-      slug: 'kopi-arabika',
-      title: 'Kopi Arabika',
-      subtitle: 'Rasa khas dari lereng tinggi Belok/Sidan',
+      slug: 'kopi',
+
+      title: 'Kopi',
+
+      subtitle: 'Komoditas kopi dengan beragam klon Arabika dari Desa Belok/Sidan',
+
       image: 'assets/images/produk-kopi.png',
-      description: 'Kopi Arabika yang tumbuh di kawasan dataran tinggi menghasilkan citarasa lembut dengan aroma yang khas.',
-      shortDescription: 'Kopi Arabika Desa Belok/Sidan tumbuh di lereng pegunungan dengan udara sejuk, menghasilkan biji kopi beraroma harum, rasa lembut, dan tingkat keasaman yang seimbang. Diproses secara tradisional untuk menjaga cita rasa khasnya.',
+
+      description: 'Kopi merupakan salah satu komoditas utama Desa Belok/Sidan yang dibudidayakan oleh masyarakat di berbagai wilayah desa. Jenis kopi yang menjadi perbandingan utama adalah Kopi Arabika dan Kopi Robusta. Kopi Arabika terdapat di seluruh banjar di Desa Belok/Sidan, dengan berbagai klon yang berbeda pada masing-masing wilayah.',
+
+      shortDescription: 'Kopi Arabika menjadi salah satu komoditas penting Desa Belok/Sidan dan ditemukan di seluruh banjar. Berbagai klon Arabika seperti Homasti, Kopyol B1, Kopyol B2, Yellow Bourbon, Yellow Caturra, Kopi Gayo, Sigara Rutang, Lini S 795, dan USDA 762 telah teridentifikasi dibudidayakan di wilayah desa. Selain Arabika, terdapat pula Kopi Robusta yang umumnya sesuai untuk kondisi dataran yang lebih rendah.',
+
       nutritionItems: [
         {
-          title: 'Sumber Antioksidan',
-          description: 'Kandungan asam klorogenat pada kopi berperan sebagai antioksidan yang membantu melawan radikal bebas.'
+          title: 'Mengandung Kafein',
+          description: 'Kopi mengandung kafein yang merupakan senyawa alami yang dapat memberikan efek stimulan terhadap sistem saraf pusat.'
         },
+
         {
-          title: 'Meningkatkan Fokus',
-          description: 'Kafein alami membantu meningkatkan kewaspadaan dan konsentrasi secara sementara.'
+          title: 'Mengandung Antioksidan',
+          description: 'Kopi mengandung berbagai senyawa seperti asam klorogenat yang berkontribusi terhadap aktivitas antioksidan.'
         },
+
         {
-          title: 'Mendukung Metabolisme',
-          description: 'Senyawa aktif dalam kopi berpotensi membantu meningkatkan laju metabolisme tubuh.'
+          title: 'Memiliki Senyawa Bioaktif',
+          description: 'Selain kafein, kopi mengandung berbagai senyawa bioaktif yang terbentuk secara alami pada biji kopi.'
         }
       ],
+
       farmInfo: {
-        hectares: 'Sekitar 454 hektar lahan perkebunan kopi arabika dikelola oleh kelompok tani di dataran tinggi Desa Belok/Sidan.',
-        distribution: 'Perkebunan kopi tersebar di seluruh banjar desa Belok/Sidan yang memiliki ketinggian dan kemiringan lahan ideal.',
-        soilClimate: 'Tanah andosol yang subur serta iklim sejuk dengan suhu stabil dan curah hujan merata mendukung pertumbuhan biji kopi berkualitas tinggi.'
+        hectares: 'Luas budidaya kopi di Desa Belok/Sidan disesuaikan dengan besaran luasan yang diperoleh dari data lapangan.',
+
+        distribution: 'Kopi Arabika terdapat di seluruh banjar di Desa Belok/Sidan. Masing-masing wilayah dapat memiliki klon Arabika yang berbeda sesuai dengan jenis yang dibudidayakan oleh petani. Sebaran Kopi Robusta dicatat secara terpisah berdasarkan data lapangan.',
+
+        soilClimate: 'Kopi Arabika umumnya dibudidayakan pada wilayah dengan ketinggian sekitar 500 mdpl ke atas dan kondisi lingkungan yang lebih sejuk. Kopi Robusta umumnya lebih sesuai pada wilayah dengan ketinggian sekitar 500 mdpl ke bawah dan memiliki toleransi yang lebih baik terhadap kondisi lingkungan yang lebih hangat.'
       },
+
       varietyComparison: {
         title: 'Kopi Arabika vs Kopi Robusta',
-        description: 'Dua jenis kopi paling populer ini memiliki perbedaan mencolok dari segi rasa, bentuk biji, hingga tempat tumbuhnya.',
+
+        description: 'Kopi Arabika dan Kopi Robusta merupakan dua jenis kopi yang dibudidayakan di wilayah Belok/Sidan. Keduanya memiliki karakteristik tanaman, biji, rasa, serta kondisi tumbuh yang berbeda. Kopi Arabika menjadi perhatian khusus karena berbagai klonnya ditemukan di seluruh banjar dengan karakteristik yang dapat berbeda antarwilayah.',
+
         variants: [
           {
             name: 'Kopi Arabika',
+
             attributes: [
-              { label: 'Rasa', value: 'Lembut, sedikit asam segar dengan sentuhan rasa buah atau bunga' },
-              { label: 'Aroma', value: 'Harum kompleks, cenderung floral dan fruity' },
-              { label: 'Bentuk Biji', value: 'Lonjong dengan garis tengah bergelombang' },
-              { label: 'Kadar Kafein', value: 'Lebih rendah, sekitar 1-1,5%' },
-              { label: 'Habitat Tumbuh', value: 'Optimal di dataran tinggi 700-2000 mdpl dengan suhu sejuk' }
-              //{ label: ''}
+              {
+                label: 'Karakteristik',
+                value: 'Memiliki cita rasa dan aroma yang cenderung lebih kompleks dengan tingkat keasaman yang dapat berbeda berdasarkan varietas, lingkungan, dan pengolahan.'
+              },
+
+              {
+                label: 'Bentuk Biji',
+                value: 'Biji umumnya berbentuk lebih lonjong dengan garis tengah yang berkelok atau bergelombang.'
+              },
+
+              {
+                label: 'Ketinggian',
+                value: 'Umumnya dibudidayakan pada wilayah dengan ketinggian sekitar 500 mdpl ke atas dan kondisi yang relatif sejuk.'
+              },
+
+              {
+                label: 'Sebaran',
+                value: 'Dibudidayakan di seluruh banjar di Desa Belok/Sidan.'
+              },
+
+              {
+                label: 'Klon yang Teridentifikasi',
+                value: 'Homasti, Kopyol B1, Kopyol B2, Yellow Bourbon, Yellow Caturra, Kopi Gayo, Sigara Rutang, Lini S 795, dan USDA 762.'
+              }
             ]
           },
+
           {
             name: 'Kopi Robusta',
+
             attributes: [
-              { label: 'Rasa', value: 'Lebih pahit, kuat, dan cenderung earthy' },
-              { label: 'Aroma', value: 'Lebih tajam, menyerupai kacang panggang' },
-              { label: 'Bentuk Biji', value: 'Bulat dengan garis tengah lurus' },
-              { label: 'Kadar Kafein', value: 'Lebih tinggi, sekitar 2-2,7%' },
-              { label: 'Habitat Tumbuh', value: 'Dapat tumbuh di dataran rendah hingga menengah, lebih tahan hama' }
+              {
+                label: 'Karakteristik',
+                value: 'Cenderung memiliki cita rasa lebih kuat dan pahit dibandingkan Arabika serta karakter rasa yang lebih sederhana.'
+              },
+
+              {
+                label: 'Bentuk Biji',
+                value: 'Biji umumnya lebih bulat dengan garis tengah yang relatif lurus.'
+              },
+
+              {
+                label: 'Ketinggian',
+                value: 'Umumnya dibudidayakan pada wilayah dengan ketinggian sekitar 500 mdpl ke bawah dan kondisi yang lebih hangat.'
+              },
+
+              {
+                label: 'Sebaran',
+                value: 'Sebaran Robusta di Desa Belok/Sidan disajikan berdasarkan data wilayah dan petani yang telah teridentifikasi.'
+              },
+
+              {
+                label: 'Klon',
+                value: 'Klon Robusta yang dibudidayakan di wilayah Belok/Sidan belum teridentifikasi secara pasti sehingga belum dijabarkan berdasarkan klon.'
+              }
             ]
           }
         ]
       },
+
       highlights: [
-        'Tumbuh di lahan pegunungan yang cocok untuk kopi',
-        'Rasa halus dan aroma menarik',
-        'Mendukung ekonomi petani lokal'
+        'Kopi merupakan salah satu komoditas utama Desa Belok/Sidan',
+        'Kopi Arabika terdapat di seluruh banjar',
+        'Memiliki beragam klon Arabika yang berbeda antarwilayah',
+        'Klon Arabika yang teridentifikasi meliputi Homasti, Kopyol B1, Kopyol B2, Yellow Bourbon, Yellow Caturra, Kopi Gayo, Sigara Rutang, Lini S 795, dan USDA 762',
+        'Kopi Robusta dibudidayakan pada wilayah dengan kondisi yang sesuai, tetapi klonnya belum teridentifikasi secara pasti'
       ]
     },
-
     {
       slug: 'bunga-gemitir',
 
@@ -638,153 +745,395 @@ export class ProdukDetailPageComponent implements OnInit {
       ]
     },
     {
-      slug: 'jeruk-siam-madu',
+      slug: 'jeruk',
+
       title: 'Jeruk',
-      subtitle: 'Jeruk manis unik dengan aroma harum khas',
+
+      subtitle: 'Komoditas unggulan Desa Belok/Sidan dengan beragam varietas',
+
       image: 'assets/images/produk-jeruk siam madu.png',
-      description: 'Jeruk Siam memadukan rasa manis dan aroma wangi, ideal sebagai buah segar dan bahan minuman sehat.' ,
-      shortDescription: 'Jeruk Siam Desa Belok/Sidan memiliki rasa manis dominan dengan aroma harum yang khas, kulit tipis mudah dikupas, dan tekstur daging buah yang lembut berair.',
+
+      description: 'Jeruk merupakan salah satu komoditas andalan Desa Belok/Sidan yang dibudidayakan oleh masyarakat di berbagai wilayah desa. Jenis jeruk yang terdapat di wilayah ini meliputi Jeruk Siam, Jeruk Berastagi, Jeruk Selayak, Jeruk RGL, dan Jeruk Siam Madu. Keberagaman varietas tersebut menghasilkan karakter buah yang berbeda dan menjadi salah satu potensi hasil pertanian Desa Belok/Sidan.',
+
+      shortDescription: 'Jeruk menjadi salah satu komoditas utama Desa Belok/Sidan dengan total budidaya mencapai 267.000 pohon atau setara dengan 267 hektar. Budidayanya tersebar di Banjar Bon, Banjar Jempanang, Sekarmuti, Belok, dan Lawak. Produksi jeruk di wilayah ini juga dinilai memiliki keunggulan dibandingkan produksi jeruk di Kintamani.',
+
       nutritionItems: [
         {
-          title: 'Sumber Vitamin C Alami',
-          description: 'Kandungan vitamin C yang tinggi mendukung sistem kekebalan tubuh.'
+          title: 'Sumber Vitamin C',
+          description: 'Jeruk mengandung vitamin C yang menjadi salah satu kandungan gizi utama buah jeruk.'
         },
+
         {
-          title: 'Rendah Kalori',
-          description: 'Cocok dikonsumsi sebagai camilan sehat karena kandungan kalorinya yang rendah.'
+          title: 'Mengandung Air',
+          description: 'Kandungan air yang tinggi membuat jeruk terasa segar dan cocok dikonsumsi sebagai buah segar maupun diolah menjadi minuman.'
         },
+
         {
-          title: 'Mengandung Folat',
-          description: 'Kandungan folat pada jeruk mendukung pembentukan sel darah merah yang sehat.'
+          title: 'Mengandung Serat',
+          description: 'Jeruk mengandung serat pangan yang menjadi bagian dari nilai gizi buah.'
+        },
+
+        {
+          title: 'Mengandung Senyawa Bioaktif',
+          description: 'Jeruk mengandung berbagai senyawa seperti flavonoid dan karotenoid yang berkontribusi terhadap nilai gizinya.'
         }
       ],
+
       farmInfo: {
-        hectares: 'Sekitar 38 hektar lahan perkebunan Jeruk Siam dikelola oleh petani setempat.',
-        distribution: 'Sebaran tanaman terkonsentrasi di dusun-dusun dengan ketinggian sedang dan paparan sinar matahari yang cukup.',
-        soilClimate: 'Tanah subur dengan pH seimbang serta iklim sejuk dan curah hujan merata mendukung rasa manis khas Jeruk Siam.'
+        hectares: 'Total luas budidaya jeruk di Desa Belok/Sidan mencapai 267.000 pohon atau setara dengan 267 hektar.',
+
+        distribution: 'Budidaya jeruk banyak terdapat di Banjar Bon, Banjar Jempanang, Sekarmuti, Belok, dan Lawak.',
+
+        soilClimate: 'Jenis-jenis jeruk yang dibudidayakan pada dasarnya memiliki kebutuhan lingkungan yang relatif serupa, yaitu tanah dengan drainase baik, ketersediaan air yang cukup, serta paparan sinar matahari yang mendukung pertumbuhan dan pembentukan buah.'
       },
+
       varietyComparison: {
-        title: 'Perbandingan Jenis Jeruk Siam',
-        description: 'Perbandingan antara Jeruk Siam biasa dan Jeruk Siam Madu.',
+        title: 'Perbandingan Jenis Jeruk',
+
+        description: 'Desa Belok/Sidan memiliki beberapa jenis jeruk yang dibudidayakan oleh masyarakat. Empat jenis yang menjadi perbandingan utama adalah Jeruk Siam, Jeruk Siam Madu, Jeruk Selayak, dan Jeruk RGL. Masing-masing memiliki karakteristik buah dan keunggulan yang berbeda.',
+
         variants: [
           {
             name: 'Jeruk Siam',
+
             attributes: [
-              { label: 'Rasa', value: 'Manis dominan dengan aroma harum khas' },
-              { label: 'Bentuk & Tekstur', value: 'Kulit tipis dan mudah dikupas, daging lembut' },
-              { label: 'Warna', value: 'Kulit oranye cerah merata' },
-              { label: 'Ciri Khas', value: 'Praktis dikonsumsi langsung sebagai buah meja' }
+              {
+                label: 'Rasa',
+                value: 'Umumnya memiliki rasa manis dengan tingkat keasaman yang dapat berbeda sesuai kondisi buah dan tingkat kematangan.'
+              },
+
+              {
+                label: 'Kulit',
+                value: 'Kulit relatif tipis dan mudah dikupas ketika buah telah matang.'
+              },
+
+              {
+                label: 'Daging Buah',
+                value: 'Memiliki daging buah yang berair dan mudah dikonsumsi secara langsung.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Cocok dikonsumsi sebagai buah segar maupun digunakan sebagai bahan minuman dan olahan makanan.'
+              }
             ]
           },
+
           {
             name: 'Jeruk Siam Madu',
+
             attributes: [
-              { label: 'Rasa', value: 'Manis dominan dengan aroma harum khas' },
-              { label: 'Bentuk & Tekstur', value: 'Kulit tipis dan mudah dikupas, daging lembut' },
-              { label: 'Warna', value: 'Kulit oranye cerah merata' },
-              { label: 'Ciri Khas', value: 'Ukuran lebih kecil, praktis dikonsumsi langsung sebagai buah meja' }
+              {
+                label: 'Rasa',
+                value: 'Dikenal memiliki rasa manis dengan karakter rasa yang menjadi ciri khas Jeruk Siam Madu.'
+              },
+
+              {
+                label: 'Kulit',
+                value: 'Kulit relatif mudah dikupas sehingga praktis untuk dikonsumsi secara langsung.'
+              },
+
+              {
+                label: 'Daging Buah',
+                value: 'Memiliki daging buah yang berair dengan rasa manis.'
+              },
+
+              {
+                label: 'Ciri Khas',
+                value: 'Dikembangkan sebagai salah satu jenis jeruk konsumsi dengan cita rasa manis dan praktis dikonsumsi sebagai buah segar.'
+              }
+            ]
+          },
+
+          {
+            name: 'Jeruk Selayak',
+
+            attributes: [
+              {
+                label: 'Karakteristik',
+                value: 'Merupakan salah satu jenis jeruk yang mulai dibudidayakan dan dikembangkan di wilayah Belok/Sidan.'
+              },
+
+              {
+                label: 'Buah',
+                value: 'Memiliki karakteristik buah jeruk keprok dengan warna kulit yang berubah menjadi kuning atau jingga ketika memasuki kematangan.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Dapat dimanfaatkan sebagai buah konsumsi segar dan menjadi salah satu komoditas pertanian yang dikembangkan oleh petani.'
+              },
+
+              {
+                label: 'Budidaya',
+                value: 'Mulai menunjukkan potensi produksi di wilayah Belok/Sidan dan menjadi bagian dari keberagaman jenis jeruk yang dibudidayakan.'
+              }
+            ]
+          },
+
+          {
+            name: 'Jeruk RGL',
+
+            attributes: [
+              {
+                label: 'Karakteristik',
+                value: 'Jeruk RGL merupakan salah satu jenis jeruk yang dibudidayakan sebagai komoditas pertanian dengan nilai ekonomi.'
+              },
+
+              {
+                label: 'Rasa',
+                value: 'Memiliki karakter rasa jeruk yang segar dengan perpaduan rasa manis dan asam yang dapat dipengaruhi oleh tingkat kematangan.'
+              },
+
+              {
+                label: 'Buah',
+                value: 'Memiliki buah dengan karakteristik yang sesuai untuk konsumsi segar.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Dapat dipasarkan sebagai buah segar dan menjadi salah satu pilihan komoditas jeruk bernilai ekonomi.'
+              }
             ]
           }
         ]
       },
+
       highlights: [
-        'Rasa manis alami',
-        'Aroma buah yang kuat',
-        'Cocok untuk pasar premium'
+        'Salah satu komoditas utama Desa Belok/Sidan',
+        'Memiliki sekitar 267.000 pohon atau setara dengan 267 hektar budidaya',
+        'Tersebar di Banjar Bon, Jempanang, Sekarmuti, Belok, dan Lawak',
+        'Memiliki beragam jenis seperti Siam, Berastagi, Selayak, RGL, dan Siam Madu',
+        'Produksi jeruk Belok/Sidan dinilai memiliki keunggulan dibandingkan Kintamani'
       ]
     },
     {
       slug: 'padi',
+
       title: 'Padi',
-      subtitle: 'Komoditas pokok hasil pertanian lokal',
+
+      subtitle: 'Komoditas pangan dan potensi pertanian Desa Belok/Sidan',
+
       image: 'assets/images/produk-padi.png',
-      description: 'Padi Desa Belok/Sidan dihasilkan dari lahan pertanian subur dengan praktik bercocok tanam yang mendukung ketahanan pangan lokal.',
-      shortDescription: 'Padi Desa Belok/Sidan ditanam di lahan sawah subur dengan sistem pengairan yang terjaga, menghasilkan gabah berkualitas sebagai sumber pangan utama masyarakat.',
+
+      description: 'Padi merupakan salah satu komoditas pertanian yang dibudidayakan oleh masyarakat Desa Belok/Sidan. Selain berperan sebagai sumber pangan utama, komoditas padi juga tetap dimasukkan dalam pemetaan potensi desa karena memiliki keterkaitan dengan kegiatan pemasaran hasil pertanian.',
+
+      shortDescription: 'Padi Desa Belok/Sidan dibudidayakan pada beberapa wilayah, yaitu Belok, Lawak, Sidan, dan Penikit. Dengan luas budidaya sekitar 100,2 hektar dan pola tanam yang dapat dilakukan hingga dua kali dalam setahun, padi menjadi salah satu komoditas yang mendukung kebutuhan pangan sekaligus potensi ekonomi masyarakat desa.',
+
       nutritionItems: [
         {
-          title: 'Sumber Karbohidrat Utama',
-          description: 'Padi menjadi sumber energi utama melalui kandungan karbohidrat kompleksnya.'
+          title: 'Sumber Karbohidrat',
+          description: 'Beras yang dihasilkan dari tanaman padi merupakan salah satu sumber karbohidrat utama dalam makanan sehari-hari.'
         },
+
         {
-          title: 'Mengandung Vitamin B',
-          description: 'Kandungan vitamin B1 dan B3 mendukung metabolisme energi dalam tubuh.'
+          title: 'Sumber Energi',
+          description: 'Kandungan karbohidrat pada beras dapat digunakan tubuh sebagai salah satu sumber energi.'
         },
+
         {
-          title: 'Sumber Mineral',
-          description: 'Beras mengandung mineral seperti magnesium dan fosfor yang penting bagi tubuh.'
+          title: 'Mengandung Vitamin dan Mineral',
+          description: 'Beras mengandung sejumlah vitamin dan mineral, dengan kandungan yang dapat berbeda berdasarkan varietas dan tingkat pengolahannya.'
         }
       ],
+
       farmInfo: {
-        hectares: 'Sekitar 150 hektar lahan sawah aktif digunakan untuk budidaya padi di Desa Belok/Sidan.',
-        distribution: 'Sawah tersebar mengikuti sistem subak tradisional di dataran dan lembah subur Kecamatan Petang.',
-        soilClimate: 'Tanah aluvial yang subur dengan pengairan sawah yang teratur serta iklim tropis mendukung dua kali masa tanam per tahun.'
+        hectares: 'Total luas budidaya padi di Desa Belok/Sidan mencapai 100,2 hektar.',
+
+        distribution: 'Budidaya padi terdapat di wilayah Belok, Lawak, Sidan, dan Penikit. Wilayah lain tidak dimasukkan dalam sebaran apabila belum terdapat data atau potensi budidaya padi yang teridentifikasi.',
+
+        soilClimate: 'Budidaya padi didukung oleh kondisi lahan dan pengairan yang sesuai. Dalam satu tahun, petani dapat melakukan hingga dua kali masa tanam sehingga pola budidaya dapat menyesuaikan kondisi iklim dan ketersediaan air.'
       },
+
       varietyComparison: {
-        title: 'Beras Putih Pulen vs Beras Merah',
-        description: 'Dua jenis beras hasil panen padi desa ini berbeda dari segi rasa, tekstur, dan kandungan gizinya.',
+        title: 'Beras Ciherang vs Beras Putih Pelita',
+
+        description: 'Beras Ciherang dan Beras Putih Pelita merupakan dua varietas yang digunakan sebagai perbandingan dalam komoditas padi Desa Belok/Sidan. Keduanya merupakan beras putih yang dapat dimanfaatkan sebagai bahan pangan sehari-hari, dengan karakteristik varietas yang berbeda.',
+
         variants: [
           {
-            name: 'Beras Putih Pelita',
+            name: 'Beras Ciherang',
+
             attributes: [
-              { label: 'Rasa', value: 'Pulen dan gurih netral, cocok untuk nasi sehari-hari' },
-              { label: 'Bentuk & Tekstur', value: 'Butiran putih bersih, tekstur lembut saat matang' },
-              { label: 'Warna', value: 'Putih bersih' },
-              { label: 'Kandungan', value: 'Karbohidrat tinggi dengan indeks glikemik sedang-tinggi' }
+              {
+                label: 'Jenis',
+                value: 'Beras putih yang berasal dari varietas padi Ciherang.'
+              },
+
+              {
+                label: 'Bentuk & Tekstur',
+                value: 'Memiliki bentuk butiran yang relatif ramping dan menghasilkan nasi dengan tekstur yang sesuai untuk konsumsi sehari-hari.'
+              },
+
+              {
+                label: 'Warna',
+                value: 'Putih setelah melalui proses penggilingan dan pengolahan menjadi beras.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Umumnya digunakan sebagai bahan pangan pokok dan dikonsumsi sebagai nasi sehari-hari.'
+              }
             ]
           },
+
           {
-            name: 'Beras Putih Ciherang',
+            name: 'Beras Putih Pelita',
+
             attributes: [
-              { label: 'Rasa', value: 'Sedikit pera dengan aroma gurih khas (nutty)' },
-              { label: 'Bentuk & Tekstur', value: 'Butiran lebih keras dan berserat' },
-              { label: 'Warna', value: 'Cokelat kemerahan alami karena kulit ari masih menempel' },
-              { label: 'Kandungan', value: 'Kaya serat dan antioksidan, indeks glikemik lebih rendah' }
+              {
+                label: 'Jenis',
+                value: 'Beras putih yang berasal dari varietas padi Pelita.'
+              },
+
+              {
+                label: 'Bentuk & Tekstur',
+                value: 'Memiliki karakteristik butiran dan tekstur nasi yang menjadi ciri dari varietas Pelita.'
+              },
+
+              {
+                label: 'Warna',
+                value: 'Berwarna putih setelah melalui proses penggilingan.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Digunakan sebagai bahan pangan pokok dan dapat dikonsumsi sebagai nasi sehari-hari.'
+              }
             ]
           }
         ]
       },
+
       highlights: [
-        'Diproduksi oleh petani setempat',
-        'Menjadi sumber pangan utama masyarakat desa',
-        'Berperan dalam kedaulatan pangan'
+        'Luas budidaya mencapai sekitar 100,2 hektar',
+        'Terdapat di Belok, Lawak, Sidan, dan Penikit',
+        'Dapat dibudidayakan hingga dua kali masa tanam dalam setahun',
+        'Memiliki varietas seperti Ciherang dan Pelita',
+        'Menjadi komoditas pangan sekaligus potensi pemasaran hasil pertanian desa'
       ]
     },
     {
       slug: 'lemon',
+
       title: 'Lemon',
-      subtitle: 'Buah sitrus segar dan harum',
+
+      subtitle: 'Lemon California segar dari Desa Belok/Sidan',
+
       image: 'assets/images/produk-lemon.png',
-      description: 'Lemon Desa Belok/Sidan memberikan rasa asam segar dan aroma khas, cocok untuk minuman dan olahan kuliner.',
-      shortDescription: 'Lemon lokal dengan kulit tipis, sari beraroma, dan kandungan vitamin C tinggi.',
+
+      description: 'Lemon merupakan salah satu komoditas buah sitrus yang dibudidayakan oleh petani di Desa Belok/Sidan. Varietas yang dikembangkan adalah Lemon California, yang dikenal memiliki rasa asam segar dan aroma khas serta dapat dimanfaatkan untuk berbagai kebutuhan minuman dan olahan kuliner.',
+
+      shortDescription: 'Lemon California Desa Belok/Sidan dibudidayakan terutama di wilayah Banjar Bon dan Banjar Lawak. Buahnya memiliki rasa asam yang segar dan aroma khas, sehingga cocok dikonsumsi sebagai bahan minuman maupun berbagai olahan makanan.',
+
       nutritionItems: [
-        { title: 'Sumber Vitamin C', description: 'Kaya vitamin C yang membantu daya tahan tubuh.' },
-        { title: 'Antioksidan', description: 'Mengandung senyawa flavonoid yang bersifat antioksidan.' }
+        {
+          title: 'Sumber Vitamin C',
+          description: 'Lemon mengandung vitamin C yang menjadi salah satu kandungan gizi utama buah sitrus.'
+        },
+
+        {
+          title: 'Mengandung Senyawa Antioksidan',
+          description: 'Lemon mengandung berbagai senyawa, termasuk flavonoid dan vitamin C, yang berkontribusi terhadap nilai gizinya.'
+        },
+
+        {
+          title: 'Mengandung Air',
+          description: 'Kandungan air pada buah lemon memberikan karakter rasa yang segar dan membuatnya banyak dimanfaatkan dalam minuman.'
+        }
       ],
+
       farmInfo: {
-        hectares: 'Sekitar 20 hektar lahan sitrus kecil dikelola oleh petani lokal.',
-        distribution: 'Tersebar di beberapa dusun dengan paparan matahari yang baik.',
-        soilClimate: 'Tanah subur dan iklim sejuk hingga sedang mendukung pertumbuhan lemon.'
+        hectares: 'Total luas budidaya Lemon California di Desa Belok/Sidan mencapai 19,25 hektar.',
+
+        distribution: 'Sebaran budidaya Lemon California paling banyak terdapat di Banjar Bon dan Banjar Lawak.',
+
+        soilClimate: 'Tanaman lemon membutuhkan kondisi lingkungan yang mendukung pertumbuhan tanaman, termasuk tanah dengan drainase yang baik, ketersediaan air yang cukup, serta paparan sinar matahari.'
       },
+
       varietyComparison: {
-        title: 'Lemon California',
-        description: 'Perbandingan sederhana antara lemon California',
+        title: 'Karakteristik Lemon California',
+
+        description: 'Lemon California merupakan varietas lemon yang dibudidayakan di Desa Belok/Sidan. Buah ini dikenal memiliki rasa asam yang segar dan aroma khas sehingga banyak dimanfaatkan sebagai bahan minuman maupun olahan kuliner.',
+
         variants: [
-          { name: 'Lemon California', attributes: [ { label: 'Rasa', value: 'Asam segar' }, { label: 'Ciri Khas', value: 'Kulit lebih tipis, aroma tajam' } ] }
+          {
+            name: 'Lemon California',
+
+            attributes: [
+              {
+                label: 'Rasa',
+                value: 'Memiliki rasa asam yang segar dan khas.'
+              },
+
+              {
+                label: 'Aroma',
+                value: 'Memiliki aroma sitrus yang segar dan kuat.'
+              },
+
+              {
+                label: 'Karakteristik Buah',
+                value: 'Buah memiliki karakteristik khas lemon dengan kandungan sari buah yang dapat dimanfaatkan untuk berbagai kebutuhan.'
+              },
+
+              {
+                label: 'Pemanfaatan',
+                value: 'Digunakan sebagai bahan minuman, campuran makanan, bumbu, serta berbagai olahan kuliner.'
+              }
+            ]
+          }
         ]
       },
+
       highlights: [
-        'Cocok untuk minuman dan pengawet',
-        'Mengandung vitamin C tinggi'
+        'Varietas Lemon California',
+        'Luas budidaya mencapai sekitar 19,25 hektar',
+        'Banyak dibudidayakan di Banjar Bon dan Banjar Lawak',
+        'Memiliki rasa asam segar dan aroma khas',
+        'Cocok untuk minuman dan berbagai olahan kuliner'
       ]
     }
+
   ];
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('slug') ?? 'asparagus';
-    this.detail = this.produkDetails.find((item) => item.slug === slug) ?? this.produkDetails[0];
+    this.detail = this.produkDetails.find((item) => item.slug === slug) ?? this.createAdditionalDetail(slug);
     this.badges = this.buildBadges(this.detail);
+  }
+
+  private createAdditionalDetail(slug: string): ProdukDetailData {
+    const produk = PRODUK_LIST.find((item) => item.link === `/produk/${slug}`);
+    const title = produk?.title ?? 'Produk Desa Belok/Sidan';
+    const distribution = produk?.banjar.length
+      ? produk.banjar
+      .map((banjar) => BANJAR_LABELS[banjar].replace('Banjar Dinas ', ''))
+      .join(', ')
+      : 'belum dirinci dalam data lapangan';
+    const hectares = title === 'Pisang'
+      ? 'Jumlah budidaya mencapai 64.000 rumpun.'
+      : 'Data luas budidaya disajikan berdasarkan data lapangan yang telah teridentifikasi.';
+
+    return {
+      slug,
+      title,
+      subtitle: `Potensi ${title} Desa Belok/Sidan`,
+      image: produk?.image ?? 'assets/images/produk-sayur hortikultura.png',
+      description: `${title} merupakan bagian dari potensi wilayah Desa Belok/Sidan sesuai hasil pembahasan dan revisi data komoditas. Komoditas ini dikembangkan oleh masyarakat dan dapat mendukung keragaman serta pemasaran hasil pertanian desa.`,
+      shortDescription: `${title} termasuk komoditas yang perlu dimasukkan dalam potensi wilayah Desa Belok/Sidan.`,
+      farmInfo: {
+        hectares,
+        distribution: `Data sebaran yang tercatat: ${distribution}.`,
+        soilClimate: 'Budidaya disesuaikan dengan kondisi tanah, ketersediaan air, cahaya matahari, dan lingkungan yang sesuai bagi pertumbuhan tanaman.'
+      },
+      highlights: [
+        `Termasuk potensi ${title} Desa Belok/Sidan`,
+        'Dibudidayakan oleh masyarakat desa',
+        'Data sebaran mengikuti wilayah yang telah teridentifikasi'
+      ]
+    };
   }
 
   /** Menyusun badge kategori tanaman + banjar (maks. 2) dari data produk di halaman list */

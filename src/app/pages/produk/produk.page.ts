@@ -12,7 +12,7 @@ export interface ProdukFeatured {
   tipeTanaman: TipeTanaman[];
 }
 
-export type TipeTanaman = 'hortikultura-sayur' | 'tanaman-pangan' | 'tanaman-perkebunan' | 'hortikultura-buah' | 'tanaman-hias';
+export type TipeTanaman = 'hortikultura-sayur' | 'tanaman-pangan' | 'tanaman-perkebunan' | 'hortikultura-buah' | 'tanaman-hias' | 'biofarmaka' | 'palawija';
 export type Banjar = 'jempanang' | 'bon' | 'sekarmukti' | 'lawak' | 'belok' | 'selantang' | 'sidan' | 'sidan-kawan' | 'penikit';
 
 export const TIPE_TANAMAN_LABELS: Record<TipeTanaman, string> = {
@@ -20,7 +20,9 @@ export const TIPE_TANAMAN_LABELS: Record<TipeTanaman, string> = {
   'tanaman-pangan': 'Tanaman Pangan',
   'tanaman-perkebunan': 'Tanaman Perkebunan',
   'hortikultura-buah': 'Hortikultura Buah',
-  'tanaman-hias': 'Tanaman Hias'
+  'tanaman-hias': 'Tanaman Hias',
+  'biofarmaka': 'Biofarmaka',
+  'palawija': 'Palawija'
 };
 
 export const BANJAR_LABELS: Record<Banjar, string> = {
@@ -48,12 +50,31 @@ export interface ProdukItem {
 export const PRODUK_LIST: ProdukItem[] = [
   { title: 'Alpukat', image: 'assets/images/produk-alpukat.png', link: '/produk/alpukat', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
   { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir', tipeTanaman: ['tanaman-hias'], banjar: ['sekarmukti', 'lawak', 'belok', 'selantang', 'sidan'] },
-  { title: 'Cabai', image: 'assets/images/produk-cabai besar.png', link: '/produk/cabai', tipeTanaman: ['hortikultura-sayur'], banjar: ['bon', 'jempanang', 'sekarmukti', 'sidan'] },
-  { title: 'Durian', image: 'assets/images/produk-durian.png', link: '/produk/durian-musangking', tipeTanaman: ['hortikultura-buah'], banjar: ['selantang', 'sidan', 'sidan-kawan', 'penikit'] },
-  { title: 'Jeruk', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
+  { title: 'Cabai', image: 'assets/images/produk-cabai besar.png', link: '/produk/cabai', tipeTanaman: ['hortikultura-sayur'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok', 'selantang', 'sidan', 'sidan-kawan', 'penikit'] },
+  { title: 'Kubis', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/kubis', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Sawi putih', image: 'assets/images/produk-sawi putih.png', link: '/produk/sawi-putih', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Buncis', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/buncis', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Mentimun', image: 'assets/images/produk-timun jepang.png', link: '/produk/mentimun', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Tomat', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/tomat', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Pakcoy', image: 'assets/images/produk-sawi putih.png', link: '/produk/pakcoy', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Terong', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/terong', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Labu siam', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/labu-siam', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Labu pumpkin', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/labu-pumpkin', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Durian', image: 'assets/images/produk-durian.png', link: '/produk/durian', tipeTanaman: ['hortikultura-buah'], banjar: ['selantang'] },
+  { title: 'Jeruk', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'jempanang', 'sekarmukti', 'lawak', 'belok'] },
   { title: 'Lemon', image: 'assets/images/produk-lemon.png', link: '/produk/lemon', tipeTanaman: ['hortikultura-buah'], banjar: ['bon', 'lawak'] },
-  { title: 'Kopi', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika', tipeTanaman: ['tanaman-perkebunan'], banjar: ['jempanang', 'bon', 'sekarmukti', 'lawak', 'belok', 'selantang', 'sidan', 'sidan-kawan', 'penikit'] },
-  { title: 'Padi', image: 'assets/images/produk-padi.png', link: '/produk/padi', tipeTanaman: ['tanaman-pangan'], banjar: ['sidan', 'sidan-kawan', 'penikit'] },
+  { title: 'Pisang', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/pisang', tipeTanaman: ['hortikultura-buah'], banjar: [] },
+  { title: 'Kopi', image: 'assets/images/produk-kopi.png', link: '/produk/kopi', tipeTanaman: ['tanaman-perkebunan'], banjar: ['jempanang', 'bon', 'sekarmukti', 'lawak', 'belok', 'selantang', 'sidan', 'sidan-kawan', 'penikit'] },
+  { title: 'Vanili', image: 'assets/images/produk-vanili.png', link: '/produk/vanili', tipeTanaman: ['tanaman-perkebunan'], banjar: [] },
+  { title: 'Gula aren', image: 'assets/images/produk-gula aren.png', link: '/produk/gula-aren', tipeTanaman: ['tanaman-perkebunan'], banjar: [] },
+  { title: 'Cengkeh', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/cengkeh', tipeTanaman: ['tanaman-perkebunan'], banjar: [] },
+  { title: 'Kakao', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/kakao', tipeTanaman: ['tanaman-perkebunan'], banjar: [] },
+  { title: 'Kelapa', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/kelapa', tipeTanaman: ['tanaman-perkebunan'], banjar: [] },
+  { title: 'Padi', image: 'assets/images/produk-padi.png', link: '/produk/padi', tipeTanaman: ['tanaman-pangan'], banjar: ['belok', 'lawak', 'sidan', 'penikit'] },
+  { title: 'Jahe', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/jahe', tipeTanaman: ['biofarmaka'], banjar: [] },
+  { title: 'Umbi-umbian', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/umbi-umbian', tipeTanaman: ['palawija'], banjar: [] },
+  { title: 'Kacang tanah', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/kacang-tanah', tipeTanaman: ['palawija'], banjar: [] },
+  { title: 'Porang', image: 'assets/images/produk-sayur hortikultura.png', link: '/produk/porang', tipeTanaman: ['palawija'], banjar: [] },
 ];
 
 @Component({
@@ -91,7 +112,9 @@ export class ProdukPageComponent {
     { key: 'tanaman-pangan', label: TIPE_TANAMAN_LABELS['tanaman-pangan'] },
     { key: 'tanaman-perkebunan', label: TIPE_TANAMAN_LABELS['tanaman-perkebunan'] },
     { key: 'hortikultura-buah', label: TIPE_TANAMAN_LABELS['hortikultura-buah'] },
-    { key: 'tanaman-hias', label: TIPE_TANAMAN_LABELS['tanaman-hias'] }
+    { key: 'tanaman-hias', label: TIPE_TANAMAN_LABELS['tanaman-hias'] },
+    { key: 'biofarmaka', label: TIPE_TANAMAN_LABELS['biofarmaka'] },
+    { key: 'palawija', label: TIPE_TANAMAN_LABELS['palawija'] }
   ];
 
   get filteredProdukList(): ProdukItem[] {

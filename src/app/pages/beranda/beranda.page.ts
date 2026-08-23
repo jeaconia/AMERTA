@@ -95,7 +95,7 @@ export class BerandaPageComponent implements OnInit {
     image: 'assets/images/produk-asparagus.png',
     link: '/produk/asparagus'},
     { title: 'Jeruk', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu' },
-    { title: 'Kopi', image: 'assets/images/produk-kopi.png', link: '/produk/kopi-arabika' },
+    { title: 'Kopi', image: 'assets/images/produk-kopi.png', link: '/produk/kopi' },
     { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir' },
   ];
 
