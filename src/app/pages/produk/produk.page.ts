@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
@@ -86,6 +86,7 @@ export const PRODUK_LIST: ProdukItem[] = [
 })
 export class ProdukPageComponent {
   @Input() bannerTitle: string = 'Produk Unggulan';
+  @ViewChild('filterTrack') filterTrackRef?: ElementRef<HTMLDivElement>;
 
   // Expose constants untuk template
   readonly tipeTanamanLabels = TIPE_TANAMAN_LABELS;
@@ -106,15 +107,15 @@ export class ProdukPageComponent {
   // Filter state — hanya kategori tanaman yang bisa dipilih
   selectedTipeTanaman: TipeTanaman | null = null;
 
-  // Lists untuk filter UI
-  tipeTanamanOptions: Array<{ key: TipeTanaman; label: string }> = [
-    { key: 'hortikultura-sayur', label: TIPE_TANAMAN_LABELS['hortikultura-sayur'] },
-    { key: 'tanaman-pangan', label: TIPE_TANAMAN_LABELS['tanaman-pangan'] },
-    { key: 'tanaman-perkebunan', label: TIPE_TANAMAN_LABELS['tanaman-perkebunan'] },
-    { key: 'hortikultura-buah', label: TIPE_TANAMAN_LABELS['hortikultura-buah'] },
-    { key: 'tanaman-hias', label: TIPE_TANAMAN_LABELS['tanaman-hias'] },
-    { key: 'biofarmaka', label: TIPE_TANAMAN_LABELS['biofarmaka'] },
-    { key: 'palawija', label: TIPE_TANAMAN_LABELS['palawija'] }
+  // Lists untuk filter UI dengan ikon Font Awesome
+  tipeTanamanOptions: Array<{ key: TipeTanaman; label: string; icon: string }> = [
+    { key: 'hortikultura-sayur', label: TIPE_TANAMAN_LABELS['hortikultura-sayur'], icon: 'fa-carrot' },
+    { key: 'tanaman-pangan', label: TIPE_TANAMAN_LABELS['tanaman-pangan'], icon: 'fa-wheat-awn' },
+    { key: 'tanaman-perkebunan', label: TIPE_TANAMAN_LABELS['tanaman-perkebunan'], icon: 'fa-tree' },
+    { key: 'hortikultura-buah', label: TIPE_TANAMAN_LABELS['hortikultura-buah'], icon: 'fa-apple-whole' },
+    { key: 'tanaman-hias', label: TIPE_TANAMAN_LABELS['tanaman-hias'], icon: 'fa-spa' },
+    { key: 'biofarmaka', label: TIPE_TANAMAN_LABELS['biofarmaka'], icon: 'fa-mortar-pestle' },
+    { key: 'palawija', label: TIPE_TANAMAN_LABELS['palawija'], icon: 'fa-seedling' }
   ];
 
   get filteredProdukList(): ProdukItem[] {
@@ -139,13 +140,46 @@ export class ProdukPageComponent {
       featuredProduk.tipeTanaman.includes(this.selectedTipeTanaman as TipeTanaman);
   }
 
-  toggleTipeTanaman(tipe: TipeTanaman): void {
-    // Single-select: pilih kategori ini, atau kembali ke "semua" jika kategori yang sama dipencet lagi
-    this.selectedTipeTanaman = this.selectedTipeTanaman === tipe ? null : tipe;
+  getProdukCount(tipe: TipeTanaman | null): number {
+    if (!tipe) {
+      return this.produkList.length;
+    }
+    return this.produkList.filter(produk => produk.tipeTanaman.includes(tipe)).length;
   }
 
-  clearFilters(): void {
+  toggleTipeTanaman(tipe: TipeTanaman, event?: Event): void {
+    // Single-select: pilih kategori ini, atau kembali ke "semua" jika kategori yang sama dipencet lagi
+    this.selectedTipeTanaman = this.selectedTipeTanaman === tipe ? null : tipe;
+
+    if (event?.currentTarget && typeof (event.currentTarget as HTMLElement).scrollIntoView === 'function') {
+      (event.currentTarget as HTMLElement).scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+      });
+    }
+  }
+
+  clearFilters(event?: Event): void {
     this.selectedTipeTanaman = null;
+
+    if (event?.currentTarget && typeof (event.currentTarget as HTMLElement).scrollIntoView === 'function') {
+      (event.currentTarget as HTMLElement).scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+      });
+    }
+  }
+
+  scrollFilterTrack(direction: 'left' | 'right'): void {
+    if (!this.filterTrackRef?.nativeElement) return;
+    const track = this.filterTrackRef.nativeElement;
+    const scrollAmount = 260;
+    track.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
   }
 
   onLihatSelengkapnya(title: string): void {

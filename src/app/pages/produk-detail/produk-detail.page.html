@@ -28,23 +28,111 @@
       </div>
     </div>
 
-    <section class="produk-detail__section" *ngIf="detail.varietyComparison as variety">
-      <h2 class="produk-detail__section-title">{{ variety.title }}</h2>
-      <p class="produk-detail__variety-desc" *ngIf="variety.description">{{ variety.description }}</p>
-      <div class="produk-detail__variety-grid">
-        <ng-container *ngFor="let item of variety.variants; let last = last">
-          <div class="produk-detail__variety-card">
-            <h3 class="produk-detail__variety-name">{{ item.name }}</h3>
-            <p class="produk-detail__variety-tagline" *ngIf="item.tagline">{{ item.tagline }}</p>
-            <ul class="produk-detail__variety-attrs">
-              <li class="produk-detail__variety-attr" *ngFor="let attr of item.attributes">
-                <span class="produk-detail__variety-attr-label">{{ attr.label }}</span>
-                <span class="produk-detail__variety-attr-value">{{ attr.value }}</span>
-              </li>
-            </ul>
+    <section class="produk-detail__section produk-detail__section--variety" *ngIf="detail.varietyComparison as variety">
+      <div class="produk-detail__variety-header">
+        <h2 class="produk-detail__section-title">{{ variety.title }}</h2>
+        <p class="produk-detail__variety-desc" *ngIf="variety.description">{{ variety.description }}</p>
+      </div>
+
+      <!-- Quick Variant Selector Tabs (hanya jika varietas > 1) -->
+      <div class="produk-detail__variant-pills" *ngIf="variety.variants.length > 1">
+        <button
+          type="button"
+          class="produk-detail__variant-pill"
+          *ngFor="let item of variety.variants; let idx = index"
+          [class.produk-detail__variant-pill--active]="activeVariantIndex === idx"
+          (click)="setActiveVariant(idx)">
+          <span class="produk-detail__variant-pill-num">{{ idx + 1 }}</span>
+          <span class="produk-detail__variant-pill-name">{{ item.name }}</span>
+        </button>
+      </div>
+
+      <!-- 3D CARDS STACK CAROUSEL VIEWPORT -->
+      <div class="produk-detail__deck-wrapper">
+        <div class="produk-detail__deck-stage">
+          <button
+            type="button"
+            class="produk-detail__slider-arrow produk-detail__slider-arrow--prev"
+            (click)="prevVariant()"
+            [disabled]="variety.variants.length <= 1"
+            aria-label="Varietas sebelumnya"
+            *ngIf="variety.variants.length > 1">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <!-- 3D Card Stack Container -->
+          <div
+            class="produk-detail__cards-deck"
+            (touchstart)="onTouchStart($event)"
+            (touchend)="onTouchEnd($event)">
+            
+            <div
+              class="produk-detail__variety-card"
+              *ngFor="let item of variety.variants; let idx = index"
+              [ngClass]="getCardPositionClass(idx, variety.variants.length)"
+              (click)="setActiveVariant(idx)">
+
+              <div class="produk-detail__card-header-badge">
+                <span class="produk-detail__card-badge-tag">
+                  <i class="fa-solid fa-leaf"></i>
+                  Varietas 0{{ idx + 1 }} / 0{{ variety.variants.length }}
+                </span>
+                <span class="produk-detail__card-badge-slug">{{ detail.title }}</span>
+              </div>
+
+              <h3 class="produk-detail__variety-name">{{ item.name }}</h3>
+              <p class="produk-detail__variety-tagline" *ngIf="item.tagline">{{ item.tagline }}</p>
+
+              <ul class="produk-detail__variety-attrs">
+                <li class="produk-detail__variety-attr" *ngFor="let attr of item.attributes">
+                  <span class="produk-detail__variety-attr-label">{{ attr.label }}</span>
+                  <span class="produk-detail__variety-attr-value">{{ attr.value }}</span>
+                </li>
+              </ul>
+
+              <!-- Card Bottom Navigation for Active Card -->
+              <div class="produk-detail__card-footer-nav" *ngIf="variety.variants.length > 1 && idx === activeVariantIndex" (click)="$event.stopPropagation()">
+                <button type="button" class="produk-detail__card-nav-link" (click)="prevVariant()">
+                  <i class="fa-solid fa-arrow-left"></i> Sebelumnya
+                </button>
+                <span class="produk-detail__card-counter">{{ idx + 1 }} / {{ variety.variants.length }}</span>
+                <button type="button" class="produk-detail__card-nav-link" (click)="nextVariant()">
+                  Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Click hint on peeking side cards -->
+              <div class="produk-detail__card-peek-overlay" *ngIf="idx !== activeVariantIndex">
+                <span class="produk-detail__card-peek-text">
+                  <i class="fa-solid fa-hand-pointer"></i> Klik untuk tampilkan
+                </span>
+              </div>
+            </div>
+
           </div>
-          <div class="produk-detail__variety-vs" *ngIf="!last">VS</div>
-        </ng-container>
+
+          <button
+            type="button"
+            class="produk-detail__slider-arrow produk-detail__slider-arrow--next"
+            (click)="nextVariant()"
+            [disabled]="variety.variants.length <= 1"
+            aria-label="Varietas selanjutnya"
+            *ngIf="variety.variants.length > 1">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Slider Dots Pagination -->
+        <div class="produk-detail__slider-pagination" *ngIf="variety.variants.length > 1">
+          <button
+            type="button"
+            class="produk-detail__slider-dot"
+            *ngFor="let item of variety.variants; let idx = index"
+            [class.produk-detail__slider-dot--active]="activeVariantIndex === idx"
+            (click)="setActiveVariant(idx)"
+            [attr.aria-label]="'Pilih varietas ' + item.name">
+          </button>
+        </div>
       </div>
     </section>
 

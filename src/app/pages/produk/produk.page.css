@@ -30,54 +30,125 @@
   margin: 0;
 }
 
-/* Filter Pills */
-.produk__filter-pills {
+/* Horizontal Filter Pills Slider */
+.produk__filter-slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  max-width: 900px;
+  gap: 0.6rem;
+  padding: 0 0.5rem;
+  margin: 0 auto;
 }
 
-@media (min-width: 992px) {
-  .produk__filter-pills {
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 1rem;
-    max-width: 1200px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 1rem;
-  }
+.produk__filter-arrow {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary-dark);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 3;
+}
 
-  .produk__filter-pills::-webkit-scrollbar {
-    display: none;
-  }
+.produk__filter-arrow:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+  color: var(--color-primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.produk__filter-pills-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0.4rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.produk__filter-pills-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .produk__pill {
-  padding: 0.7rem 1.4rem;
-  font: 500 0.95rem var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.25rem;
+  font: 500 0.92rem var(--font-body);
   color: var(--color-text);
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 999px;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.produk__pill-icon {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  transition: transform 0.2s ease;
+}
+
+.produk__pill-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--color-text);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .produk__pill:hover {
   background: #ffffff;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+.produk__pill:hover .produk__pill-icon {
+  transform: scale(1.15);
 }
 
 .produk__pill--active {
   background: #ffffff;
   color: var(--color-primary-dark);
   font-weight: 700;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+  border-color: #ffffff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+}
+
+.produk__pill--active .produk__pill-icon {
+  color: var(--color-primary-dark);
+}
+
+.produk__pill--active .produk__pill-badge {
+  background: var(--color-primary);
+  color: #ffffff;
 }
 
 .produk__content {
@@ -240,9 +311,28 @@
     padding: 1rem 0 1.75rem;
   }
 
+  .produk__filter-slider-wrapper {
+    width: 100%;
+    padding: 0;
+    gap: 0.35rem;
+  }
+
+  .produk__filter-arrow {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    font-size: 0.78rem;
+  }
+
   .produk__pill {
-    padding: 0.55rem 1.1rem;
-    font-size: 0.85rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.84rem;
+    gap: 0.45rem;
+  }
+
+  .produk__pill-badge {
+    font-size: 0.72rem;
+    padding: 0.1rem 0.4rem;
   }
 
   .produk__filter-results {
