@@ -56,7 +56,7 @@ export const PRODUK_LIST: ProdukItem[] = [
   { title: 'Buncis', image: 'assets/images/produk-buncis.png', link: '/produk/buncis', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
   { title: 'Mentimun', image: 'assets/images/produk-timun jepang.png', link: '/produk/mentimun', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
   { title: 'Tomat', image: 'assets/images/produk-tomat.png', link: '/produk/tomat', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
-  { title: 'Pakcoy', image: 'assets/images/produk-sawi putih.png', link: '/produk/pakcoy', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
+  { title: 'Pakcoy', image: 'assets/images/produk-pakcoy.png', link: '/produk/pakcoy', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
   { title: 'Terong', image: 'assets/images/produk-terong.png', link: '/produk/terong', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
   { title: 'Labu siam', image: 'assets/images/produk-labu-siam.png', link: '/produk/labu-siam', tipeTanaman: ['hortikultura-sayur'], banjar: [] },
   { title: 'Labu pumpkin', image: 'assets/images/produk-labu-pumpkin.png', link: '/produk/labu-pumpkin', tipeTanaman: ['hortikultura-sayur'], banjar: [] },

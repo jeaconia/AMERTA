@@ -144,7 +144,7 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: '120 hektar lahan pertanian aktif dikelola untuk budidaya asparagus di wilayah dataran tinggi Desa Belok/Sidan.',
+        hectares: '120 Hektar lahan pertanian aktif dikelola untuk budidaya asparagus di wilayah dataran tinggi Desa Belok/Sidan.',
         distribution: 'Sebaran budidaya tersebar di beberapa dusun dan kawasan pertanian dataran tinggi di Kecamatan Petang, Desa Belok/Sidan, dengan fokus pada area yang memiliki suhu sejuk dan tingkat kelembapan stabil.',
         soilClimate: 'Tanah umumnya bersifat subur dengan tekstur yang baik untuk perakaran tanaman, sementara iklim dingin, curah hujan cukup, dan ketinggian lokasi mendukung pertumbuhan asparagus yang kuat dan berkualitas.'
       },
@@ -216,7 +216,7 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: '35 hektar lahan perkebunan alpukat dikelola oleh petani di Desa Belok/Sidan.',
+        hectares: '35 Hektar lahan perkebunan alpukat dikelola oleh petani di Desa Belok/Sidan.',
         distribution: 'Tanaman alpukat tersebar di Banjar Bon, Banjar Jempanang, Sekarmukti, Lawak, dan Belok.',
         soilClimate: 'Tanah subur berdrainase baik dengan paparan sinar matahari cukup serta iklim dataran sejuk mendukung pertumbuhan tanaman dan pembentukan buah alpukat berkualitas.'
       },
@@ -281,7 +281,7 @@ export class ProdukDetailPageComponent implements OnInit {
       highlights: [
         'Alpukat Hass menghasilkan kualitas terbaik pada dataran tinggi di atas 800 mdpl',
         'Alpukat Mentega sangat produktif dan sesuai untuk kondisi dataran yang lebih rendah',
-        'Luas budidaya mencapai 35 hektar di wilayah Desa Belok/Sidan',
+        'Luas budidaya mencapai 35 Hektar di wilayah Desa Belok/Sidan',
         'Perbandingan varietas mencakup ketinggian, tekstur, karakteristik buah, khasiat, dan lingkungan',
         'Kaya akan asam lemak tak jenuh tunggal, vitamin E, dan antioksidan alami'
       ]
@@ -402,13 +402,13 @@ export class ProdukDetailPageComponent implements OnInit {
       farmInfo: {
         largeChili: {
           title: 'Budidaya Cabai Besar',
-          hectares: 'Data luas budidaya cabai besar disajikan secara khusus berdasarkan data petani dan perkebunan cabai besar di Desa Belok/Sidan.',
+          hectares: '0,5 Hektar lahan perkebunan cabai besar dikelola secara terpusat oleh petani di Banjar Bon.',
           distribution: 'Cabai besar banyak dibudidayakan secara terpusat oleh petani di Banjar Bon.',
           soilClimate: 'Membutuhkan tanah gembur subur dengan drainase optimal, pasokan air terkontrol, dan penyinaran matahari penuh.'
         },
         birdEyeChili: {
           title: 'Budidaya Cabai Rawit',
-          hectares: 'Data luas budidaya cabai rawit disajikan secara terpisah berdasarkan data petani dan perkebunan cabai rawit di Desa Belok/Sidan.',
+          hectares: 'Terdapat 8 Hektar lahan perkebunan cabai rawit yang dikelola oleh petani di wilayah Desa Belok/Sidan.',
           distribution: 'Cabai rawit dibudidayakan di seluruh banjar (9 banjar) di wilayah Desa Belok/Sidan.',
           soilClimate: 'Tumbuh adaptif di berbagai kondisi lahan kebun maupun pekarangan warga dengan paparan sinar matahari memadai.'
         }
@@ -505,8 +505,8 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: 'Data luas budidaya durian dicatat berdasarkan luasan kebun produktif yang dikembangkan oleh petani di desa.',
-        distribution: 'Potensi durian terutama terdapat di Banjar Selantang. Banjar Bon tidak memiliki potensi durian sehingga tidak dimasukkan sebagai wilayah sebaran durian.',
+        hectares: 'Terdapat 72 Hektar lahan perkebunan durian yang dikelola oleh petani di wilayah Desa Belok/Sidan.',
+        distribution: 'Potensi durian terutama terdapat di Banjar Belok, Selantang, Sidan, dan Penikit.',
         soilClimate: 'Tanaman durian membutuhkan lahan dengan drainase baik, ketersediaan air yang cukup, serta iklim mikro dataran yang mendukung pembungaan dan pembuahan optimal.'
       },
       varietyComparison: {
@@ -581,7 +581,7 @@ export class ProdukDetailPageComponent implements OnInit {
         { url: 'assets/images/produk-jeruk brastagi.png', label: 'Jeruk Berastagi' }
       ],
       description: 'Jeruk merupakan salah satu komoditas andalan Desa Belok/Sidan. Varietas jeruk yang terdapat di wilayah ini meliputi Jeruk Siam, Jeruk Berastagi, Jeruk Selayak, Jeruk RGL, dan Jeruk Siam Madu. Produksi jeruk di Desa Belok/Sidan saat ini dinilai memiliki keunggulan rasa manis segar dan kualitas buah dibandingkan produksi jeruk di Kintamani.',
-      shortDescription: 'Jeruk menjadi komoditas utama dengan total luas budidaya mencapai 267.000 pohon atau setara dengan 267 hektar. Sebaran budidaya berpusat di Banjar Bon, Banjar Jempanang, Sekarmukti, Belok, dan Lawak.',
+      shortDescription: 'Jeruk menjadi komoditas utama dengan total luas budidaya mencapai 267.000 pohon atau setara dengan 267 Hektar. Sebaran budidaya berpusat di Banjar Bon, Banjar Jempanang, Sekarmukti, Belok, dan Lawak.',
       nutritionItems: [
         {
           title: 'Sumber Vitamin C Tinggi',
@@ -701,7 +701,7 @@ export class ProdukDetailPageComponent implements OnInit {
       },
       highlights: [
         'Komoditas andalan utama Desa Belok/Sidan',
-        'Total luas budidaya 267.000 pohon atau setara dengan 267 hektar',
+        'Total luas budidaya 267.000 pohon atau setara dengan 267 Hektar',
         'Sebaran utama di Banjar Bon, Banjar Jempanang, Sekarmukti, Belok, dan Lawak',
         'Perbandingan 4 varietas: Jeruk Siam, Jeruk Siam Madu, Jeruk Selayak, dan Jeruk RGL',
         'Kualitas produksi dinilai memiliki keunggulan dibandingkan jeruk Kintamani'
@@ -729,7 +729,7 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: 'Terdapat 354 ha lahan perkebunan kopi yang dibudidayakan oleh petani di Desa Belok/Sidan.',
+        hectares: 'Data luas budidaya kopi dimasukkan berdasarkan besaran luasan yang telah diperoleh dari data lapangan.',
         distribution: 'Kopi Arabika terdapat di seluruh banjar di Desa Belok/Sidan dengan perbedaan klon yang dibudidayakan pada masing-masing banjar. Kopi Robusta dibudidayakan pada area dataran yang lebih rendah.',
         soilClimate: 'Kopi Arabika umumnya dibudidayakan pada ketinggian 500 mdpl ke atas dengan kondisi iklim sejuk. Kopi Robusta umumnya dibudidayakan pada ketinggian 500 mdpl ke bawah dengan toleransi suhu yang lebih hangat.'
       },
@@ -805,7 +805,7 @@ export class ProdukDetailPageComponent implements OnInit {
       subtitle: 'Lemon California segar dengan sebaran terbanyak di Bon dan Lawak',
       image: 'assets/images/produk-lemon.png',
       description: 'Lemon merupakan salah satu komoditas buah sitrus yang dibudidayakan oleh petani di Desa Belok/Sidan. Varietas yang dikembangkan adalah Lemon California, yang dikenal memiliki rasa asam segar, aroma harum kuat, serta kandungan vitamin C dan antioksidan tinggi.',
-      shortDescription: 'Lemon California dibudidayakan di Desa Belok/Sidan dengan total luas budidaya 19,25 hektar. Wilayah dengan sebaran lemon terbanyak terdapat di Banjar Bon dan Banjar Lawak.',
+      shortDescription: 'Lemon California dibudidayakan di Desa Belok/Sidan dengan total luas budidaya 19,25 Hektar. Wilayah dengan sebaran lemon terbanyak terdapat di Banjar Bon dan Banjar Lawak.',
       nutritionItems: [
         {
           title: 'Tinggi Vitamin C',
@@ -952,6 +952,1222 @@ export class ProdukDetailPageComponent implements OnInit {
         'Perbandingan varietas Beras Ciherang dan Beras Putih Pelita',
         'Terintegrasi dalam pemetaan potensi dan pemasaran hasil pertanian desa'
       ]
+    },
+    {
+      slug: 'kubis',
+      title: 'Kubis',
+      subtitle: 'Sayuran daun dataran tinggi yang kaya vitamin C dan serat',
+      image: 'assets/images/produk-kubis.png',
+      description: 'Kubis atau kol (Brassica oleracea var. capitata) merupakan tanaman sayuran daun berkepala padat yang tumbuh sangat optimal di daerah dataran tinggi beriklim sejuk seperti Desa Belok/Sidan. Kubis banyak dimanfaatkan sebagai bahan aneka masakan sup, tumisan, lalapan segar, hingga olahan fermentasi bernilai gizi tinggi.',
+      shortDescription: 'Kubis Desa Belok/Sidan dibudidayakan di lahan pertanian dataran tinggi berhawa sejuk, menghasilkan krop padat, renyah, dan kaya akan antioksidan serta vitamin C.',
+      nutritionItems: [
+        {
+          title: 'Kaya Vitamin C',
+          description: 'Satu porsi kubis segar mencukupi sebagian besar kebutuhan harian vitamin C untuk meningkatkan kekebalan tubuh.'
+        },
+        {
+          title: 'Sumber Vitamin K & Kalsium',
+          description: 'Mendukung proses pembekuan darah normal dan memelihara kepadatan tulang serta gigi.'
+        },
+        {
+          title: 'Senyawa Glukosinolat',
+          description: 'Mengandung senyawa sulfur glukosinolat yang memiliki sifat detoksifikasi dan potensi antikanker alami.'
+        },
+        {
+          title: 'Serat Pangan Sehat',
+          description: 'Membantu melancarkan saluran pencernaan, mencegah sembelit, dan menjaga kesehatan mikrobiota usus.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Terdapat 6,2 Hektar lahan pertanian kubis yang dikelola oleh kelompok tani sayur di Desa Belok/Sidan.',
+        distribution: 'Tersebar di Banjar Bon, Jempanang, Sekarmukti, Lawak, Belok, Selantang, danSidan.',
+        soilClimate: 'Memerlukan suhu sejuk berkisar 15–20°C, tanah gembur kaya humus dengan drainase baik dan kelembapan stabil.'
+      },
+      varietyComparison: {
+        title: 'Kubis Hijau Bulat vs Kubis Ungu',
+        description: 'Kubis memiliki variasi kultivar dengan perbedaan pigmen warna daun, kepadatan krop, dan profil antioksidan.',
+        variants: [
+          {
+            name: 'Kubis Hijau Bulat',
+            tagline: 'Kultivar kubis paling populer dengan krop padat renyah dan rasa manis segar',
+            attributes: [
+              { label: 'Karakteristik Krop', value: 'Krop bulat padat dengan lembaran daun berlapis hijau muda cerah hingga putih di bagian dalam.' },
+              { label: 'Cita Rasa & Tekstur', value: 'Rasa manis segar alami dengan tekstur renyah dan kadar air seimbang.' },
+              { label: 'Kondisi Budidaya', value: 'Tumbuh sangat subur di bedengan tanah gembur beriklim sejuk dataran tinggi.' },
+              { label: 'Pemanfaatan', value: 'Bahan aneka sayur sup, tumisan, lalapan segar, dan olahan kuliner sehari-hari.' }
+            ]
+          },
+          {
+            name: 'Kubis Ungu (Merah)',
+            tagline: 'Kultivar kaya pigmen antosianin dengan warna ungu kemerahan mencolok',
+            attributes: [
+              { label: 'Karakteristik Krop', value: 'Daun berwarna ungu tua kemerahan pekat dengan lapisan krop yang sangat rapat dan kokoh.' },
+              { label: 'Cita Rasa & Tekstur', value: 'Tekstur lebih padat renyah dengan sedikit rasa earthy manis khas kubis merah.' },
+              { label: 'Kandungan Khusus', value: 'Kaya akan antioksidan antosianin dan vitamin C yang lebih tinggi dari kubis hijau.' },
+              { label: 'Pemanfaatan', value: 'Bahan salad premium, coleslaw, garnish hidangan restoran, dan olahan acar.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Tumbuh optimal di iklim dataran tinggi yang sejuk dan subur',
+        'Krop padat, segar, dan bertekstur renyah',
+        'Kaya akan vitamin C, vitamin K, dan antioksidan glukosinolat',
+        'Komoditas hortikultura sayuran andalan pasar pangan lokal',
+        'Serbaguna untuk aneka masakan sup, tumis, dan lalapan'
+      ]
+    },
+    {
+      slug: 'sawi-putih',
+      title: 'Sawi Putih',
+      subtitle: 'Sayuran daun renyah segar untuk aneka kuliner dan olahan',
+      image: 'assets/images/produk-sawi putih.png',
+      description: 'Sawi putih (Brassica rapa subsp. pekinensis) adalah sayuran daun berbentuk krop silindris memanjang dengan daun bertulang putih tebal dan helai hijau muda kekuningan. Di Desa Belok/Sidan, sawi putih dibudidayakan secara intensif karena memiliki masa panen relatif singkat dan permintaan pasar yang tinggi.',
+      shortDescription: 'Sawi putih Desa Belok/Sidan memiliki krop padat, renyah, berair melimpah, dan berasa manis lembut, cocok untuk sayur kuah maupun olahan fermentasi.',
+      nutritionItems: [
+        {
+          title: 'Hidrasi Alami & Rendah Kalori',
+          description: 'Memiliki kandungan air hingga 95% dengan kalori sangat rendah, sangat baik untuk diet sehat.'
+        },
+        {
+          title: 'Tinggi Vitamin A & C',
+          description: 'Mendukung kesehatan mata, peremajaan kulit, dan memperkuat pertahanan imun tubuh.'
+        },
+        {
+          title: 'Kandungan Asam Folat',
+          description: 'Penting untuk pembentukan sel darah merah dan sangat baik dikonsumsi ibu hamil.'
+        },
+        {
+          title: 'Kalsium & Kalium Nabati',
+          description: 'Membantu menjaga kestabilan tekanan darah dan kesehatan sistem saraf serta otot.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya sawi putih dicatat berdasarkan luasan lahan aktif kelompok tani sayur.',
+        distribution: 'Dibudidayakan di areal persawahan dan tegalan beriklim sejuk Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan tanah lempung berpasir yang gembur, drainase lancar, dan ketersediaan air irigasi yang cukup.'
+      },
+      varietyComparison: {
+        title: 'Sawi Putih Hibrida vs Sawi Putih Lokal',
+        description: 'Perbandingan kultivar sawi putih berfokus pada ketahanan tanaman, kepadatan krop, dan bobot panen.',
+        variants: [
+          {
+            name: 'Sawi Putih Hibrida',
+            tagline: 'Kultivar unggul berbobot berat dengan krop silindris padat',
+            attributes: [
+              { label: 'Bentuk Krop', value: 'Krop silindris panjang, tersusun sangat rapat dan padat dengan bobot 1,5–2,5 kg per krop.' },
+              { label: 'Ketahanan', value: 'Tahan terhadap penyakit busuk lunak bakteri dan cocok untuk transportasi jarak jauh.' },
+              { label: 'Tekstur & Rasa', value: 'Batang daun putih tebal sangat renyah, berair banyak, dan manis alami.' },
+              { label: 'Pemanfaatan', value: 'Pasokan pasar induk, supermarket, restoran, dan bahan kimchi.' }
+            ]
+          },
+          {
+            name: 'Sawi Putih Lokal',
+            tagline: 'Kultivar tradisional dengan masa panen genjah dan daun lembut',
+            attributes: [
+              { label: 'Bentuk Krop', value: 'Krop berukuran sedang dengan susunan daun yang lebih renggang dan lembut.' },
+              { label: 'Masa Panen', value: 'Umur panen lebih cepat sekitar 40–50 hari setelah tanam.' },
+              { label: 'Tekstur & Rasa', value: 'Rasa manis gurih lembut yang cepat matang saat dimasak sayur kuah.' },
+              { label: 'Pemanfaatan', value: 'Konsumsi rumah tangga petani dan pasar tradisional lokal.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Krop silindris padat dengan batang daun tebal dan renyah',
+        'Kandungan air tinggi memberikan kesegaran alami',
+        'Kaya vitamin A, vitamin C, kalsium, dan asam folat',
+        'Masa tanam produktif dengan permintaan pasar stabil',
+        'Bahan favorit masakan capcay, sup bening, dan olahan tumis'
+      ]
+    },
+    {
+      slug: 'buncis',
+      title: 'Buncis',
+      subtitle: 'Polong polongan bernutrisi tinggi dan sumber protein nabati',
+      image: 'assets/images/produk-buncis.png',
+      description: 'Buncis (Phaseolus vulgaris) merupakan tanaman polong-polongan semusim yang dibudidayakan untuk dipanen polong mudanya. Di Desa Belok/Sidan, kondisi tanah yang gembur dan udara sejuk pegunungan menghasilkan polong buncis yang lurus, renyah, berwarna hijau segar, dan tanpa serat kasar.',
+      shortDescription: 'Buncis Desa Belok/Sidan terkenal segar, manis renyah, dan kaya akan protein nabati, serat, serta zat besi untuk kesehatan keluarga.',
+      nutritionItems: [
+        {
+          title: 'Sumber Protein Nabati',
+          description: 'Mengandung protein nabati berkualitas yang mendukung regenerasi sel dan pemeliharaan massa otot.'
+        },
+        {
+          title: 'Zat Besi & Asam Folat',
+          description: 'Membantu pembentukan hemoglobin darah dan mencegah anemia bagi tubuh.'
+        },
+        {
+          title: 'Serat Pangan Larut',
+          description: 'Membantu menurunkan kadar kolesterol LDL dan menjaga kadar gula darah tetap stabil.'
+        },
+        {
+          title: 'Silikon & Vitamin K',
+          description: 'Kombinasi silikon nabati dan vitamin K mendukung penyerapan mineral untuk kepadatan tulang.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Terdapat 5,6 Hektar lahan pertanian kubis yang dikelola oleh kelompok tani sayur di Desa Belok/Sidan.',
+        distribution: 'Tersebar di Banjar Bon, Sekarmukti, Lawak, Belok, Selantang, Sidan, dan Penikit.',
+        soilClimate: 'Tumbuh subur pada tanah subur berdrainase baik dengan pH 5,5–6,5 dan suhu udara 18–24°C.'
+      },
+      varietyComparison: {
+        title: 'Buncis Tegak vs Buncis Rambat',
+        description: 'Buncis dibedakan berdasarkan pola pertumbuhan batangnya antara tipe tegak mandiri dan tipe merambat.',
+        variants: [
+          {
+            name: 'Buncis Tegak (Bush Bean)',
+            tagline: 'Tipe tanaman kompak tanpa lanjaran dengan panen serempak',
+            attributes: [
+              { label: 'Habitus Tanaman', value: 'Tumbuh pendek membentuk semak setinggi 30–50 cm tanpa memerlukan tiang lanjaran bambu.' },
+              { label: 'Polong Buah', value: 'Polong berukuran sedang, renyah, dan siap panen serentak dalam waktu 45–50 hari.' },
+              { label: 'Karakteristik Budidaya', value: 'Praktis dan hemat biaya tenaga kerja pembuatan lanjaran.' },
+              { label: 'Pemanfaatan', value: 'Sayuran segar harian, tumis buncis bawang putih, dan sayur campur.' }
+            ]
+          },
+          {
+            name: 'Buncis Rambat (Pole Bean)',
+            tagline: 'Tipe merambat dengan masa produktif panjang dan polong panjang lentur',
+            attributes: [
+              { label: 'Habitus Tanaman', value: 'Batang merambat mencapai 2–3 meter menggunakan tiang penyangga lanjaran bambu.' },
+              { label: 'Polong Buah', value: 'Polong lebih panjang (15–20 cm), lurus, daging polong tebal dan tidak berserat.' },
+              { label: 'Masa Panen', value: 'Dapat dipanen berkali-kali selama masa produktif 2–3 bulan.' },
+              { label: 'Pemanfaatan', value: 'Komoditas pasar induk premium, katering, dan hidangan restoran.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Polong hijau segar, renyah, manis, dan tanpa serat kasar',
+        'Kaya protein nabati, zat besi, vitamin K, dan asam folat',
+        'Mendukung kesehatan jantung dan kepadatan tulang',
+        'Cocok ditanam secara tumpang sari di lahan pertanian dataran tinggi',
+        'Sangat lezat ditumis, direbus sebagai lalapan, atau sup'
+      ]
+    },
+    {
+      slug: 'mentimun',
+      title: 'Mentimun',
+      subtitle: 'Buah sayur segar penyejuk kaya elektrolit dan antioksidan',
+      image: 'assets/images/produk-timun jepang.png',
+      description: 'Mentimun (Cucumis sativus) merupakan tanaman merambat semusim anggota suku labu-labuan (Cucurbitaceae). Buah mentimun yang dipanen muda memiliki daging buah berair banyak dengan rasa sejuk menyegarkan. Di Desa Belok/Sidan, petani membudidayakan mentimun lokal maupun varietas timun jepang (kyuri) yang bernilai jual tinggi.',
+      shortDescription: 'Mentimun Desa Belok/Sidan memiliki rasa segar renyah dengan kandungan air melimpah, kaya elektrolit alami dan antioksidan untuk hidrasi tubuh.',
+      nutritionItems: [
+        {
+          title: 'Kaya Cairan & Elektrolit',
+          description: 'Mengandung 95% air serta kalium dan magnesium untuk rehidrasi tubuh setelah beraktivitas.'
+        },
+        {
+          title: 'Antioksidan Flavonoid & Tanin',
+          description: 'Membantu menangkal radikal bebas dan mengurangi risiko peradangan kronis pada sel tubuh.'
+        },
+        {
+          title: 'Menyehatkan Kulit & Kolagen',
+          description: 'Kandungan silika dan vitamin C membantu menjaga kekenyalan kulit dan memperkuat jaringan ikat.'
+        },
+        {
+          title: 'Mendukung Detoksifikasi Alami',
+          description: 'Membantu merangsang fungsi ginjal dalam membuang sisa metabolisme melalui urin (efek diuretik ringan).'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya mentimun dicatat berdasarkan pencatatan rotasi tanam petani hortikultura.',
+        distribution: 'Ditanam pada bedengan sawah tadah hujan dan tegalan di Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan tanah lempung gembur subur, sinar matahari penuh, dan pasokan air teratur.'
+      },
+      varietyComparison: {
+        title: 'Timun Jepang (Kyuri) vs Timun Lokal',
+        description: 'Perbandingan karakteristik timun jepang berkulit hijau gelap pekat dengan timun sayur lokal.',
+        variants: [
+          {
+            name: 'Timun Jepang (Kyuri)',
+            tagline: 'Kultivar premium berkulit hijau gelap pekat, renyah, dan minim biji',
+            attributes: [
+              { label: 'Bentuk & Kulit', value: 'Bentuk silindris panjang ramping, kulit hijau tua berpori halus tanpa duri mencolok.' },
+              { label: 'Daging Buah & Biji', value: 'Daging buah sangat padat, renyah, kadar air teratur, dengan ruang biji sangat kecil.' },
+              { label: 'Cita Rasa', value: 'Rasa manis segar murni tanpa rasa pahit sama sekali.' },
+              { label: 'Pemanfaatan', value: 'Bahan sushi, salad segar hotel/restoran, dan hidangan dingin.' }
+            ]
+          },
+          {
+            name: 'Timun Sayur Lokal',
+            tagline: 'Kultivar lokal berair melimpah dengan kulit hijau bergaris putih',
+            attributes: [
+              { label: 'Bentuk & Kulit', value: 'Bentuk silindris montok, kulit hijau terang dengan garis putih kekuningan memudar.' },
+              { label: 'Daging Buah & Biji', value: 'Daging buah berair sangat banyak dengan aroma mentimun segar yang tajam.' },
+              { label: 'Cita Rasa', value: 'Rasa segar menyejukkan yang sangat cocok dikonsumsi mentah.' },
+              { label: 'Pemanfaatan', value: 'Lalapan sambal, acar mentah, rujak, dan jus mentimun penurun tensi.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Kandungan air tinggi untuk hidrasi alami dan pemulihan stamina',
+        'Tersedia varietas Timun Jepang (Kyuri) dan Timun Lokal',
+        'Tekstur renyah, segar, dan tidak berasa pahit',
+        'Kaya elektrolit kalium, magnesium, dan vitamin K',
+        'Sangat populer sebagai lalapan, salad, jus segar, dan acar'
+      ]
+    },
+    {
+      slug: 'tomat',
+      title: 'Tomat',
+      subtitle: 'Buah hortikultura kaya likopen untuk kesehatan dan aneka bumbu masakan',
+      image: 'assets/images/produk-tomat.png',
+      description: 'Tomat (Solanum lycopersicum) adalah tumbuhan dari keluarga Solanaceae yang dibudidayakan untuk dipanen buahnya yang kaya sari dan berwarna merah cerah. Di kawasan dataran tinggi Desa Belok/Sidan yang berhawa sejuk, buah tomat berkembang dengan daging tebal, rasa manis-asam segar, dan kadar likopen antioksidan yang optimal.',
+      shortDescription: 'Tomat Desa Belok/Sidan berbuah lebat, padat, merah merona, dan kaya antioksidan likopen serta vitamin C untuk kesehatan jantung dan imunitas.',
+      nutritionItems: [
+        {
+          title: 'Tinggi Antioksidan Likopen',
+          description: 'Likopen merupakan pigmen karotenoid merah yang sangat efektif melindungi kesehatan jantung dan prostat.'
+        },
+        {
+          title: 'Kaya Vitamin C & Vitamin A',
+          description: 'Mendukung kekebalan tubuh, menjaga kesehatan retina mata, dan mempercepat penyembuhan luka.'
+        },
+        {
+          title: 'Kalium untuk Tekanan Darah',
+          description: 'Membantu menyeimbangkan kadar natrium tubuh dan menjaga kestabilan tekanan darah arteri.'
+        },
+        {
+          title: 'Asam Folat & Kolin',
+          description: 'Mendukung fungsi neurologis, suasana hati, dan pembelahan sel yang sehat.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya tomat dicatat berdasarkan luasan kebun aktif kelompok tani.',
+        distribution: 'Tersebar di lahan-lahan pertanian sayur dataran tinggi Desa Belok/Sidan.',
+        soilClimate: 'Tumbuh optimal pada suhu 18–25°C dengan tanah gembur kaya bahan organik dan penyinaran matahari penuh.'
+      },
+      varietyComparison: {
+        title: 'Tomat Buah (Sayur) vs Tomat Ceri',
+        description: 'Perbandingan antara tomat buah berukuran besar untuk masakan dan tomat ceri manis untuk konsumsi segar.',
+        variants: [
+          {
+            name: 'Tomat Buah / Sayur',
+            tagline: 'Buah berukuran besar dengan daging tebal dan sari buah berlimpah',
+            attributes: [
+              { label: 'Ukuran & Bentuk', value: 'Buah bulat agak lonjong berukuran 80–150 gram dengan dinding buah tebal.' },
+              { label: 'Cita Rasa', value: 'Perpaduan rasa asam segar dan manis dengan aroma tomat yang kuat.' },
+              { label: 'Karakteristik Daging', value: 'Daging buah tebal dan kokoh sehingga tahan simpan dan pengiriman.' },
+              { label: 'Pemanfaatan', value: 'Bahan utama sambal tomat, bumbu masakan, jus buah, dan saus.' }
+            ]
+          },
+          {
+            name: 'Tomat Ceri (Cherry Tomato)',
+            tagline: 'Buah berukuran kecil bulat mungil dengan rasa manis legit',
+            attributes: [
+              { label: 'Ukuran & Bentuk', value: 'Buah bulat kecil berdiameter 2–3 cm dalam dompolan tandan buah yang lebat.' },
+              { label: 'Cita Rasa', value: 'Rasa manis dominan dengan tingkat keasaman rendah dan kulit tipis renyah.' },
+              { label: 'Karakteristik Daging', value: 'Sari buah manis meletup saat digigit segar.' },
+              { label: 'Pemanfaatan', value: 'Salad segar premium, garnish hidangan hotel/kafe, dan camilan sehat.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Warna merah merona alami dengan daging buah padat dan tebal',
+        'Sumber antioksidan likopen dan vitamin C berkualitas tinggi',
+        'Rasa manis-asam segar seimbang yang meningkatkan kelezatan masakan',
+        'Dibudidayakan di dataran tinggi dengan metode pertanian terjaga',
+        'Komoditas penting untuk bumbu dapur, sambal, dan minuman jus'
+      ]
+    },
+    {
+      slug: 'pakcoy',
+      title: 'Pakcoy',
+      subtitle: 'Sayuran daun hijau berbentuk sendok yang renyah dan gurih',
+      image: 'assets/images/produk-pakcoy.png',
+      description: 'Pakcoy atau sawi sendok (Brassica rapa subsp. chinensis) adalah jenis sayuran daun dari suku kubis-kubisan dengan tangkai daun lebar berdaging menyerupai sendok dan helaian daun hijau tua mengilap. Di Desa Belok/Sidan, pakcoy tumbuh sangat subur dengan tekstur tangkai yang renyah, manis, dan kaya akan kalsium serta antioksidan.',
+      shortDescription: 'Pakcoy Desa Belok/Sidan dipanen segar dengan daun hijau tua mengilap dan tangkai renyah, kaya vitamin dan mineral nabati untuk hidangan sehat.',
+      nutritionItems: [
+        {
+          title: 'Tinggi Kalsium & Magnesium',
+          description: 'Menyediakan kalsium nabati yang mudah diserap tubuh untuk memperkuat tulang dan gigi.'
+        },
+        {
+          title: 'Kaya Vitamin C & E',
+          description: 'Kombinasi antioksidan vitamin C dan E membantu menjaga daya tahan tubuh dan menangkal penuaan sel.'
+        },
+        {
+          title: 'Karotenoid Lutein & Zeaksantin',
+          description: 'Pigmen pelindung mata dari radiasi cahaya dan pencegah degenerasi makula.'
+        },
+        {
+          title: 'Serat Pangan Alami',
+          description: 'Membantu menjaga kesehatan pencernaan, melancarkan metabolisme, dan mendukung berat badan ideal.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya pakcoy dicatat berdasarkan data kelompok tani sayuran daun.',
+        distribution: 'Tersebar di areal bedengan sayuran dan kebun pekarangan Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan tanah gembur berhumus tinggi dengan ketersediaan air yang cukup dan suhu sejuk.'
+      },
+      varietyComparison: {
+        title: 'Pakcoy Hijau Standar vs Baby Pakcoy',
+        description: 'Perbandingan antara pakcoy ukuran dewasa standar dan baby pakcoy yang dipanen pada usia muda.',
+        variants: [
+          {
+            name: 'Pakcoy Hijau Standar',
+            tagline: 'Kultivar daun berukuran besar dengan tangkai sendok kokoh dan tebal',
+            attributes: [
+              { label: 'Ukuran Tanaman', value: 'Tinggi tanaman mencapai 20–25 cm dengan tangkai daun lebar berdaging tebal.' },
+              { label: 'Tekstur & Rasa', value: 'Tangkai sangat renyah, berair, dan berasa manis gurih saat ditumis.' },
+              { label: 'Masa Panen', value: 'Dipanen pada umur 35–40 hari setelah tanam.' },
+              { label: 'Pemanfaatan', value: 'Bahan tumisan daging/seafood, mi kuah, capcay, dan aneka masakan oriental.' }
+            ]
+          },
+          {
+            name: 'Baby Pakcoy',
+            tagline: 'Kultivar mini bertekstur sangat lembut dan manis renyah',
+            attributes: [
+              { label: 'Ukuran Tanaman', value: 'Ukuran mungil kompak setinggi 10–15 cm yang disajikan utuh saat dimasak.' },
+              { label: 'Tekstur & Rasa', value: 'Tekstur sangat empuk, lembut, tidak berserat, dan cita rasa manis segar.' },
+              { label: 'Masa Panen', value: 'Dipanen dini pada umur 25–30 hari setelah tanam.' },
+              { label: 'Pemanfaatan', value: 'Hidangan tumis bawang putih ala restoran, rebusan hotpot, dan sup premium.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Tangkai daun tebal bertekstur renyah dan daun hijau segar mengilap',
+        'Kaya kalsium nabati, vitamin C, vitamin E, dan lutein',
+        'Masa tanam cepat dengan kesegaran terjamin dari kebun lokal',
+        'Sangat mudah diolah menjadi aneka hidangan tumis dan sup',
+        'Pilihan utama masyarakat untuk menu sayuran hijau harian'
+      ]
+    },
+    {
+      slug: 'terong',
+      title: 'Terong',
+      subtitle: 'Sayuran buah ungu kaya nasunin dan antioksidan polifenol',
+      image: 'assets/images/produk-terong.png',
+      description: 'Terong (Solanum melongena) adalah tumbuhan penghasil buah yang tergolong dalam keluarga Solanaceae. Buah terong memiliki kulit ungu mengilap yang indah dengan daging buah spons lembut yang menyerap bumbu dengan sempurna. Di Desa Belok/Sidan, terong dibudidayakan sebagai salah satu komoditas sayuran buah yang produktif.',
+      shortDescription: 'Terong Desa Belok/Sidan memiliki kulit ungu berkilau, daging lembut bebas rasa pahit, dan kaya antioksidan nasunin untuk perlindungan sel saraf.',
+      nutritionItems: [
+        {
+          title: 'Antioksidan Nasunin (Antosianin)',
+          description: 'Nasunin pada kulit ungu terong adalah antioksidan kuat yang melindungi membran sel otak dari kerusakan radikal bebas.'
+        },
+        {
+          title: 'Tinggi Serat Pangan',
+          description: 'Membantu menurunkan penyerapan gula dalam darah dan memelihara kesehatan saluran cerna.'
+        },
+        {
+          title: 'Kandungan Asam Klorogenat',
+          description: 'Senyawa polifenol utama yang membantu menurunkan kadar kolesterol jahat (LDL).'
+        },
+        {
+          title: 'Kaya Kalium & Mangan',
+          description: 'Mendukung metabolisme karbohidrat dan menjaga fungsi normal sistem kardiovaskular.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya terong dicatat berdasarkan luasan kebun produktif petani desa.',
+        distribution: 'Tersebar di lahan tegalan dan persawahan Desa Belok/Sidan.',
+        soilClimate: 'Tumbuh subur pada tanah lempung berpasir kaya hara dengan drainase lancar dan sinar matahari cukup.'
+      },
+      varietyComparison: {
+        title: 'Terong Ungu Panjang vs Terong Bulat Lalap',
+        description: 'Perbandingan antara terong ungu berukuran panjang untuk masakan dan terong bulat renyah untuk lalapan.',
+        variants: [
+          {
+            name: 'Terong Ungu Panjang',
+            tagline: 'Kultivar paling populer dengan buah lurus panjang dan kulit ungu mengilap',
+            attributes: [
+              { label: 'Bentuk & Kulit', value: 'Buah silindris memanjang 20–30 cm dengan kulit ungu tua berkilau dan daging putih kehijauan.' },
+              { label: 'Tekstur Daging', value: 'Daging buah empuk, lembut, bertekstur spons yang meresap bumbu masakan.' },
+              { label: 'Cita Rasa', value: 'Rasa gurih manis lembut tanpa rasa pahit.' },
+              { label: 'Pemanfaatan', value: 'Terong balado, terong bakar sambal matah, sayur lodeh, dan terong goreng krispi.' }
+            ]
+          },
+          {
+            name: 'Terong Bulat Lalap (Terong Telunjuk/Hijau)',
+            tagline: 'Kultivar bulat kecil bertekstur renyah khusus lalapan segar',
+            attributes: [
+              { label: 'Bentuk & Kulit', value: 'Buah bulat kecil berdiameter 3–5 cm berwarna hijau bergaris putih atau ungu muda.' },
+              { label: 'Tekstur Daging', value: 'Daging buah padat renyah dengan rasa manis segar.' },
+              { label: 'Pemanfaatan Khusus', value: 'Dikonsumsi mentah sebagai lalapan segar bersama aneka sambal tradisional.' },
+              { label: 'Kandungan', value: 'Kaya serat dan air yang menyegarkan mulut saat menikmati makanan berlemak.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Kulit ungu berkilau kaya antioksidan nasunin pelindung sel otak',
+        'Daging buah lembut dan empuk tanpa rasa pahit',
+        'Membantu menjaga kadar kolesterol dan kesehatan jantung',
+        'Daya serap bumbu yang sangat baik untuk aneka masakan Nusantara',
+        'Dipanen segar langsung dari perkebunan petani Desa Belok/Sidan'
+      ]
+    },
+    {
+      slug: 'labu-siam',
+      title: 'Labu Siam',
+      subtitle: 'Sayuran buah renyah dengan kandungan air tinggi dan kalium',
+      image: 'assets/images/produk-labu-siam.png',
+      description: 'Labu siam (Sechium edule) atau jepang merupakan tumbuhan merambat suku Cucurbitaceae yang menghasilkan buah berdaging renyah dengan getah bening dan kandungan air melimpah. Di Desa Belok/Sidan, tanaman ini merambat subur pada para-para bambu di perkebunan warga, menghasilkan buah labu siam dan pucuk daun muda yang digemari pasar.',
+      shortDescription: 'Labu siam Desa Belok/Sidan memiliki buah bertekstur renyah, segar, kaya kalium dan asam folat, serta pucuk daun muda yang lezat dimasak sayur.',
+      nutritionItems: [
+        {
+          title: 'Kaya Kalium Penurun Tekanan Darah',
+          description: 'Kalium tinggi membantu menstabilkan tekanan darah dan membuang kelebihan natrium dari tubuh.'
+        },
+        {
+          title: 'Sangat Rendah Kalori & Lemak',
+          description: 'Kandungan air tinggi dan nol lemak jenuh menjadikannya sayuran ideal untuk menjaga berat badan.'
+        },
+        {
+          title: 'Tinggi Asam Folat (Vitamin B9)',
+          description: 'Sangat baik untuk mendukung pembentukan DNA, regenerasi sel, dan kesehatan ibu hamil.'
+        },
+        {
+          title: 'Antioksidan Myricetin',
+          description: 'Senyawa flavonoid yang memiliki sifat anti-inflamasi dan pelindung sel dari stres oksidatif.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya labu siam dicatat berdasarkan luasan para-para perkebunan aktif.',
+        distribution: 'Dibudidayakan pada sistem para-para bambu di tegalan dan perbukitan Desa Belok/Sidan.',
+        soilClimate: 'Tumbuh sangat subur di iklim sejuk dataran tinggi dengan tanah lembap berdrainase baik.'
+      },
+      varietyComparison: {
+        title: 'Buah Labu Siam vs Pucuk Daun Labu Siam',
+        description: 'Dua bagian tanaman labu siam yang dimanfaatkan secara luas sebagai komoditas sayuran bernilai ekonomi.',
+        variants: [
+          {
+            name: 'Buah Labu Siam',
+            tagline: 'Buah berbentuk pir berwarna hijau muda dengan tekstur renyah segar',
+            attributes: [
+              { label: 'Karakteristik Fisik', value: 'Buah berbentuk lonjong pir beralur lembut, kulit hijau muda mulus tanpa duri.' },
+              { label: 'Tekstur & Rasa', value: 'Daging buah padat renyah, berair banyak, berasa manis lembut yang menyegarkan.' },
+              { label: 'Pemanfaatan', value: 'Bahan sayur lodeh, tumis labu siam ebi/cabai, lalapan rebus, dan sayur asem.' },
+              { label: 'Ketahanan Simpan', value: 'Daya simpan lama hingga beberapa minggu pada suhu ruang.' }
+            ]
+          },
+          {
+            name: 'Pucuk Daun Labu Siam (Baby Labu)',
+            tagline: 'Tunas pucuk daun muda yang sangat lembut, renyah, dan gurih',
+            attributes: [
+              { label: 'Karakteristik Fisik', value: 'Pucuk sulur dan daun muda berwarna hijau cerah berbulu halus yang lentur.' },
+              { label: 'Tekstur & Rasa', value: 'Tekstur sangat lembut renyah dengan rasa gurih manis alami khas pucuk sayur.' },
+              { label: 'Pemanfaatan', value: 'Tumisan bawang putih, plecing daun labu, dan lalapan rebus hangat.' },
+              { label: 'Kandungan', value: 'Kaya zat besi, klorofil, dan serat hijau untuk pembersih pencernaan.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Kandungan kalium tinggi membantu mengontrol tekanan darah',
+        'Tekstur buah renyah berair dan pucuk daun muda yang lezat',
+        'Sangat rendah kalori dan bebas lemak untuk pola hidup sehat',
+        'Ditanam dengan sistem para-para tradisional yang higienis',
+        'Bahan serbaguna untuk aneka olahan sayur kuah dan tumis'
+      ]
+    },
+    {
+      slug: 'labu-pumpkin',
+      title: 'Labu Pumpkin',
+      subtitle: 'Buah labu berdaging kuning tebal kaya beta karoten dan serat',
+      image: 'assets/images/produk-labu-pumpkin.png',
+      description: 'Labu pumpkin atau waluh (Cucurbita moschata) merupakan tanaman semusim menjalar yang menghasilkan buah berkulit keras dengan daging buah tebal berwarna kuning jingga keemasan. Di Desa Belok/Sidan, labu pumpkin tumbuh optimal menghasilkan buah berbobot berat dengan rasa manis pulen dan kandungan beta karoten alami yang sangat tinggi.',
+      shortDescription: 'Labu pumpkin Desa Belok/Sidan berbuah besar dengan daging kuning jingga tebal, manis pulen, dan kaya provitamin A untuk kesehatan tubuh.',
+      nutritionItems: [
+        {
+          title: 'Sangat Tinggi Beta Karoten (Vitamin A)',
+          description: 'Pigmen oranye alami yang diubah tubuh menjadi vitamin A untuk memelihara ketajaman mata dan imunitas.'
+        },
+        {
+          title: 'Serat Pangan Mengenyangkan',
+          description: 'Memberikan rasa kenyang lebih lama, memperlambat penyerapan glukosa, dan melancarkan pencernaan.'
+        },
+        {
+          title: 'Mineral Kalium & Seng',
+          description: 'Mendukung fungsi kontraksi otot jantung dan memperkuat sistem pertahanan kekebalan tubuh.'
+        },
+        {
+          title: 'Antioksidan Lutein & Zeaksantin',
+          description: 'Melindungi sel tubuh dari efek buruk penuaan dini dan menjaga kesehatan kulit.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya labu pumpkin dicatat berdasarkan luasan tegalan dan lahan kebun petani.',
+        distribution: 'Tersebar di kebun tegalan dan lahan terbuka Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan tanah gembur kaya bahan organik, sinar matahari penuh, dan drainase air yang lancar.'
+      },
+      varietyComparison: {
+        title: 'Labu Kuning Lokal (Waluh) vs Labu Madu (Butternut)',
+        description: 'Perbandingan antara labu kuning bulat tradisional dan labu madu berbentuk botol.',
+        variants: [
+          {
+            name: 'Labu Kuning Lokal (Waluh)',
+            tagline: 'Kultivar tradisional berbentuk bulat pipih beralur dengan daging tebal pulen',
+            attributes: [
+              { label: 'Bentuk & Ukuran', value: 'Buah bulat pipih beralur berbobot 3–6 kg per buah dengan kulit cokelat jingga kekuningan.' },
+              { label: 'Daging Buah & Tekstur', value: 'Daging buah tebal berwarna kuning jingga tua, bertekstur pulen lembut dan legit.' },
+              { label: 'Pemanfaatan', value: 'Bahan kolak, kue tradisional Bali, sup labu, bubur sehat, dan olahan kukus.' },
+              { label: 'Daya Simpan', value: 'Kulit keras memungkinkan penyimpanan hingga berbulan-bulan tanpa rusak.' }
+            ]
+          },
+          {
+            name: 'Labu Madu (Butternut Pumpkin)',
+            tagline: 'Kultivar berbentuk botol pir dengan rasa manis pekat seperti mentega',
+            attributes: [
+              { label: 'Bentuk & Ukuran', value: 'Bentuk pir silindris berleher dengan kulit krem mulus dan rongga biji hanya di bagian bawah.' },
+              { label: 'Daging Buah & Tekstur', value: 'Daging buah padat halus bebas serat kasar dengan cita rasa manis madu gurih (nutty).' },
+              { label: 'Pemanfaatan', value: 'Creamy pumpkin soup, kue pastry, MPASI bayi, dan hidangan panggang restoran.' },
+              { label: 'Kandungan Khusus', value: 'Kadar gula alami dan kepekatan beta karoten yang sangat tinggi.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Daging buah kuning jingga tebal dengan cita rasa manis pulen',
+        'Sumber terkaya beta karoten (provitamin A) dan serat alami',
+        'Daya simpan buah sangat lama berkat kulit luar yang kokoh',
+        'Bahan baku favorit aneka hidangan kolak, kue, dan sup sehat',
+        'Dibudidayakan secara alami oleh para petani Desa Belok/Sidan'
+      ]
+    },
+    {
+      slug: 'pisang',
+      title: 'Pisang',
+      subtitle: 'Komoditas buah hortikultura 64.000 rumpun untuk pangan dan tradisi upacara Bali',
+      image: 'assets/images/produk-pisang.png',
+      description: 'Pisang (Musa spp.) merupakan salah satu komoditas hortikultura buah utama yang dibudidayakan secara luas di Desa Belok/Sidan dengan populasi mencapai 64.000 rumpun. Selain sebagai buah konsumsi segar keluarga dan sumber ekonomi harian, pisang memiliki peranan yang sangat sakral dalam tradisi adat dan persembahyangan umat Hindu di Bali sebagai sarana upakara banten.',
+      shortDescription: 'Pisang di Desa Belok/Sidan dibudidayakan mencapai 64.000 rumpun, menghasilkan buah manis bernutrisi tinggi untuk konsumsi harian dan sarana utama upacara adat Bali.',
+      nutritionItems: [
+        {
+          title: 'Sumber Kalium Sangat Tinggi',
+          description: 'Kalium esensial untuk menjaga fungsi detak jantung normal, tekanan darah stabil, dan mencegah kram otot.'
+        },
+        {
+          title: 'Karbohidrat Kompleks & Energi Instan',
+          description: 'Kombinasi glukosa, fruktosa, dan serat menyediakan pasokan energi berkelanjutan bagi tubuh.'
+        },
+        {
+          title: 'Vitamin B6 & Triptofan',
+          description: 'Mendukung produksi neurotransmiter serotonin untuk memperbaiki suasana hati dan kualitas tidur.'
+        },
+        {
+          title: 'Serat Pektin & Prebiotik',
+          description: 'Membantu memelihara kesehatan sistem pencernaan dan menjadi makanan bagi bakteri baik usus.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Jumlah budidaya: 64.000 rumpun.',
+        distribution: 'Ditanam di kebun tegalan, pekarangan rumah warga, dan pembatas lahan di seluruh wilayah Desa Belok/Sidan.',
+        soilClimate: 'Tumbuh subur pada tanah lempung gembur yang kaya humus dan air dengan iklim tropis dataran sejuk.'
+      },
+      varietyComparison: {
+        title: 'Pisang Konsumsi Segar vs Pisang Upakara (Saba/Kepok)',
+        description: 'Perbandingan pemanfaatan varietas pisang meja konsumsi dan pisang khusus sarana upacara adat di Bali.',
+        variants: [
+          {
+            name: 'Pisang Meja Konsumsi (Pisang Raja / Susu / Ambon)',
+            tagline: 'Kultivar pisang meja dengan aroma harum manis dan daging lembut',
+            attributes: [
+              { label: 'Karakteristik Buah', value: 'Kulit kuning cerah mulus saat matang dengan daging buah lembut, manis legit, dan harum.' },
+              { label: 'Pemanfaatan', value: 'Dikonsumsi langsung sebagai buah pencuci mulut, jus buah, dan bahan kue.' },
+              { label: 'Cita Rasa', value: 'Rasa manis pekat dengan tekstur pulen lembut yang sangat disukai anak-anak hingga dewasa.' },
+              { label: 'Pemasaran', value: 'Dipasarkan luas ke toko buah, pasar tradisional, dan perhotelan.' }
+            ]
+          },
+          {
+            name: 'Pisang Upakara (Pisang Saba / Kepok / Emas)',
+            tagline: 'Kultivar esensial untuk kelengkapan sarana banten dan persembahyangan adat Bali',
+            attributes: [
+              { label: 'Karakteristik Buah', value: 'Buah berbentuk bersegi kokoh dengan tandan yang rapi dan tahan simpan lama.' },
+              { label: 'Peran Adat & Budaya', value: 'Komponen wajib dalam pembuatan aneka banten sajen, canang, dan upacara keagamaan Hindu Bali.' },
+              { label: 'Pemanfaatan Kuliner', value: 'Sangat lezat diolah menjadi pisang goreng, pisang rebus, kolak, dan keripik pisang.' },
+              { label: 'Nilai Ekonomi', value: 'Permintaan melonjak tinggi menjelang hari raya Galungan, Kuningan, dan piodalan.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Populasi budidaya mencapai 64.000 rumpun di seluruh desa',
+        'Komoditas multiguna untuk pemenuhan gizi pangan dan sarana ritual upacara adat',
+        'Sumber kalium, energi alami, dan vitamin B6 yang sangat baik',
+        'Beragam varietas unggulan seperti Pisang Raja, Pisang Saba, Pisang Susu, dan Kepok',
+        'Pasokan buah segar yang stabil sepanjang tahun'
+      ]
+    },
+    {
+      slug: 'vanili',
+      title: 'Vanili',
+      subtitle: 'Emas hijau perkebunan penghasil aroma vanilin alami bermutu tinggi',
+      image: 'assets/images/produk-vanili.png',
+      description: 'Vanili (Vanilla planifolia) merupakan tanaman anggrek penghasil polong vanili yang dijuluki sebagai "emas hijau" karena nilai ekonominya yang sangat tinggi di pasar internasional. Di Desa Belok/Sidan, ketinggian dan iklim mikro pegunungan yang sejuk menyediakan kondisi ideal untuk budidaya vanili berkualitas dengan kadar vanilin alami yang tinggi dan aroma harum yang memikat.',
+      shortDescription: 'Vanili Desa Belok/Sidan adalah komoditas perkebunan bernilai tinggi dengan polong panjang, berminyak, dan beraroma harum vanilin alami pekat.',
+      nutritionItems: [
+        {
+          title: 'Senyawa Vanilin Alami Murni',
+          description: 'Vanilin alami merupakan antioksidan polifenol yang memberikan aroma manis menenangkan dan melindungi sel.'
+        },
+        {
+          title: 'Efek Relaksasi & Aromaterapi',
+          description: 'Aroma vanili alami terbukti membantu meredakan stres, kecemasan, dan meningkatkan suasana hati.'
+        },
+        {
+          title: 'Sifat Antibakteri Alami',
+          description: 'Minyak atsiri pada polong vanili memiliki aktivitas antibakteri yang melindungi dari mikroorganisme patogen.'
+        },
+        {
+          title: 'Mendukung Kesehatan Pencernaan',
+          description: 'Membantu meredakan mual dan mendukung fungsi pencernaan saat digunakan dalam sajian minuman hangat.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya vanili dicatat berdasarkan luasan kebun vanili intensif petani desa.',
+        distribution: 'Tersebar di perkebunan ternaungi di wilayah dataran menengah dan tinggi Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan iklim tropis sejuk dengan kelembapan 70–80%, pohon rambatan pelindung, dan tanah kaya humus dengan drainase sangat baik.'
+      },
+      varietyComparison: {
+        title: 'Vanili Planifolia vs Vanili Tahitensis',
+        description: 'Perbandingan dua spesies vanili komersial utama dengan profil aroma dan bentuk polong yang berbeda.',
+        variants: [
+          {
+            name: 'Vanilla Planifolia (Bourbon Vanilla)',
+            tagline: 'Spesies vanili terpopuler dunia dengan kadar vanilin tinggi dan aroma creamy klasik',
+            attributes: [
+              { label: 'Bentuk Polong', value: 'Polong ramping memanjang 15–22 cm, berwarna cokelat kehitaman mengilap dan lentur berminyak.' },
+              { label: 'Kandungan Vanilin', value: 'Kadar vanilin alami tinggi (1,8–2,4%) menghasilkan aroma manis karamel pekat.' },
+              { label: 'Budidaya di Belok/Sidan', value: 'Spesies utama yang dibudidayakan secara intensif oleh kelompok petani vanili desa.' },
+              { label: 'Pemanfaatan', value: 'Ekstrak vanila premium, industri perhotelan, pastry kue internasional, dan pasar ekspor.' }
+            ]
+          },
+          {
+            name: 'Vanilla Tahitensis',
+            tagline: 'Spesies vanili dengan profil aroma floral bunga dan buah yang unik',
+            attributes: [
+              { label: 'Bentuk Polong', value: 'Polong lebih pendek montok dengan kulit lebih tebal dan elastis.' },
+              { label: 'Karakter Aroma', value: 'Aroma vanila dipadu dengan nuansa wangi bunga (floral) dan buah manis yang khas.' },
+              { label: 'Kandungan Vanilin', value: 'Kadar vanilin lebih rendah namun kaya senyawa aromatik heliotropin dan anisalil alkohol.' },
+              { label: 'Pemanfaatan', value: 'Industri parfum, aromaterapi mewah, minuman spesialti, dan kosmetik herbal.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Komoditas perkebunan premium bernilai ekonomi tinggi untuk pasar ekspor',
+        'Polong vanili panjang, berminyak, lentur, dan beraroma harum pekat',
+        'Kandungan senyawa vanilin alami murni tanpa perisa sintetis',
+        'Dikelola dengan pemeliharaan presisi dan penyerbukan bunga manual yang teliti',
+        'Menjadi salah satu potensi kebanggaan hasil bumi perkebunan desa'
+      ]
+    },
+    {
+      slug: 'gula-aren',
+      title: 'Gula Aren',
+      subtitle: 'Pemanis alami tradisional dari sadapan nira murni pohon aren',
+      image: 'assets/images/produk-gula aren.png',
+      description: 'Gula aren khas Desa Belok/Sidan diproduksi secara tradisional dari sadapan nira segar pohon aren atau pohon nao (Arenga pinnata) yang tumbuh subur di lereng perbukitan desa. Nira murni dimasak perlahan di atas tungku kayu bakar hingga mengental membentuk gula aren alami dengan aroma karamel smoky yang khas dan indeks glikemik yang lebih ramah bagi tubuh.',
+      shortDescription: 'Gula aren Desa Belok/Sidan diolah murni dari nira pohon aren (nao) tanpa bahan kimia, menghasilkan pemanis alami legit beraroma harum khas pedesaan.',
+      nutritionItems: [
+        {
+          title: 'Indeks Glikemik Lebih Rendah',
+          description: 'Memiliki indeks glikemik sekitar 35 (jauh lebih rendah dari gula pasir 65), tidak memicu lonjakan drastis gula darah.'
+        },
+        {
+          title: 'Kaya Mineral Zat Besi & Kalsium',
+          description: 'Mengandung zat besi untuk mencegah anemia serta kalsium dan fosfor untuk kekuatan tulang.'
+        },
+        {
+          title: 'Mengandung Antioksidan Polifenol',
+          description: 'Warna cokelat alami menyimpan senyawa antioksidan yang membantu melawan stres oksidatif sel.'
+        },
+        {
+          title: 'Sumber Energi Berkelanjutan',
+          description: 'Mengandung inulin (serat prebiotik) yang memperlambat penyerapan glukosa dan memelihara kesehatan usus.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya dan sebaran pohon nao dicatat berdasarkan populasi tegakan pohon produktif di desa.',
+        distribution: 'Pohon nao tumbuh alami dan dibudidayakan di lereng-lereng perbukitan dan kebun warga Desa Belok/Sidan.',
+        soilClimate: 'Tumbuh optimal di kawasan perbukitan dataran sejuk dengan kelembapan tanah yang baik dan aerasi optimal.'
+      },
+      varietyComparison: {
+        title: 'Gula Aren Cetak Tradisional vs Gula Semut Aren',
+        description: 'Dua bentuk olahan gula aren murni hasil produksi pengrajin nira Desa Belok/Sidan.',
+        variants: [
+          {
+            name: 'Gula Aren Cetak (Batok/Bambu)',
+            tagline: 'Bentuk olahan padat tradisional dicetak dalam batok kelapa atau bilah bambu',
+            attributes: [
+              { label: 'Bentuk & Warna', value: 'Bongkahan padat setengah bola atau silinder berwarna cokelat kemerahan pekat.' },
+              { label: 'Cita Rasa & Aroma', value: 'Rasa manis legit pekat dengan aroma nira bakar tradisional yang kuat.' },
+              { label: 'Proses Pembuatan', value: 'Nira kental dituang langsung ke dalam cetakan alami hingga membeku padat.' },
+              { label: 'Pemanfaatan', value: 'Bahan kuah kolak, bumbu rujak Bali, kue tradisional, dan saus gula merah.' }
+            ]
+          },
+          {
+            name: 'Gula Semut Aren (Granulated Palm Sugar)',
+            tagline: 'Bentuk serbuk kristal modern yang praktis larut dan tahan simpan lama',
+            attributes: [
+              { label: 'Bentuk & Tekstur', value: 'Serbuk butiran kristal halus berwarna cokelat keemasan yang kering dan higienis.' },
+              { label: 'Karakteristik Penggunaan', value: 'Sangat mudah larut dalam air dingin maupun panas tanpa perlu diiris.' },
+              { label: 'Pemanfaatan', value: 'Pemanis kopi spesialti, teh herbal, bahan bakery modern, dan komoditas oleh-oleh premium.' },
+              { label: 'Daya Simpan', value: 'Kadar air rendah (< 2%) sehingga tahan disimpan hingga lebih dari satu tahun.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Diolah murni dari sadapan nira segar pohon aren (nao) tanpa pengawet atau pemutih',
+        'Indeks glikemik rendah dan kaya mineral alami (zat besi, kalium, kalsium)',
+        'Cita rasa manis legit dengan aroma karamel smoky yang khas dan harum',
+        'Mendukung perekonomian para pengrajin penderes nira tradisional desa',
+        'Tersedia dalam bentuk cetak tradisional dan gula semut kristal praktis'
+      ]
+    },
+    {
+      slug: 'cengkeh',
+      title: 'Cengkeh',
+      subtitle: 'Rempah aromatik perkebunan dengan kandungan eugenol tinggi',
+      image: 'assets/images/produk-cengkeh.png',
+      description: 'Cengkeh (Syzygium aromaticum) adalah tanaman pohon rempah asli Nusantara dari keluarga Myrtaceae yang dipanen kuncup bunganya yang belum mekar dan dikeringkan. Di Desa Belok/Sidan, pohon cengkeh tumbuh subur di perbukitan dataran tinggi, menghasilkan kuncup cengkeh kering berwarna cokelat tua dengan kadar minyak atsiri eugenol yang tinggi dan aroma harum pedas yang khas.',
+      shortDescription: 'Cengkeh Desa Belok/Sidan dipanen dari kuncup bunga pilihan dengan kandungan eugenol tinggi, beraroma harum tajam untuk rempah dan obat herbal.',
+      nutritionItems: [
+        {
+          title: 'Kandungan Eugenol Alami Sangat Tinggi',
+          description: 'Eugenol merupakan senyawa bioaktif utama cengkeh yang berfungsi sebagai antiseptik, anestetik, dan antibakteri kuat.'
+        },
+        {
+          title: 'Antioksidan Sangat Kuat',
+          description: 'Cengkeh menempati salah satu peringkat tertinggi dalam kapasitas antioksidan (skor ORAC tinggi) untuk melawan radikal bebas.'
+        },
+        {
+          title: 'Kesehatan Gigi & Mulut',
+          description: 'Minyak cengkeh telah digunakan berabad-abad untuk meredakan sakit gigi dan menjaga kesegaran napas.'
+        },
+        {
+          title: 'Mendukung Kesehatan Saluran Pernapasan',
+          description: 'Membantu mengencerkan dahak, melegakan tenggorokan, dan menghangatkan tubuh.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Terdapat 2,5 Hektar lahan perkebunan cengkeh yang dikelola oleh petani di wilayah Desa Belok/Sidan.',
+        distribution: 'Tersebar Banjar Penikit.',
+        soilClimate: 'Membutuhkan iklim tropis basah dengan tanah lempung berpasir subur, berdrainase lancar, dan ketinggian yang mendukung.'
+      },
+      varietyComparison: {
+        title: 'Cengkeh Zanzibar vs Cengkeh Sikotok',
+        description: 'Perbandingan dua kultivar pohon cengkeh unggulan yang banyak dibudidayakan oleh petani perkebunan.',
+        variants: [
+          {
+            name: 'Cengkeh Zanzibar',
+            tagline: 'Kultivar cengkeh paling unggul dengan produksi bunga lebat dan kadar minyak tinggi',
+            attributes: [
+              { label: 'Karakteristik Tanaman', value: 'Pohon berkanopi piramida dengan daun rimbun berwarna hijau tua mengilap dan tangkai kemerahan.' },
+              { label: 'Kuncup Bunga', value: 'Bunga berukuran sedang, bergerombol padat, berwarna merah muda saat siap panen.' },
+              { label: 'Kadar Minyak Atsiri', value: 'Kadar minyak atsiri eugenol sangat tinggi (18–22%) dengan aroma harum pedas tajam.' },
+              { label: 'Pemanfaatan', value: 'Industri farmasi, minyak cengkeh, bumbu rempah dapur, dan bahan dupa wangi.' }
+            ]
+          },
+          {
+            name: 'Cengkeh Sikotok',
+            tagline: 'Kultivar berpostur ramping dengan kuncup bunga berukuran besar',
+            attributes: [
+              { label: 'Karakteristik Tanaman', value: 'Tajuk pohon ramping dengan percabangan agak renggang dan pucuk daun berwarna hijau kekuningan.' },
+              { label: 'Kuncup Bunga', value: 'Kuncup bunga berukuran lebih besar dan panjang dengan warna kuning kemerahan saat matang.' },
+              { label: 'Karakteristik Pengeringan', value: 'Menghasilkan cengkeh kering berbobot mantap dan warna cokelat gelap.' },
+              { label: 'Pemanfaatan', value: 'Bumbu rempah masakan tradisional, racikan jamu herbal, dan pengawet alami.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Rempah legendaris bernilai ekonomi tinggi hasil perkebunan rakyat',
+        'Kandungan senyawa eugenol tinggi dengan aroma harum pedas tajam',
+        'Antioksidan sangat kuat untuk kesehatan dan daya tahan tubuh',
+        'Bahan penting untuk bumbu kuliner, obat herbal, aromaterapi, dan tradisi',
+        'Kuncup bunga dipetik manual dan dikeringkan secara alami di bawah sinar matahari'
+      ]
+    },
+    {
+      slug: 'kakao',
+      title: 'Kakao',
+      subtitle: 'Tanaman perkebunan penghasil biji cokelat berkualitas tinggi',
+      image: 'assets/images/produk-kakao.png',
+      description: 'Kakao (Theobroma cacao) adalah pohon perkebunan tropis yang menghasilkan buah dengan biji kakao di dalamnya sebagai bahan baku utama pembuatan cokelat dan mentega kakao. Di Desa Belok/Sidan, tanaman kakao dibudidayakan secara tumpang sari di bawah naungan pohon perkebunan lainnya, menghasilkan biji kakao berkualitas dengan fermentasi optimal.',
+      shortDescription: 'Kakao Desa Belok/Sidan dibudidayakan di perkebunan rakyat subur, menghasilkan biji cokelat beraroma harum, kaya antioksidan flavonoid dan teobromin.',
+      nutritionItems: [
+        {
+          title: 'Kaya Antioksidan Flavonoid (Epikatekin)',
+          description: 'Flavonoid kakao membantu meningkatkan aliran darah ke otak dan jantung serta menurunkan tekanan darah.'
+        },
+        {
+          title: 'Senyawa Teobromin Penenang Alami',
+          description: 'Memberikan efek stimulasi lembut yang meningkatkan fokus, energi, dan suasana hati (mood booster).'
+        },
+        {
+          title: 'Tinggi Mineral Magnesium & Zat Besi',
+          description: 'Mendukung relaksasi otot, fungsi sistem saraf, dan pembentukan sel darah merah.'
+        },
+        {
+          title: 'Lemak Sehat Lemak Kakao (Cocoa Butter)',
+          description: 'Mengandung asam stearat dan asam oleat yang ramah bagi profil lipid jantung.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Terdapat 4,7 Hektar lahan perkebunan kakao yang dikelola oleh petani di wilayah Desa Belok/Sidan.',
+        distribution: 'Tersebar di Banjar Sidan dan Penikit.',
+        soilClimate: 'Membutuhkan tanah gembur berhumus tebal, drainase baik, dan naungan pohon peneduh di iklim dataran sejuk.'
+      },
+      varietyComparison: {
+        title: 'Kakao Criollo vs Kakao Forastero',
+        description: 'Perbandingan dua varietas kakao dunia yang merepresentasikan kualitas cita rasa halus dan ketahanan produksi.',
+        variants: [
+          {
+            name: 'Kakao Criollo (Fine Flavor Cocoa)',
+            tagline: 'Varietas kakao mulia dengan aroma kompleks dan cita rasa cokelat lembut',
+            attributes: [
+              { label: 'Karakteristik Buah', value: 'Kulit buah bergelombang kasar dengan warna merah atau kuning; biji berwarna putih krem di dalam.' },
+              { label: 'Cita Rasa & Aroma', value: 'Aroma sangat harum, rasa cokelat lembut, tidak terlalu pahit, dengan nuansa fruity dan floral.' },
+              { label: 'Nilai Pasar', value: 'Sangat diminati produsen cokelat artisan dan cokelat premium dunia.' },
+              { label: 'Pemanfaatan', value: 'Cokelat batang gourmet, bubuk cokelat spesialti, dan produk confectionery mewah.' }
+            ]
+          },
+          {
+            name: 'Kakao Forastero (Bulk Cocoa)',
+            tagline: 'Varietas kakao lindak dengan ketahanan tinggi dan rasa cokelat kuat',
+            attributes: [
+              { label: 'Karakteristik Buah', value: 'Kulit buah halus berbentuk bulat telur berwarna hijau kekuningan dengan biji ungu pekat.' },
+              { label: 'Cita Rasa & Karakter', value: 'Cita rasa cokelat yang kuat, pekat, tegas, dengan tingkat keasaman dan pahit seimbang.' },
+              { label: 'Produktivitas', value: 'Pohon sangat tangguh, tahan hama penyakit, dan memiliki produktivitas buah tinggi.' },
+              { label: 'Pemanfaatan', value: 'Bahan baku utama industri cokelat olahan, mentega kakao, dan bubuk kakao murni.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Bahan baku utama pembuatan cokelat murni dan bubuk kakao berkualitas',
+        'Kaya antioksidan flavonoid, teobromin, dan mineral magnesium',
+        'Mendukung kesehatan kardiovaskular dan peningkatan suasana hati',
+        'Dibudidayakan secara tumpang sari ramah lingkungan di kebun rakyat',
+        'Potensi perkebunan bernilai ekonomi berkelanjutan bagi petani desa'
+      ]
+    },
+    {
+      slug: 'kelapa',
+      title: 'Kelapa',
+      subtitle: 'Pohon kehidupan serbaguna penghasil minyak kelapa, banten upakara, dan kuliner',
+      image: 'assets/images/produk-kelapa.png',
+      description: 'Kelapa (Cocos nucifera) dijuluki sebagai "pohon kehidupan" (tree of life) karena setiap bagian tanamannya memiliki manfaat nyata bagi kehidupan manusia. Di Desa Belok/Sidan, kelapa memegang peranan krusial baik sebagai komoditas perkebunan bernilai ekonomi (minyak kelapa VCO, kelapa muda, kuliner) maupun sebagai sarana pokok yang tak tergantikan dalam upacara adat dan keagamaan Hindu Bali.',
+      shortDescription: 'Kelapa di Desa Belok/Sidan mencakup varietas Kelapa Dalam dan Kelapa Genjah dengan pemanfaatan luas untuk bahan pangan, minyak VCO, dan sarana upacara adat.',
+      nutritionItems: [
+        {
+          title: 'Asam Laurat & MCT (Medium Chain Triglycerides)',
+          description: 'Minyak kelapa kaya asam laurat yang memiliki sifat antibakteri, antivirus, dan cepat diubah menjadi energi bersih.'
+        },
+        {
+          title: 'Elektrolit Alami Air Kelapa',
+          description: 'Air kelapa muda kaya kalium, natrium, kalsium, dan magnesium yang identik dengan cairan elektrolit tubuh.'
+        },
+        {
+          title: 'Serat Pangan Daging Buah',
+          description: 'Daging kelapa parut dan santan mengandung serat alami yang membantu menjaga kesehatan saluran pencernaan.'
+        },
+        {
+          title: 'Mineral Mangan & Tembaga',
+          description: 'Penting untuk kesehatan struktur tulang, metabolisme protein, dan pembentukan antioksidan endogen.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Terdapat 28,07 Hektar lahan perkebunan kelapa yang dikelola oleh petani di wilayah Desa Belok/Sidan.',
+        distribution: 'Tersebar di Banjar Jempanang, Sekarmukti, Lawak, Belok, Selantang, Sidan, dan Penikit',
+        soilClimate: 'Membutuhkan tanah subur dengan aerasi baik, penyinaran matahari penuh, dan pasokan air seimbang.'
+      },
+      varietyComparison: {
+        title: 'Kelapa Dalam vs Kelapa Genjah',
+        description: 'Kelapa di Desa Belok/Sidan terdiri atas dua varietas utama dengan karakteristik postur tanaman dan pemanfaatan yang saling melengkapi.',
+        variants: [
+          {
+            name: 'Kelapa Dalam (Tall Coconut)',
+            tagline: 'Pohon tinggi berumur panjang dengan produksi kopra dan minyak kelapa tinggi',
+            attributes: [
+              { label: 'Karakteristik Tanaman', value: 'Pohon berbatang tinggi kokoh (15–30 meter) dengan usia produktif mencapai puluhan tahun.' },
+              { label: 'Karakteristik Buah', value: 'Buah berukuran relatif besar dengan daging buah tebal, keras, dan kadar minyak nabati tinggi.' },
+              { label: 'Pemanfaatan', value: 'Bahan baku minyak kelapa tradisional/VCO, santan masakan, kopra, dan kayu bangunan.' },
+              { label: 'Masa Berbuah', value: 'Mulai berbuah pada umur 6–8 tahun setelah tanam.' }
+            ]
+          },
+          {
+            name: 'Kelapa Genjah (Dwarf Coconut)',
+            tagline: 'Pohon berpostur pendek/sedang yang cepat berbuah dan lebat',
+            attributes: [
+              { label: 'Karakteristik Tanaman', value: 'Pohon relatif pendek (3–5 meter) dan mulai berbuah cepat pada umur 3–4 tahun.' },
+              { label: 'Karakteristik Buah', value: 'Buah lebat dalam jumlah banyak per tandan, kulit berwarna hijau, kuning (gading), atau jingga (bulan).' },
+              { label: 'Peran Upakara Adat', value: 'Sarana mutlak dan utama dalam pembuatan banten sajen, daksina, dan upacara keagamaan di Bali.' },
+              { label: 'Pemanfaatan', value: 'Minuman air kelapa muda segar penyejuk dahaga dan ritual keagamaan.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Meliputi varietas Kelapa Dalam dan Kelapa Genjah yang saling melengkapi',
+        'Pemanfaatan menyeluruh dari air kelapa, daging buah, batok, hingga sabut',
+        'Bahan baku pembuatan minyak kelapa murni (VCO) dan kuliner khas Bali',
+        'Komponen sakral dan wajib dalam sarana upacara adat dan keagamaan Hindu Bali',
+        'Tanaman serbaguna yang menopang kehidupan dan tradisi masyarakat desa'
+      ]
+    },
+    {
+      slug: 'jahe',
+      title: 'Jahe',
+      subtitle: 'Rimpang biofarmaka unggulan penghangat tubuh dan peningkat imunitas',
+      image: 'assets/images/produk-jahe.png',
+      description: 'Jahe (Zingiber officinale) merupakan tanaman rimpang biofarmaka terpopuler dari suku Zingiberaceae. Rimpang jahe memiliki aroma harum pedas hangat yang berasal dari senyawa bioaktif gingerol dan shogaol. Di Desa Belok/Sidan, jahe dibudidayakan di kebun biofarmaka sebagai bahan baku minuman herbal penghangat, bumbu rempah kuliner, dan ramuan obat tradisional.',
+      shortDescription: 'Jahe Desa Belok/Sidan berimpang tebal, padat, beraroma pedas hangat kuat, kaya gingerol untuk meningkatkan daya tahan tubuh dan kebugaran.',
+      nutritionItems: [
+        {
+          title: 'Senyawa Gingerol & Shogaol',
+          description: 'Senyawa bioaktif utama pemberi rasa pedas hangat yang memiliki aktivitas anti-inflamasi dan antioksidan kuat.'
+        },
+        {
+          title: 'Pereda Mual & Masuk Angin',
+          description: 'Sangat efektif meredakan mual, pusing perjalanan, perut kembung, dan rasa tidak nyaman pada pencernaan.'
+        },
+        {
+          title: 'Pelancar Sirkulasi Darah & Penghangat',
+          description: 'Membantu melebarkan pembuluh darah tepi, melancarkan peredaran darah, dan menghangatkan tubuh di udara dingin.'
+        },
+        {
+          title: 'Pereda Nyeri Sendi & Otot',
+          description: 'Sifat anti-inflamasinya membantu mengurangi nyeri otot setelah beraktivitas dan gejala radang sendi.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya jahe dicatat berdasarkan luasan kebun tanaman obat keluarga (TOGA) dan kelompok tani biofarmaka.',
+        distribution: 'Tersebar di lahan kebun pekarangan dan tegalan gembur Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan tanah gembur kaya humus dengan drainase baik agar rimpang tidak membusuk, serta curah hujan merata.'
+      },
+      varietyComparison: {
+        title: 'Jahe Gajah (Badak) vs Jahe Merah',
+        description: 'Perbandingan dua varietas jahe dengan karakteristik ukuran rimpang, tingkat kepedasan, dan khasiat obat.',
+        variants: [
+          {
+            name: 'Jahe Gajah (Jahe Badak)',
+            tagline: 'Rimpang berukuran besar gemuk dengan rasa pedas lembut dan sari berlimpah',
+            attributes: [
+              { label: 'Bentuk Rimpang', value: 'Rimpang sangat besar, gemuk menggembung, dengan ruas rimpang tebal berwarna kuning pucat.' },
+              { label: 'Tingkat Kepedasan', value: 'Pedas lembut dengan aroma segar yang tidak terlalu menyengat.' },
+              { label: 'Pemanfaatan', value: 'Bahan bumbu dapur harian, minuman wedang jahe segar, manisan jahe, dan kuliner masakan.' },
+              { label: 'Karakteristik Sari', value: 'Kandungan air dan sari rimpang melimpah sehingga mudah diperas.' }
+            ]
+          },
+          {
+            name: 'Jahe Merah (Zingiber officinale var. rubrum)',
+            tagline: 'Rimpang berkulit kemerahan dengan rasa pedas sangat tajam dan khasiat herbal tinggi',
+            attributes: [
+              { label: 'Bentuk Rimpang', value: 'Rimpang berukuran lebih kecil dengan kulit berwarna merah keunguan dan serat kuat.' },
+              { label: 'Kandungan Gingerol', value: 'Kadar minyak atsiri dan gingerol paling tinggi di antara seluruh jenis jahe.' },
+              { label: 'Tingkat Kepedasan', value: 'Rasa pedas sangat kuat, tajam, dan langsung menghangatkan tenggorokan.' },
+              { label: 'Pemanfaatan', value: 'Bahan baku utama jamu tradisional, suplemen stamina herbal, dan pengobatan medis alami.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Komoditas biofarmaka unggulan untuk kesehatan dan penghangat tubuh alami',
+        'Kaya senyawa aktif gingerol dan shogaol berkhasiat anti-inflamasi',
+        'Tersedia varietas Jahe Gajah yang berair melimpah dan Jahe Merah berkasiat tinggi',
+        'Membantu meningkatkan daya tahan tubuh dan meredakan masuk angin',
+        'Bahan utama aneka minuman herbal hangat dan bumbu rempah dapur'
+      ]
+    },
+    {
+      slug: 'umbi-umbian',
+      title: 'Umbi-umbian',
+      subtitle: 'Komoditas palawija sumber karbohidrat kompleks dan ketahanan pangan',
+      image: 'assets/images/produk-umbi.png',
+      description: 'Umbi-umbian (ubi jalar, singkong, dan talas) merupakan komoditas tanaman palawija penting yang dibudidayakan oleh petani Desa Belok/Sidan. Umbi-umbian menjadi sumber pangan karbohidrat kompleks kaya serat yang menopang ketahanan pangan lokal serta dapat diolah menjadi aneka kudapan tradisional bernilai gizi tinggi.',
+      shortDescription: 'Umbi-umbian Desa Belok/Sidan kaya karbohidrat kompleks, serat sehat, dan antioksidan alami sebagai komoditas pangan palawija yang mengenyangkan.',
+      nutritionItems: [
+        {
+          title: 'Karbohidrat Kompleks Pelepasan Lambat',
+          description: 'Menyediakan energi stabil tanpa memicu lonjakan drastis gula darah, cocok untuk diet sehat.'
+        },
+        {
+          title: 'Tinggi Serat & Prebiotik',
+          description: 'Mendukung kesehatan saluran pencernaan dan menjadi nutrisi bagi bakteri menguntungkan usus.'
+        },
+        {
+          title: 'Antioksidan Beta Karoten & Antosianin',
+          description: 'Ubi jalar oranye kaya beta karoten dan ubi ungu kaya antosianin untuk perlindungan sel dari oksidasi.'
+        },
+        {
+          title: 'Kaya Vitamin C & Vitamin B Kompleks',
+          description: 'Mendukung metabolisme energi dan memelihara kesehatan sistem imun tubuh.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya umbi-umbian dicatat berdasarkan luasan tegalan palawija masyarakat.',
+        distribution: 'Tersebar di lahan tegalan dan batas kebun masyarakat Desa Belok/Sidan.',
+        soilClimate: 'Tumbuh subur pada tanah gembur berpasir yang remah sehingga umbi dapat berkembang leluasa dan berbobot besar.'
+      },
+      varietyComparison: {
+        title: 'Ubi Jalar (Madu / Ungu) vs Singkong (Ubi Kayu)',
+        description: 'Perbandingan dua jenis umbi palawija yang paling banyak dibudidayakan oleh petani desa.',
+        variants: [
+          {
+            name: 'Ubi Jalar (Ipomoea batatas)',
+            tagline: 'Umbi manis legit dengan variasi warna daging oranye (madu) dan ungu antioksidan',
+            attributes: [
+              { label: 'Karakteristik Umbi', value: 'Kulit halus tipis dengan daging umbi pulen manis berwarna kuning, oranye madu, atau ungu pekat.' },
+              { label: 'Kandungan Khusus', value: 'Kaya akan vitamin A (beta karoten) dan antosianin yang sangat tinggi.' },
+              { label: 'Cita Rasa', value: 'Rasa manis legit alami yang semakin manis saat dipanggang atau dikukus.' },
+              { label: 'Pemanfaatan', value: 'Ubi rebus/kukus, ubi panggang madu, bahan kolak, dan olahan kue tradisional.' }
+            ]
+          },
+          {
+            name: 'Singkong / Ubi Kayu (Manihot esculenta)',
+            tagline: 'Umbi bertepung tinggi yang empuk, renyah, dan mengenyangkan',
+            attributes: [
+              { label: 'Karakteristik Umbi', value: 'Umbi silindris panjang berkulit cokelat kasar dengan daging putih bersih atau kekuningan.' },
+              { label: 'Kandungan Nutrisi', value: 'Sumber karbohidrat pati murni yang sangat mengenyangkan dan bebas gluten.' },
+              { label: 'Tekstur Saat Dimasak', value: 'Tekstur merekah empuk saat direbus dan sangat renyah saat digoreng.' },
+              { label: 'Pemanfaatan', value: 'Singkong goreng mekar, keripik singkong, tape singkong, dan bahan tepung tapioka.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Sumber karbohidrat kompleks alami yang sehat dan mengenyangkan',
+        'Kaya serat pangan, prebiotik, vitamin C, dan antioksidan warna alami',
+        'Mudah dibudidayakan dengan daya tahan tinggi terhadap perubahan cuaca',
+        'Bahan baku serbaguna untuk aneka kuliner tradisional dan camilan sehat',
+        'Menopang pilar ketahanan pangan mandiri masyarakat Desa Belok/Sidan'
+      ]
+    },
+    {
+      slug: 'kacang-tanah',
+      title: 'Kacang Tanah',
+      subtitle: 'Tanaman palawija polong tanah kaya protein nabati dan lemak sehat',
+      image: 'assets/images/produk-kacang-tanah.png',
+      description: 'Kacang tanah (Arachis hypogaea) merupakan tanaman polong-polongan anggota suku Fabaceae yang memiliki keunikan pembuahan di mana tangkai bunga (ginofor) masuk ke dalam tanah untuk membesarkan polongnya. Di Desa Belok/Sidan, kacang tanah dibudidayakan sebagai tanaman palawija yang menyuburkan tanah karena bersimbiosis mengikat nitrogen udara.',
+      shortDescription: 'Kacang tanah Desa Belok/Sidan berpolong padat dengan biji bernas, gurih manis, kaya protein nabati dan lemak tak jenuh untuk kesehatan jantung.',
+      nutritionItems: [
+        {
+          title: 'Tinggi Protein Nabati Berkualitas',
+          description: 'Menyediakan sekitar 25% protein nabati yang sangat baik untuk perbaikan jaringan dan pertumbuhan sel tubuh.'
+        },
+        {
+          title: 'Kaya Asam Lemak Tak Jenuh',
+          description: 'Mengandung asam oleat dan linoleat yang membantu menurunkan kolesterol jahat dan menjaga kesehatan jantung.'
+        },
+        {
+          title: 'Antioksidan Resveratrol',
+          description: 'Senyawa polifenol bioaktif yang membantu melindungi pembuluh darah dari inflamasi dan penuaan dini.'
+        },
+        {
+          title: 'Kandungan Vitamin E & Niasin (B3)',
+          description: 'Mendukung kesehatan kulit, fungsi kognitif otak, dan metabolisme konversi energi.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya kacang tanah dicatat berdasarkan luasan panen palawija musiman.',
+        distribution: 'Ditanam pada lahan tegalan dan rotasi tanaman sawah di Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan tanah gembur berpasir dan remah agar ginofor mudah menembus tanah, serta penyinaran matahari penuh.'
+      },
+      varietyComparison: {
+        title: 'Kacang Tanah Biji Dua vs Kacang Tanah Biji Tiga/Empat',
+        description: 'Perbandingan kultivar kacang tanah berdasarkan jumlah biji per polong dan tekstur kerenyahannya.',
+        variants: [
+          {
+            name: 'Kacang Tanah Biji Dua (Kacang Garing)',
+            tagline: 'Kultivar polong berisi dua biji berukuran besar dan gurih',
+            attributes: [
+              { label: 'Bentuk Polong', value: 'Polong berpinggang jelas berisi dua butir biji besar bernas berkulit ari merah muda.' },
+              { label: 'Tekstur & Rasa', value: 'Rasa gurih manis berlemak dengan kerenyahan maksimal saat disangrai atau digoreng.' },
+              { label: 'Pemanfaatan', value: 'Bahan kacang bawang, kacang oven, selai kacang (peanut butter), dan bumbu gado-gado.' },
+              { label: 'Karakteristik', value: 'Ukuran biji seragam dan sangat disukai industri olahan kacang goreng.' }
+            ]
+          },
+          {
+            name: 'Kacang Tanah Biji Tiga/Empat (Kacang Lokal)',
+            tagline: 'Kultivar polong panjang berisi 3–4 biji yang manis untuk kacang rebus',
+            attributes: [
+              { label: 'Bentuk Polong', value: 'Polong lebih panjang lurus berisi 3 hingga 4 butir biji berukuran sedang.' },
+              { label: 'Tekstur & Rasa', value: 'Kadar gula alami lebih terasa manis empuk dan gurih saat direbus segar.' },
+              { label: 'Pemanfaatan', value: 'Sangat favorit untuk kacang rebus kulit hangat, sayur asam, dan camilan pasar.' },
+              { label: 'Masa Panen', value: 'Dipanen pada umur 90–100 hari saat polong telah mengeras sempurna.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Sumber protein nabati tinggi dan lemak tak jenuh yang menyehatkan jantung',
+        'Mengandung antioksidan resveratrol dan vitamin E untuk kebugaran tubuh',
+        'Biji bernas, padat, renyah, dan berasa gurih manis alami',
+        'Menyuburkan tanah pertanian melalui penambatan nitrogen alami dari udara',
+        'Bahan serbaguna untuk aneka camilan kacang, bumbu sambal kacang, dan olahan pangan'
+      ]
+    },
+    {
+      slug: 'porang',
+      title: 'Porang',
+      subtitle: 'Komoditas umbi palawija bernilai ekspor tinggi penghasil glukomanan',
+      image: 'assets/images/produk-porang.png',
+      description: 'Porang atau iles-iles (Amorphophallus muelleri) adalah tanaman herba anggota famili Araceae penghasil umbi batang yang mengandung serat alami glukomanan berkadar tinggi. Di Desa Belok/Sidan, tanaman porang dibudidayakan secara tumpang sari di bawah naungan pohon perkebunan, menjadi komoditas komersial bernilai tinggi untuk industri pangan sehat dan ekspor.',
+      shortDescription: 'Porang Desa Belok/Sidan dibudidayakan di bawah naungan kebun alami, menghasilkan umbi kaya glukomanan untuk bahan makanan sehat dan komoditas ekspor.',
+      nutritionItems: [
+        {
+          title: 'Serat Larut Glukomanan Murni',
+          description: 'Glukomanan adalah serat larut air dengan kemampuan mengembang hingga ratusan kali lipat, sangat mengenyangkan dan bebas kalori.'
+        },
+        {
+          title: 'Menurunkan Kolesterol & Trigliserida',
+          description: 'Membantu mengikat asam empedu dan lemak di usus sehingga menurunkan kadar kolesterol jahat (LDL).'
+        },
+        {
+          title: 'Manajemen Gula Darah (Diabetes Friendly)',
+          description: 'Memperlambat penyerapan karbohidrat dalam saluran cerna sehingga mencegah lonjakan glukosa darah.'
+        },
+        {
+          title: 'Bahan Baku Shirataki & Konnyaku',
+          description: 'Menjadi bahan dasar makanan sehat internasional seperti beras shirataki dan mi konjac yang bebas lemak dan nol kalori.'
+        }
+      ],
+      farmInfo: {
+        hectares: 'Data luas budidaya porang dicatat berdasarkan luasan kebun tumpang sari porang kelompok tani.',
+        distribution: 'Dibudidayakan di bawah naungan pohon perkebunan (kopi, kakao, kelapa) di Desa Belok/Sidan.',
+        soilClimate: 'Membutuhkan naungan 40–60%, tanah gembur kaya bahan organik dengan drainase lancar, dan iklim sejuk.'
+      },
+      varietyComparison: {
+        title: 'Porang Budidaya (A. muelleri) vs Suweg / Iles-iles Liar',
+        description: 'Perbedaan ciri fisik antara tanaman porang budidaya bernilai tinggi dengan tanaman kerabat dekatnya.',
+        variants: [
+          {
+            name: 'Porang Budidaya (Amorphophallus muelleri)',
+            tagline: 'Kultivar unggul berumbi kuning kaya glukomanan dengan katak (bubil) di ketiak daun',
+            attributes: [
+              { label: 'Ciri Daun & Katak', value: 'Memiliki katak/bubil (umbi udara) berwarna cokelat tua di setiap percabangan tulang daunnya.' },
+              { label: 'Batang & Kulit', value: 'Batang hijau mulus bercak putih memanjang tanpa duri kasar.' },
+              { label: 'Daging Umbi', value: 'Daging umbi berwarna kuning jingga cerah dengan serat glukomanan yang sangat kental dan padat.' },
+              { label: 'Nilai Ekonomi', value: 'Permintaan ekspor sangat tinggi untuk industri tepung glukomanan dan makanan shirataki.' }
+            ]
+          },
+          {
+            name: 'Suweg / Iles-iles Liar (Amorphophallus paeoniifolius)',
+            tagline: 'Spesies kerabat tanpa katak daun dengan umbi bertepung padat',
+            attributes: [
+              { label: 'Ciri Daun', value: 'Tidak memiliki umbi katak (bubil) pada percabangan tulang daunnya.' },
+              { label: 'Batang', value: 'Batang bertekstur agak kasar dengan bintil-bintil kecil.' },
+              { label: 'Daging Umbi', value: 'Daging umbi berwarna putih krem keunguan dengan kandungan pati tepung lebih dominan daripada glukomanan.' },
+              { label: 'Pemanfaatan', value: 'Umbi kukus tradisional untuk konsumsi pangan lokal pedesaan.' }
+            ]
+          }
+        ]
+      },
+      highlights: [
+        'Komoditas perkebunan dan palawija bernilai ekspor tinggi',
+        'Penghasil serat larut glukomanan murni dengan sejuta manfaat kesehatan',
+        'Bahan baku utama industri pangan sehat shirataki, konjac, dan kosmetik',
+        'Sangat cocok dibudidayakan secara tumpang sari di bawah naungan pohon',
+        'Membuka peluang ekonomi baru yang menjanjikan bagi para petani desa'
+      ]
     }
   ];
 
@@ -984,94 +2200,6 @@ export class ProdukDetailPageComponent implements OnInit {
       .map((banjar) => BANJAR_LABELS[banjar].replace('Banjar Dinas ', ''))
       .join(', ')
       : 'Berdasarkan data potensi wilayah Desa Belok/Sidan';
-
-    // Spesifikasi data khusus sesuai notulensi rapat untuk komoditas hortikultura buah & perkebunan lainnya
-    if (slug === 'pisang') {
-      return {
-        slug,
-        title: 'Pisang',
-        subtitle: 'Potensi komoditas buah hortikultura Desa Belok/Sidan',
-        image: produk?.image ?? 'assets/images/produk-pisang.png',
-        description: 'Pisang merupakan salah satu komoditas hortikultura buah yang dibudidayakan oleh masyarakat di Desa Belok/Sidan. Dengan jumlah budidaya mencapai 64.000 rumpun, pisang menjadi komoditas penting untuk konsumsi buah segar keluarga, bahan kuliner tradisional, sarana upacara keagamaan di Bali, serta pemasaran buah lokal.',
-        shortDescription: 'Pisang dibudidayakan dengan jumlah mencapai 64.000 rumpun di Desa Belok/Sidan sebagai komoditas hortikultura buah yang bernilai pangan dan tradisi.',
-        farmInfo: {
-          hectares: 'Jumlah budidaya: 64.000 rumpun.',
-          distribution: 'Ditanam di berbagai kebun pekarangan dan lahan pertanian masyarakat Desa Belok/Sidan.',
-          soilClimate: 'Tumbuh subur pada tanah lembap gembur dengan ketersediaan air yang baik di iklim dataran Belok/Sidan.'
-        },
-        highlights: [
-          'Jumlah budidaya mencapai 64.000 rumpun',
-          'Termasuk komoditas hortikultura buah unggulan',
-          'Pemanfaatan untuk konsumsi harian dan sarana upacara adat'
-        ]
-      };
-    }
-
-    if (slug === 'kelapa') {
-      return {
-        slug,
-        title: 'Kelapa',
-        subtitle: 'Komoditas tanaman perkebunan multiguna khas pedesaan',
-        image: produk?.image ?? 'assets/images/produk-kelapa.png',
-        description: 'Kelapa merupakan komoditas tanaman perkebunan yang memiliki peranan penting dan nilai multiguna di Desa Belok/Sidan. Komoditas ini mencakup varietas Kelapa Dalam dan Kelapa Genjah, yang dimanfaatkan secara luas sebagai bahan baku minyak kelapa (VCO), bahan kuliner, sarana upacara keagamaan adat Bali, serta pemanfaatan produk turunan seperti sabut dan tempurung kelapa.',
-        shortDescription: 'Kelapa di Desa Belok/Sidan mencakup varietas Kelapa Dalam dan Kelapa Genjah dengan pemanfaatan luas untuk bahan pangan, minyak, dan perlengkapan sarana upacara adat.',
-        farmInfo: {
-          hectares: 'Data luas budidaya kelapa dicatat berdasarkan data survei lapangan kebun masyarakat.',
-          distribution: 'Tersebar di wilayah-wilayah perkebunan masyarakat Desa Belok/Sidan.',
-          soilClimate: 'Membutuhkan tanah subur dengan aerasi baik dan penyinaran matahari penuh.'
-        },
-        varietyComparison: {
-          title: 'Kelapa Dalam vs Kelapa Genjah',
-          description: 'Kelapa di Desa Belok/Sidan terdiri atas dua varietas utama dengan karakteristik postur tanaman dan pemanfaatan yang saling melengkapi.',
-          variants: [
-            {
-              name: 'Kelapa Dalam',
-              tagline: 'Pohon tinggi berumur panjang dengan produksi kopra dan minyak kelapa tinggi',
-              attributes: [
-                { label: 'Karakteristik Tanaman', value: 'Pohon berbatang tinggi kokoh dengan usia produktif puluhan tahun.' },
-                { label: 'Karakteristik Buah', value: 'Buah berukuran relatif besar dengan daging buah tebal dan kadar minyak tinggi.' },
-                { label: 'Pemanfaatan', value: 'Bahan pembuatan minyak kelapa tradisional/VCO, santan masakan, dan bahan bangunan.' }
-              ]
-            },
-            {
-              name: 'Kelapa Genjah',
-              tagline: 'Pohon berpostur pendek/sedang yang cepat berbuah dan lebat',
-              attributes: [
-                { label: 'Karakteristik Tanaman', value: 'Pohon relatif pendek dan mulai berbuah pada usia tanaman yang lebih dini.' },
-                { label: 'Karakteristik Buah', value: 'Buah lebat dalam jumlah banyak, sangat diminati untuk air kelapa muda.' },
-                { label: 'Pemanfaatan', value: 'Minuman kelapa muda segar dan sarana utama kelapa upakara/banten adat Bali.' }
-              ]
-            }
-          ]
-        },
-        highlights: [
-          'Meliputi varietas Kelapa Dalam dan Kelapa Genjah',
-          'Pemanfaatan sebagai bahan minyak kelapa, kuliner, dan sarana adat',
-          'Bagian dari potensi tanaman perkebunan Desa Belok/Sidan'
-        ]
-      };
-    }
-
-    if (slug === 'gula-aren') {
-      return {
-        slug,
-        title: 'Gula Aren',
-        subtitle: 'Produk olahan nira pohon aren (nao) khas Desa Belok/Sidan',
-        image: produk?.image ?? 'assets/images/produk-gula aren.png',
-        description: 'Pohon Nao (Aren / Enau) merupakan tanaman perkebunan bernilai ekonomi tinggi di Desa Belok/Sidan. Nira manis yang disadap dari pohon nao diolah secara tradisional menjadi gula aren murni berkualitas tinggi dengan aroma harum dan rasa manis alami khas pedesaan.',
-        shortDescription: 'Gula aren Desa Belok/Sidan diproduksi secara tradisional dari sadapan nira pohon nao (aren) yang tumbuh di lereng dan perkebunan desa.',
-        farmInfo: {
-          hectares: 'Data luas budidaya dan sebaran pohon nao dicatat berdasarkan populasi tegakan pohon produktif di desa.',
-          distribution: 'Tumbuh di lereng-lereng perbukitan dan area perkebunan alami masyarakat.',
-          soilClimate: 'Tumbuh optimal di kawasan perbukitan dataran sejuk dengan kelembapan tanah yang baik.'
-        },
-        highlights: [
-          'Dihasilkan dari sadapan nira segar pohon nao (aren)',
-          'Diolah secara tradisional tanpa bahan kimia tambahan',
-          'Memiliki cita rasa manis legit dan aroma karamel khas'
-        ]
-      };
-    }
 
     return {
       slug,
