@@ -19,8 +19,31 @@
 
   <main class="produk-detail__content">
     <div class="produk-detail__top-grid">
-      <div class="produk-detail__image-wrap">
-        <img [src]="detail.image" [alt]="detail.title" class="produk-detail__image">
+      <div class="produk-detail__image-wrap" [class.produk-detail__image-wrap--has-gallery]="detail.galleryImages && detail.galleryImages.length > 1">
+        <ng-container *ngIf="detail.galleryImages && detail.galleryImages.length > 1; else singleMainImage">
+          <div class="produk-detail__gallery-box">
+            <div class="produk-detail__gallery-display">
+              <img [src]="activeGalleryImage || detail.galleryImages[0].url" [alt]="activeGalleryLabel || detail.title" class="produk-detail__image">
+              <span class="produk-detail__gallery-tag" *ngIf="activeGalleryLabel">
+                <i class="fa-solid fa-camera"></i> {{ activeGalleryLabel }}
+              </span>
+            </div>
+            <div class="produk-detail__gallery-tabs">
+              <button
+                type="button"
+                class="produk-detail__gallery-tab"
+                *ngFor="let gItem of detail.galleryImages"
+                [class.produk-detail__gallery-tab--active]="(activeGalleryImage || detail.galleryImages[0].url) === gItem.url"
+                (click)="selectGalleryImage(gItem.url, gItem.label)">
+                <img [src]="gItem.url" [alt]="gItem.label" class="produk-detail__gallery-thumb">
+                <span>{{ gItem.label }}</span>
+              </button>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #singleMainImage>
+          <img [src]="detail.image" [alt]="detail.title" class="produk-detail__image">
+        </ng-template>
       </div>
 
       <div class="produk-detail__intro-card">

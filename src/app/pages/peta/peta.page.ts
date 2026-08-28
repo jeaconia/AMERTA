@@ -129,7 +129,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Banjar Dinas Belok',
-      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam', 'Bunga Gemitir'],
+      products: ['Padi', 'Kopi Arabika', 'Alpukat', 'Jeruk Siam', 'Bunga Gemitir'],
       mapsUrl: 'https://maps.app.goo.gl/EgcrEXpZdCzvimTw5',
       top: 45,
       side: 'right',
@@ -159,7 +159,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Banjar Dinas Sidan Kawan',
-      products: ['Padi', 'Kopi Arabika', 'Alpukat', 'Jeruk Siam', 'Bunga Gemitir'],
+      products: ['Kopi Arabika', 'Alpukat', 'Jeruk Siam', 'Bunga Gemitir'],
       mapsUrl: 'https://maps.app.goo.gl/mpnB512zKmJ4sszJ6',
       top: 78,
       side: 'right',
@@ -169,7 +169,7 @@ export class PetaPageComponent implements AfterViewInit, OnDestroy {
     },
     {
       name: 'Banjar Dinas Penikit',
-      products: ['Kopi Arabika'],
+      products: ['Padi', 'Kopi Arabika'],
       mapsUrl: 'https://maps.app.goo.gl/KPfakxK5rjAa44QY9',
       top: 85,
       side: 'left',

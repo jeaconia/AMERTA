@@ -91,10 +91,12 @@ export class BerandaPageComponent implements OnInit {
   kualitasDescriptionAfter = '';
 
   produkUnggulan = [
-    {title: 'Asparagus',
-    image: 'assets/images/produk-asparagus.png',
-    link: '/produk/asparagus'},
-    { title: 'Jeruk', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk-siam-madu' },
+    {
+      title: 'Asparagus',
+      image: 'assets/images/produk-asparagus.png',
+      link: '/produk/asparagus'
+    },
+    { title: 'Jeruk', image: 'assets/images/produk-jeruk siam madu.png', link: '/produk/jeruk' },
     { title: 'Kopi', image: 'assets/images/produk-kopi.png', link: '/produk/kopi' },
     { title: 'Bunga Gemitir', image: 'assets/images/produk-bunga-gemitir.png', link: '/produk/bunga-gemitir' },
   ];
