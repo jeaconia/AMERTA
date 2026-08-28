@@ -218,35 +218,127 @@
       </div>
     </section>
 
-    <section class="produk-detail__info-card" *ngIf="detail.farmInfo">
-      <h2 class="produk-detail__info-title">petani dan perkebunan</h2>
+    <section class="produk-detail__section produk-detail__section--variety" *ngIf="detail.farmInfo">
+      <div class="produk-detail__variety-header">
+        <h2 class="produk-detail__section-title">Petani dan Perkebunan</h2>
+        <p class="produk-detail__variety-desc" *ngIf="farmGroups.length > 1">
+          Data budidaya petani dan kondisi perkebunan disajikan secara khusus untuk masing-masing komoditas.
+        </p>
+      </div>
 
-      <ng-container *ngIf="detail.farmInfo.largeChili || detail.farmInfo.birdEyeChili; else standardFarmInfo">
-        <div class="produk-detail__farm-group" *ngIf="detail.farmInfo.largeChili as largeChili">
-          <h3 class="produk-detail__farm-subtitle">{{ largeChili.title || 'Cabai Besar' }}</h3>
-          <ul class="produk-detail__list produk-detail__list--farm">
-            <li><strong>Luas budidaya:</strong> {{ largeChili.hectares }}</li>
-            <li><strong>Sebaran wilayah:</strong> {{ largeChili.distribution }}</li>
-            <li><strong>Ciri tanah dan iklim:</strong> {{ largeChili.soilClimate }}</li>
-          </ul>
+      <!-- 1. MULTI-GROUP SLIDER CARD (Cabai Besar & Cabai Rawit) -->
+      <ng-container *ngIf="farmGroups.length > 1; else standardFarmInfo">
+        <!-- Quick Selector Pills -->
+        <div class="produk-detail__variety-controls">
+          <div class="produk-detail__variant-pills">
+            <button
+              type="button"
+              class="produk-detail__variant-pill"
+              *ngFor="let group of farmGroups; let idx = index"
+              [class.produk-detail__variant-pill--active]="activeFarmIndex === idx"
+              (click)="setActiveFarm(idx)">
+              <span class="produk-detail__variant-pill-num">{{ idx + 1 }}</span>
+              <span class="produk-detail__variant-pill-name">{{ group.title || 'Budidaya ' + (idx + 1) }}</span>
+            </button>
+          </div>
         </div>
 
-        <div class="produk-detail__farm-group" *ngIf="detail.farmInfo.birdEyeChili as birdEyeChili">
-          <h3 class="produk-detail__farm-subtitle">{{ birdEyeChili.title || 'Cabai Rawit' }}</h3>
-          <ul class="produk-detail__list produk-detail__list--farm">
-            <li><strong>Luas budidaya:</strong> {{ birdEyeChili.hectares }}</li>
-            <li><strong>Sebaran wilayah:</strong> {{ birdEyeChili.distribution }}</li>
-            <li><strong>Ciri tanah dan iklim:</strong> {{ birdEyeChili.soilClimate }}</li>
-          </ul>
+        <!-- Slider & Stacked Deck View -->
+        <div class="produk-detail__slider-wrapper">
+          <div class="produk-detail__slider-stage">
+            <button
+              type="button"
+              class="produk-detail__slider-arrow produk-detail__slider-arrow--prev"
+              (click)="prevFarm()"
+              aria-label="Budidaya sebelumnya">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="produk-detail__deck-container">
+              <!-- Background Stack Deck Effect -->
+              <div class="produk-detail__deck-shadow produk-detail__deck-shadow--1"></div>
+
+              <!-- Active Card -->
+              <div class="produk-detail__variety-card produk-detail__variety-card--slide" *ngIf="farmGroups[activeFarmIndex] as activeFarm">
+                <div class="produk-detail__card-header-badge">
+                  <span class="produk-detail__card-badge-tag">
+                    <i class="fa-solid fa-seedling"></i>
+                    Budidaya 0{{ activeFarmIndex + 1 }} / 0{{ farmGroups.length }}
+                  </span>
+                  <span class="produk-detail__card-badge-slug">{{ detail.title }}</span>
+                </div>
+
+                <h3 class="produk-detail__variety-name">{{ activeFarm.title }}</h3>
+
+                <ul class="produk-detail__variety-attrs">
+                  <li class="produk-detail__variety-attr">
+                    <span class="produk-detail__variety-attr-label">Luas Budidaya</span>
+                    <span class="produk-detail__variety-attr-value">{{ activeFarm.hectares }}</span>
+                  </li>
+                  <li class="produk-detail__variety-attr">
+                    <span class="produk-detail__variety-attr-label">Sebaran Wilayah</span>
+                    <span class="produk-detail__variety-attr-value">{{ activeFarm.distribution }}</span>
+                  </li>
+                  <li class="produk-detail__variety-attr">
+                    <span class="produk-detail__variety-attr-label">Ciri Tanah dan Iklim</span>
+                    <span class="produk-detail__variety-attr-value">{{ activeFarm.soilClimate }}</span>
+                  </li>
+                </ul>
+
+                <!-- Card Bottom Navigation -->
+                <div class="produk-detail__card-footer-nav">
+                  <button type="button" class="produk-detail__card-nav-link" (click)="prevFarm()">
+                    <i class="fa-solid fa-arrow-left"></i> Sebelumnya
+                  </button>
+                  <span class="produk-detail__card-counter">{{ activeFarmIndex + 1 }} / {{ farmGroups.length }}</span>
+                  <button type="button" class="produk-detail__card-nav-link" (click)="nextFarm()">
+                    Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="produk-detail__slider-arrow produk-detail__slider-arrow--next"
+              (click)="nextFarm()"
+              aria-label="Budidaya selanjutnya">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="produk-detail__slider-pagination">
+            <button
+              type="button"
+              class="produk-detail__slider-dot"
+              *ngFor="let group of farmGroups; let idx = index"
+              [class.produk-detail__slider-dot--active]="activeFarmIndex === idx"
+              (click)="setActiveFarm(idx)"
+              [attr.aria-label]="'Pilih ' + group.title">
+            </button>
+          </div>
         </div>
       </ng-container>
 
+      <!-- 2. STANDARD SINGLE FARM INFO -->
       <ng-template #standardFarmInfo>
-        <ul class="produk-detail__list produk-detail__list--farm">
-          <li><strong>Luas budidaya:</strong> {{ detail.farmInfo.hectares }}</li>
-          <li><strong>Sebaran wilayah:</strong> {{ detail.farmInfo.distribution }}</li>
-          <li><strong>Ciri tanah dan iklim:</strong> {{ detail.farmInfo.soilClimate }}</li>
-        </ul>
+        <div class="produk-detail__variety-card" style="max-width: 820px; margin: 0 auto; width: 100%;">
+          <ul class="produk-detail__variety-attrs" style="margin-top: 0;">
+            <li class="produk-detail__variety-attr">
+              <span class="produk-detail__variety-attr-label">Luas Budidaya</span>
+              <span class="produk-detail__variety-attr-value">{{ detail.farmInfo.hectares }}</span>
+            </li>
+            <li class="produk-detail__variety-attr">
+              <span class="produk-detail__variety-attr-label">Sebaran Wilayah</span>
+              <span class="produk-detail__variety-attr-value">{{ detail.farmInfo.distribution }}</span>
+            </li>
+            <li class="produk-detail__variety-attr">
+              <span class="produk-detail__variety-attr-label">Ciri Tanah dan Iklim</span>
+              <span class="produk-detail__variety-attr-value">{{ detail.farmInfo.soilClimate }}</span>
+            </li>
+          </ul>
+        </div>
       </ng-template>
     </section>
   </main>

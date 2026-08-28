@@ -991,7 +991,7 @@ export class ProdukDetailPageComponent implements OnInit {
         slug,
         title: 'Pisang',
         subtitle: 'Potensi komoditas buah hortikultura Desa Belok/Sidan',
-        image: produk?.image ?? 'assets/images/produk-sayur hortikultura.png',
+        image: produk?.image ?? 'assets/images/produk-pisang.png',
         description: 'Pisang merupakan salah satu komoditas hortikultura buah yang dibudidayakan oleh masyarakat di Desa Belok/Sidan. Dengan jumlah budidaya mencapai 64.000 rumpun, pisang menjadi komoditas penting untuk konsumsi buah segar keluarga, bahan kuliner tradisional, sarana upacara keagamaan di Bali, serta pemasaran buah lokal.',
         shortDescription: 'Pisang dibudidayakan dengan jumlah mencapai 64.000 rumpun di Desa Belok/Sidan sebagai komoditas hortikultura buah yang bernilai pangan dan tradisi.',
         farmInfo: {
@@ -1012,7 +1012,7 @@ export class ProdukDetailPageComponent implements OnInit {
         slug,
         title: 'Kelapa',
         subtitle: 'Komoditas tanaman perkebunan multiguna khas pedesaan',
-        image: produk?.image ?? 'assets/images/produk-sayur hortikultura.png',
+        image: produk?.image ?? 'assets/images/produk-kelapa.png',
         description: 'Kelapa merupakan komoditas tanaman perkebunan yang memiliki peranan penting dan nilai multiguna di Desa Belok/Sidan. Komoditas ini mencakup varietas Kelapa Dalam dan Kelapa Genjah, yang dimanfaatkan secara luas sebagai bahan baku minyak kelapa (VCO), bahan kuliner, sarana upacara keagamaan adat Bali, serta pemanfaatan produk turunan seperti sabut dan tempurung kelapa.',
         shortDescription: 'Kelapa di Desa Belok/Sidan mencakup varietas Kelapa Dalam dan Kelapa Genjah dengan pemanfaatan luas untuk bahan pangan, minyak, dan perlengkapan sarana upacara adat.',
         farmInfo: {
@@ -1161,5 +1161,40 @@ export class ProdukDetailPageComponent implements OnInit {
 
   setVarietyViewMode(mode: 'slider' | 'side-by-side'): void {
     this.varietyViewMode = mode;
+  }
+
+  activeFarmIndex: number = 0;
+
+  get farmGroups(): ProdukFarmDetail[] {
+    if (!this.detail?.farmInfo) return [];
+    if (this.detail.farmInfo.largeChili || this.detail.farmInfo.birdEyeChili) {
+      const groups: ProdukFarmDetail[] = [];
+      if (this.detail.farmInfo.largeChili) {
+        groups.push(this.detail.farmInfo.largeChili);
+      }
+      if (this.detail.farmInfo.birdEyeChili) {
+        groups.push(this.detail.farmInfo.birdEyeChili);
+      }
+      return groups;
+    }
+    return [];
+  }
+
+  setActiveFarm(index: number): void {
+    if (index >= 0 && index < this.farmGroups.length) {
+      this.activeFarmIndex = index;
+    }
+  }
+
+  nextFarm(): void {
+    if (this.farmGroups.length > 1) {
+      this.activeFarmIndex = (this.activeFarmIndex + 1) % this.farmGroups.length;
+    }
+  }
+
+  prevFarm(): void {
+    if (this.farmGroups.length > 1) {
+      this.activeFarmIndex = (this.activeFarmIndex - 1 + this.farmGroups.length) % this.farmGroups.length;
+    }
   }
 }
