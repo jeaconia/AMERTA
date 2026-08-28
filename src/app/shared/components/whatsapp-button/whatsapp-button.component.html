@@ -1,0 +1,27 @@
+<div class="floating-wa-container">
+  <!-- Popup Speech Bubble / Tooltip -->
+  <a
+    [href]="whatsappUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-wa-popup"
+    [attr.aria-label]="label">
+    <span class="floating-wa-popup__indicator">
+      <span class="floating-wa-popup__dot"></span>
+    </span>
+    <span class="floating-wa-popup__text">{{ label }}</span>
+    <span class="floating-wa-popup__arrow" aria-hidden="true"></span>
+  </a>
+
+  <!-- Circular WhatsApp Floating Button -->
+  <a
+    [href]="whatsappUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-wa-btn"
+    [attr.aria-label]="label"
+    [title]="label">
+    <span class="floating-wa-btn__pulse" aria-hidden="true"></span>
+    <i class="fa-brands fa-whatsapp floating-wa-btn__icon" aria-hidden="true"></i>
+  </a>
+</div>

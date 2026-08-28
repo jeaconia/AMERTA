@@ -34,22 +34,44 @@
         <p class="produk-detail__variety-desc" *ngIf="variety.description">{{ variety.description }}</p>
       </div>
 
-      <!-- Quick Variant Selector Tabs (hanya jika varietas > 1) -->
-      <div class="produk-detail__variant-pills" *ngIf="variety.variants.length > 1">
-        <button
-          type="button"
-          class="produk-detail__variant-pill"
-          *ngFor="let item of variety.variants; let idx = index"
-          [class.produk-detail__variant-pill--active]="activeVariantIndex === idx"
-          (click)="setActiveVariant(idx)">
-          <span class="produk-detail__variant-pill-num">{{ idx + 1 }}</span>
-          <span class="produk-detail__variant-pill-name">{{ item.name }}</span>
-        </button>
+      <!-- Controls & Quick Switcher (hanya jika varietas > 1) -->
+      <div class="produk-detail__variety-controls" *ngIf="variety.variants.length > 1">
+        <div class="produk-detail__mode-tabs">
+          <button
+            type="button"
+            class="produk-detail__mode-btn"
+            [class.produk-detail__mode-btn--active]="varietyViewMode === 'slider'"
+            (click)="setVarietyViewMode('slider')">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Mode Slide & Tumpuk</span>
+          </button>
+          <button
+            type="button"
+            class="produk-detail__mode-btn"
+            [class.produk-detail__mode-btn--active]="varietyViewMode === 'side-by-side'"
+            (click)="setVarietyViewMode('side-by-side')">
+            <i class="fa-solid fa-table-columns"></i>
+            <span>Bandingkan Berdampingan</span>
+          </button>
+        </div>
+
+        <!-- Quick Variant Selector Tabs -->
+        <div class="produk-detail__variant-pills" *ngIf="varietyViewMode === 'slider'">
+          <button
+            type="button"
+            class="produk-detail__variant-pill"
+            *ngFor="let item of variety.variants; let idx = index"
+            [class.produk-detail__variant-pill--active]="activeVariantIndex === idx"
+            (click)="setActiveVariant(idx)">
+            <span class="produk-detail__variant-pill-num">{{ idx + 1 }}</span>
+            <span class="produk-detail__variant-pill-name">{{ item.name }}</span>
+          </button>
+        </div>
       </div>
 
-      <!-- 3D CARDS STACK CAROUSEL VIEWPORT -->
-      <div class="produk-detail__deck-wrapper">
-        <div class="produk-detail__deck-stage">
+      <!-- 1. SLIDER & STACKED VIEW -->
+      <div class="produk-detail__slider-wrapper" *ngIf="varietyViewMode === 'slider' || variety.variants.length === 1">
+        <div class="produk-detail__slider-stage">
           <button
             type="button"
             class="produk-detail__slider-arrow produk-detail__slider-arrow--prev"
@@ -60,55 +82,42 @@
             <i class="fa-solid fa-chevron-left"></i>
           </button>
 
-          <!-- 3D Card Stack Container -->
-          <div
-            class="produk-detail__cards-deck"
-            (touchstart)="onTouchStart($event)"
-            (touchend)="onTouchEnd($event)">
-            
-            <div
-              class="produk-detail__variety-card"
-              *ngFor="let item of variety.variants; let idx = index"
-              [ngClass]="getCardPositionClass(idx, variety.variants.length)"
-              (click)="setActiveVariant(idx)">
+          <div class="produk-detail__deck-container">
+            <!-- Background Stack Deck Effect when variants > 1 -->
+            <div class="produk-detail__deck-shadow produk-detail__deck-shadow--2" *ngIf="variety.variants.length > 2"></div>
+            <div class="produk-detail__deck-shadow produk-detail__deck-shadow--1" *ngIf="variety.variants.length > 1"></div>
 
+            <!-- Active Card -->
+            <div class="produk-detail__variety-card produk-detail__variety-card--slide" *ngIf="variety.variants[activeVariantIndex] as activeItem">
               <div class="produk-detail__card-header-badge">
                 <span class="produk-detail__card-badge-tag">
                   <i class="fa-solid fa-leaf"></i>
-                  Varietas 0{{ idx + 1 }} / 0{{ variety.variants.length }}
+                  Varietas 0{{ activeVariantIndex + 1 }} / 0{{ variety.variants.length }}
                 </span>
                 <span class="produk-detail__card-badge-slug">{{ detail.title }}</span>
               </div>
 
-              <h3 class="produk-detail__variety-name">{{ item.name }}</h3>
-              <p class="produk-detail__variety-tagline" *ngIf="item.tagline">{{ item.tagline }}</p>
+              <h3 class="produk-detail__variety-name">{{ activeItem.name }}</h3>
+              <p class="produk-detail__variety-tagline" *ngIf="activeItem.tagline">{{ activeItem.tagline }}</p>
 
               <ul class="produk-detail__variety-attrs">
-                <li class="produk-detail__variety-attr" *ngFor="let attr of item.attributes">
+                <li class="produk-detail__variety-attr" *ngFor="let attr of activeItem.attributes">
                   <span class="produk-detail__variety-attr-label">{{ attr.label }}</span>
                   <span class="produk-detail__variety-attr-value">{{ attr.value }}</span>
                 </li>
               </ul>
 
-              <!-- Card Bottom Navigation for Active Card -->
-              <div class="produk-detail__card-footer-nav" *ngIf="variety.variants.length > 1 && idx === activeVariantIndex" (click)="$event.stopPropagation()">
+              <!-- Card Bottom Quick Navigation (if > 1) -->
+              <div class="produk-detail__card-footer-nav" *ngIf="variety.variants.length > 1">
                 <button type="button" class="produk-detail__card-nav-link" (click)="prevVariant()">
                   <i class="fa-solid fa-arrow-left"></i> Sebelumnya
                 </button>
-                <span class="produk-detail__card-counter">{{ idx + 1 }} / {{ variety.variants.length }}</span>
+                <span class="produk-detail__card-counter">{{ activeVariantIndex + 1 }} / {{ variety.variants.length }}</span>
                 <button type="button" class="produk-detail__card-nav-link" (click)="nextVariant()">
                   Selanjutnya <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
-
-              <!-- Click hint on peeking side cards -->
-              <div class="produk-detail__card-peek-overlay" *ngIf="idx !== activeVariantIndex">
-                <span class="produk-detail__card-peek-text">
-                  <i class="fa-solid fa-hand-pointer"></i> Klik untuk tampilkan
-                </span>
-              </div>
             </div>
-
           </div>
 
           <button
@@ -132,6 +141,28 @@
             (click)="setActiveVariant(idx)"
             [attr.aria-label]="'Pilih varietas ' + item.name">
           </button>
+        </div>
+      </div>
+
+      <!-- 2. SIDE-BY-SIDE / BERDAMPINGAN VIEW -->
+      <div class="produk-detail__variety-grid-wrap" *ngIf="varietyViewMode === 'side-by-side' && variety.variants.length > 1">
+        <div class="produk-detail__variety-grid">
+          <ng-container *ngFor="let item of variety.variants; let idx = index; let last = last">
+            <div class="produk-detail__variety-card" [class.produk-detail__variety-card--highlight]="idx === activeVariantIndex">
+              <div class="produk-detail__card-header-badge">
+                <span class="produk-detail__card-badge-tag">Varietas 0{{ idx + 1 }}</span>
+              </div>
+              <h3 class="produk-detail__variety-name">{{ item.name }}</h3>
+              <p class="produk-detail__variety-tagline" *ngIf="item.tagline">{{ item.tagline }}</p>
+              <ul class="produk-detail__variety-attrs">
+                <li class="produk-detail__variety-attr" *ngFor="let attr of item.attributes">
+                  <span class="produk-detail__variety-attr-label">{{ attr.label }}</span>
+                  <span class="produk-detail__variety-attr-value">{{ attr.value }}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="produk-detail__variety-vs" *ngIf="!last">VS</div>
+          </ng-container>
         </div>
       </div>
     </section>

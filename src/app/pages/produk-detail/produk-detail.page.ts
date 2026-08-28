@@ -93,8 +93,7 @@ export class ProdukDetailPageComponent implements OnInit {
   detail!: ProdukDetailData;
   badges: ProdukBadge[] = [];
   activeVariantIndex: number = 0;
-  private touchStartX: number = 0;
-  private touchEndX: number = 0;
+  varietyViewMode: 'slider' | 'side-by-side' = 'slider';
 
   /** Ikon fallback untuk kartu "Keunggulan" bila item tidak punya kunci ikon sendiri */
   readonly highlightIcons: string[] = ['fa-seedling', 'fa-leaf', 'fa-mountain-sun', 'fa-award', 'fa-hand-holding-heart', 'fa-sun'];
@@ -1205,42 +1204,7 @@ export class ProdukDetailPageComponent implements OnInit {
     }
   }
 
-  getCardPositionClass(index: number, total: number): string {
-    if (total <= 1) {
-      return 'produk-detail__card--active';
-    }
-    if (index === this.activeVariantIndex) {
-      return 'produk-detail__card--active';
-    }
-    if (total === 2) {
-      return this.activeVariantIndex === 0
-        ? 'produk-detail__card--peek-right'
-        : 'produk-detail__card--peek-left';
-    }
-    const prevIndex = (this.activeVariantIndex - 1 + total) % total;
-    const nextIndex = (this.activeVariantIndex + 1) % total;
-    if (index === prevIndex) {
-      return 'produk-detail__card--prev';
-    }
-    if (index === nextIndex) {
-      return 'produk-detail__card--next';
-    }
-    return 'produk-detail__card--hidden';
-  }
-
-  onTouchStart(event: TouchEvent): void {
-    this.touchStartX = event.changedTouches[0].screenX;
-  }
-
-  onTouchEnd(event: TouchEvent): void {
-    this.touchEndX = event.changedTouches[0].screenX;
-    const diff = this.touchEndX - this.touchStartX;
-    if (Math.abs(diff) > 40) {
-      if (diff < 0) {
-        this.nextVariant();
-      } else {
-        this.prevVariant();
-      }
-    }
+  setVarietyViewMode(mode: 'slider' | 'side-by-side'): void {
+    this.varietyViewMode = mode;
   }
 }
