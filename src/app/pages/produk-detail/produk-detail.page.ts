@@ -729,7 +729,7 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: 'Data luas budidaya kopi dimasukkan berdasarkan besaran luasan yang telah diperoleh dari data lapangan.',
+        hectares: 'Terdapat 354 ha lahan perkebunan kopi yang dibudidayakan oleh petani di Desa Belok/Sidan.',
         distribution: 'Kopi Arabika terdapat di seluruh banjar di Desa Belok/Sidan dengan perbedaan klon yang dibudidayakan pada masing-masing banjar. Kopi Robusta dibudidayakan pada area dataran yang lebih rendah.',
         soilClimate: 'Kopi Arabika umumnya dibudidayakan pada ketinggian 500 mdpl ke atas dengan kondisi iklim sejuk. Kopi Robusta umumnya dibudidayakan pada ketinggian 500 mdpl ke bawah dengan toleransi suhu yang lebih hangat.'
       },
