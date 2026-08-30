@@ -10,8 +10,8 @@
 .hero {
   position: relative;
   min-height: 700px;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
+  margin-left: 0;
   margin-bottom: var(--space-xs);
   display: flex;
   align-items: center;
@@ -324,13 +324,27 @@
 .produk__card-link {
   margin-top: auto;
   padding-top: var(--space-xs);
-  font: 500 0.9rem/1.2 var(--font-body);
-  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font: 600 0.86rem/1.2 var(--font-body);
+  color: var(--color-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
+  transition: color 0.2s ease;
+  width: 100%;
 }
-.produk__card-link:hover {
-  color: var(--color-primary);
+.produk__card-link:hover,
+.produk__card:hover .produk__card-link {
+  color: var(--color-primary-dark);
+}
+.produk__card-link i {
+  font-size: 0.78rem;
+  transition: transform 0.2s ease;
+}
+.produk__card:hover .produk__card-link i {
+  transform: translateX(3px);
 }
 .produk-section-footer {
   display: flex;
@@ -520,14 +534,41 @@
 
   .produk-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
   }
 
   .produk__card {
     min-width: 0;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .produk__card-title {
+    font-size: 1.15rem;
   }
 
   .produk__card-image-wrap {
-    min-height: 120px;
+    min-height: 110px;
+  }
+
+  .produk__card-image {
+    max-width: 115px;
+  }
+
+  .produk__card-link {
+    font-size: 0.76rem;
+    gap: 0.25rem;
+    padding-top: 0.25rem;
+  }
+
+  .produk__card-link i {
+    font-size: 0.7rem;
+  }
+
+  .produk-section-button {
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
+    max-width: 100%;
+    text-align: center;
   }
 
   .standar-kualitas__badge {
@@ -535,5 +576,24 @@
     bottom: 0.25rem;
     padding: 0.65rem 0.8rem;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .produk-grid {
+    gap: 0.45rem;
+  }
+
+  .produk__card {
+    padding: 0.65rem 0.35rem;
+  }
+
+  .produk__card-title {
+    font-size: 1.05rem;
+  }
+
+  .produk__card-link {
+    font-size: 0.7rem;
+    gap: 0.2rem;
   }
 }

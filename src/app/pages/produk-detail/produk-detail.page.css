@@ -844,18 +844,28 @@
 
   .produk-detail__slider-stage {
     gap: 0.5rem;
+    width: 100%;
   }
 
   .produk-detail__slider-arrow {
     width: 38px;
     height: 38px;
+    flex: 0 0 38px;
     font-size: 0.88rem;
+  }
+
+  .produk-detail__deck-container {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
   }
 
   .produk-detail__variety-card {
     padding: 1.25rem 1.1rem;
     max-width: 100%;
     width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .produk-detail__variety-name {
@@ -865,6 +875,14 @@
   .produk-detail__variety-grid {
     flex-direction: column;
     align-items: center;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .produk-detail__variety-grid .produk-detail__variety-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .produk-detail__variety-vs {

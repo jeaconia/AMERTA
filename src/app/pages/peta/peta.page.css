@@ -1,5 +1,9 @@
 .peta-page {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
   background-color: var(--color-surface-dark);
   padding: calc(var(--navbar-clearance) + var(--space-md)) var(--space-md) 0;
 }
