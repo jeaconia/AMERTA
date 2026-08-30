@@ -57,29 +57,9 @@
         <p class="produk-detail__variety-desc" *ngIf="variety.description">{{ variety.description }}</p>
       </div>
 
-      <!-- Controls & Quick Switcher (hanya jika varietas > 1) -->
+      <!-- Quick Variant Selector Pills (hanya jika varietas > 1) -->
       <div class="produk-detail__variety-controls" *ngIf="variety.variants.length > 1">
-        <div class="produk-detail__mode-tabs">
-          <button
-            type="button"
-            class="produk-detail__mode-btn"
-            [class.produk-detail__mode-btn--active]="varietyViewMode === 'slider'"
-            (click)="setVarietyViewMode('slider')">
-            <i class="fa-solid fa-layer-group"></i>
-            <span>Mode Slide & Tumpuk</span>
-          </button>
-          <button
-            type="button"
-            class="produk-detail__mode-btn"
-            [class.produk-detail__mode-btn--active]="varietyViewMode === 'side-by-side'"
-            (click)="setVarietyViewMode('side-by-side')">
-            <i class="fa-solid fa-table-columns"></i>
-            <span>Bandingkan Berdampingan</span>
-          </button>
-        </div>
-
-        <!-- Quick Variant Selector Tabs -->
-        <div class="produk-detail__variant-pills" *ngIf="varietyViewMode === 'slider'">
+        <div class="produk-detail__variant-pills">
           <button
             type="button"
             class="produk-detail__variant-pill"
@@ -92,8 +72,8 @@
         </div>
       </div>
 
-      <!-- 1. SLIDER & STACKED VIEW -->
-      <div class="produk-detail__slider-wrapper" *ngIf="varietyViewMode === 'slider' || variety.variants.length === 1">
+      <!-- SLIDER & STACKED VIEW -->
+      <div class="produk-detail__slider-wrapper">
         <div class="produk-detail__slider-stage">
           <button
             type="button"
@@ -164,28 +144,6 @@
             (click)="setActiveVariant(idx)"
             [attr.aria-label]="'Pilih varietas ' + item.name">
           </button>
-        </div>
-      </div>
-
-      <!-- 2. SIDE-BY-SIDE / BERDAMPINGAN VIEW -->
-      <div class="produk-detail__variety-grid-wrap" *ngIf="varietyViewMode === 'side-by-side' && variety.variants.length > 1">
-        <div class="produk-detail__variety-grid">
-          <ng-container *ngFor="let item of variety.variants; let idx = index; let last = last">
-            <div class="produk-detail__variety-card" [class.produk-detail__variety-card--highlight]="idx === activeVariantIndex">
-              <div class="produk-detail__card-header-badge">
-                <span class="produk-detail__card-badge-tag">Varietas 0{{ idx + 1 }}</span>
-              </div>
-              <h3 class="produk-detail__variety-name">{{ item.name }}</h3>
-              <p class="produk-detail__variety-tagline" *ngIf="item.tagline">{{ item.tagline }}</p>
-              <ul class="produk-detail__variety-attrs">
-                <li class="produk-detail__variety-attr" *ngFor="let attr of item.attributes">
-                  <span class="produk-detail__variety-attr-label">{{ attr.label }}</span>
-                  <span class="produk-detail__variety-attr-value">{{ attr.value }}</span>
-                </li>
-              </ul>
-            </div>
-            <div class="produk-detail__variety-vs" *ngIf="!last">VS</div>
-          </ng-container>
         </div>
       </div>
     </section>

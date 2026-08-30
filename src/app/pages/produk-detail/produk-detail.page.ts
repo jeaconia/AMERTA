@@ -99,7 +99,6 @@ export class ProdukDetailPageComponent implements OnInit {
   detail!: ProdukDetailData;
   badges: ProdukBadge[] = [];
   activeVariantIndex: number = 0;
-  varietyViewMode: 'slider' | 'side-by-side' = 'slider';
   activeGalleryImage: string = '';
   activeGalleryLabel: string = '';
 
@@ -2285,10 +2284,6 @@ export class ProdukDetailPageComponent implements OnInit {
       const total = this.detail.varietyComparison.variants.length;
       this.activeVariantIndex = (this.activeVariantIndex - 1 + total) % total;
     }
-  }
-
-  setVarietyViewMode(mode: 'slider' | 'side-by-side'): void {
-    this.varietyViewMode = mode;
   }
 
   activeFarmIndex: number = 0;
