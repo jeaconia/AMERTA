@@ -983,8 +983,8 @@ export class ProdukDetailPageComponent implements OnInit {
         soilClimate: 'Memerlukan suhu sejuk berkisar 15–20°C, tanah gembur kaya humus dengan drainase baik dan kelembapan stabil.'
       },
       varietyComparison: {
-        title: 'Kubis Hijau Bulat vs Kubis Ungu',
-        description: 'Kubis memiliki variasi kultivar dengan perbedaan pigmen warna daun, kepadatan krop, dan profil antioksidan.',
+        title: 'Kubis Hijau Bulat',
+        //description: 'Kubis memiliki variasi kultivar dengan perbedaan pigmen warna daun, kepadatan krop, dan profil antioksidan.',
         variants: [
           {
             name: 'Kubis Hijau Bulat',
@@ -996,7 +996,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan', value: 'Bahan aneka sayur sup, tumisan, lalapan segar, dan olahan kuliner sehari-hari.' }
             ]
           },
-          {
+          /*{
             name: 'Kubis Ungu (Merah)',
             tagline: 'Kultivar kaya pigmen antosianin dengan warna ungu kemerahan mencolok',
             attributes: [
@@ -1005,7 +1005,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Kandungan Khusus', value: 'Kaya akan antioksidan antosianin dan vitamin C yang lebih tinggi dari kubis hijau.' },
               { label: 'Pemanfaatan', value: 'Bahan salad premium, coleslaw, garnish hidangan restoran, dan olahan acar.' }
             ]
-          }
+          }*/
         ]
       },
       highlights: [
@@ -1041,16 +1041,16 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Membantu menjaga kestabilan tekanan darah dan kesehatan sistem saraf serta otot.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya sawi putih dicatat berdasarkan luasan lahan aktif kelompok tani sayur.',
         distribution: 'Dibudidayakan di areal persawahan dan tegalan beriklim sejuk Desa Belok/Sidan.',
         soilClimate: 'Membutuhkan tanah lempung berpasir yang gembur, drainase lancar, dan ketersediaan air irigasi yang cukup.'
-      },
+      },*/
       varietyComparison: {
-        title: 'Sawi Putih Hibrida vs Sawi Putih Lokal',
-        description: 'Perbandingan kultivar sawi putih berfokus pada ketahanan tanaman, kepadatan krop, dan bobot panen.',
+        title: 'Sawi Putih Lokal',
+        //description: 'Perbandingan kultivar sawi putih berfokus pada ketahanan tanaman, kepadatan krop, dan bobot panen.',
         variants: [
-          {
+          /*{
             name: 'Sawi Putih Hibrida',
             tagline: 'Kultivar unggul berbobot berat dengan krop silindris padat',
             attributes: [
@@ -1059,7 +1059,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Tekstur & Rasa', value: 'Batang daun putih tebal sangat renyah, berair banyak, dan manis alami.' },
               { label: 'Pemanfaatan', value: 'Pasokan pasar induk, supermarket, restoran, dan bahan kimchi.' }
             ]
-          },
+          },*/
           {
             name: 'Sawi Putih Lokal',
             tagline: 'Kultivar tradisional dengan masa panen genjah dan daun lembut',
@@ -1106,15 +1106,15 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: 'Terdapat 5,6 Hektar lahan pertanian kubis yang dikelola oleh kelompok tani sayur di Desa Belok/Sidan.',
+        hectares: 'Terdapat 5,6 Hektar lahan pertanian buncis yang dikelola oleh kelompok tani sayur di Desa Belok/Sidan.',
         distribution: 'Tersebar di Banjar Bon, Sekarmukti, Lawak, Belok, Selantang, Sidan, dan Penikit.',
         soilClimate: 'Tumbuh subur pada tanah subur berdrainase baik dengan pH 5,5–6,5 dan suhu udara 18–24°C.'
       },
       varietyComparison: {
-        title: 'Buncis Tegak vs Buncis Rambat',
-        description: 'Buncis dibedakan berdasarkan pola pertumbuhan batangnya antara tipe tegak mandiri dan tipe merambat.',
+        title: 'Buncis Tegak',
+        //description: 'Buncis dibedakan berdasarkan pola pertumbuhan batangnya antara tipe tegak mandiri dan tipe merambat.',
         variants: [
-          {
+          /*{
             name: 'Buncis Tegak (Bush Bean)',
             tagline: 'Tipe tanaman kompak tanpa lanjaran dengan panen serempak',
             attributes: [
@@ -1123,7 +1123,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Karakteristik Budidaya', value: 'Praktis dan hemat biaya tenaga kerja pembuatan lanjaran.' },
               { label: 'Pemanfaatan', value: 'Sayuran segar harian, tumis buncis bawang putih, dan sayur campur.' }
             ]
-          },
+          },*/
           {
             name: 'Buncis Rambat (Pole Bean)',
             tagline: 'Tipe merambat dengan masa produktif panjang dan polong panjang lentur',
@@ -1169,11 +1169,11 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Membantu merangsang fungsi ginjal dalam membuang sisa metabolisme melalui urin (efek diuretik ringan).'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya mentimun dicatat berdasarkan pencatatan rotasi tanam petani hortikultura.',
         distribution: 'Ditanam pada bedengan sawah tadah hujan dan tegalan di Desa Belok/Sidan.',
         soilClimate: 'Membutuhkan tanah lempung gembur subur, sinar matahari penuh, dan pasokan air teratur.'
-      },
+      },*/
       varietyComparison: {
         title: 'Timun Jepang (Kyuri) vs Timun Lokal',
         description: 'Perbandingan karakteristik timun jepang berkulit hijau gelap pekat dengan timun sayur lokal.',
@@ -1233,11 +1233,11 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Mendukung fungsi neurologis, suasana hati, dan pembelahan sel yang sehat.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya tomat dicatat berdasarkan luasan kebun aktif kelompok tani.',
         distribution: 'Tersebar di lahan-lahan pertanian sayur dataran tinggi Desa Belok/Sidan.',
         soilClimate: 'Tumbuh optimal pada suhu 18–25°C dengan tanah gembur kaya bahan organik dan penyinaran matahari penuh.'
-      },
+      },*/
       varietyComparison: {
         title: 'Tomat Buah (Sayur) vs Tomat Ceri',
         description: 'Perbandingan antara tomat buah berukuran besar untuk masakan dan tomat ceri manis untuk konsumsi segar.',
@@ -1297,11 +1297,11 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Membantu menjaga kesehatan pencernaan, melancarkan metabolisme, dan mendukung berat badan ideal.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya pakcoy dicatat berdasarkan data kelompok tani sayuran daun.',
         distribution: 'Tersebar di areal bedengan sayuran dan kebun pekarangan Desa Belok/Sidan.',
         soilClimate: 'Membutuhkan tanah gembur berhumus tinggi dengan ketersediaan air yang cukup dan suhu sejuk.'
-      },
+      },*/
       varietyComparison: {
         title: 'Pakcoy Hijau Standar vs Baby Pakcoy',
         description: 'Perbandingan antara pakcoy ukuran dewasa standar dan baby pakcoy yang dipanen pada usia muda.',
@@ -1361,14 +1361,14 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Mendukung metabolisme karbohidrat dan menjaga fungsi normal sistem kardiovaskular.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya terong dicatat berdasarkan luasan kebun produktif petani desa.',
         distribution: 'Tersebar di lahan tegalan dan persawahan Desa Belok/Sidan.',
         soilClimate: 'Tumbuh subur pada tanah lempung berpasir kaya hara dengan drainase lancar dan sinar matahari cukup.'
-      },
+      },*/
       varietyComparison: {
-        title: 'Terong Ungu Panjang vs Terong Bulat Lalap',
-        description: 'Perbandingan antara terong ungu berukuran panjang untuk masakan dan terong bulat renyah untuk lalapan.',
+        title: 'Terong Ungu Panjang',
+        //description: 'Perbandingan antara terong ungu berukuran panjang untuk masakan dan terong bulat renyah untuk lalapan.',
         variants: [
           {
             name: 'Terong Ungu Panjang',
@@ -1380,7 +1380,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan', value: 'Terong balado, terong bakar sambal matah, sayur lodeh, dan terong goreng krispi.' }
             ]
           },
-          {
+          /*{
             name: 'Terong Bulat Lalap (Terong Telunjuk/Hijau)',
             tagline: 'Kultivar bulat kecil bertekstur renyah khusus lalapan segar',
             attributes: [
@@ -1389,7 +1389,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan Khusus', value: 'Dikonsumsi mentah sebagai lalapan segar bersama aneka sambal tradisional.' },
               { label: 'Kandungan', value: 'Kaya serat dan air yang menyegarkan mulut saat menikmati makanan berlemak.' }
             ]
-          }
+          }*/
         ]
       },
       highlights: [
@@ -1425,14 +1425,14 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Senyawa flavonoid yang memiliki sifat anti-inflamasi dan pelindung sel dari stres oksidatif.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya labu siam dicatat berdasarkan luasan para-para perkebunan aktif.',
         distribution: 'Dibudidayakan pada sistem para-para bambu di tegalan dan perbukitan Desa Belok/Sidan.',
         soilClimate: 'Tumbuh sangat subur di iklim sejuk dataran tinggi dengan tanah lembap berdrainase baik.'
-      },
+      },*/
       varietyComparison: {
-        title: 'Buah Labu Siam vs Pucuk Daun Labu Siam',
-        description: 'Dua bagian tanaman labu siam yang dimanfaatkan secara luas sebagai komoditas sayuran bernilai ekonomi.',
+        title: 'Buah Labu Siam',
+        //description: 'Dua bagian tanaman labu siam yang dimanfaatkan secara luas sebagai komoditas sayuran bernilai ekonomi.',
         variants: [
           {
             name: 'Buah Labu Siam',
@@ -1444,7 +1444,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Ketahanan Simpan', value: 'Daya simpan lama hingga beberapa minggu pada suhu ruang.' }
             ]
           },
-          {
+          /*{
             name: 'Pucuk Daun Labu Siam (Baby Labu)',
             tagline: 'Tunas pucuk daun muda yang sangat lembut, renyah, dan gurih',
             attributes: [
@@ -1453,7 +1453,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan', value: 'Tumisan bawang putih, plecing daun labu, dan lalapan rebus hangat.' },
               { label: 'Kandungan', value: 'Kaya zat besi, klorofil, dan serat hijau untuk pembersih pencernaan.' }
             ]
-          }
+          }*/
         ]
       },
       highlights: [
@@ -1489,14 +1489,14 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Melindungi sel tubuh dari efek buruk penuaan dini dan menjaga kesehatan kulit.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya labu pumpkin dicatat berdasarkan luasan tegalan dan lahan kebun petani.',
         distribution: 'Tersebar di kebun tegalan dan lahan terbuka Desa Belok/Sidan.',
         soilClimate: 'Membutuhkan tanah gembur kaya bahan organik, sinar matahari penuh, dan drainase air yang lancar.'
-      },
+      },*/
       varietyComparison: {
-        title: 'Labu Kuning Lokal (Waluh) vs Labu Madu (Butternut)',
-        description: 'Perbandingan antara labu kuning bulat tradisional dan labu madu berbentuk botol.',
+        title: 'Labu Kuning Lokal (Waluh)',
+        //description: 'Perbandingan antara labu kuning bulat tradisional dan labu madu berbentuk botol.',
         variants: [
           {
             name: 'Labu Kuning Lokal (Waluh)',
@@ -1508,7 +1508,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Daya Simpan', value: 'Kulit keras memungkinkan penyimpanan hingga berbulan-bulan tanpa rusak.' }
             ]
           },
-          {
+          /*{
             name: 'Labu Madu (Butternut Pumpkin)',
             tagline: 'Kultivar berbentuk botol pir dengan rasa manis pekat seperti mentega',
             attributes: [
@@ -1517,7 +1517,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan', value: 'Creamy pumpkin soup, kue pastry, MPASI bayi, dan hidangan panggang restoran.' },
               { label: 'Kandungan Khusus', value: 'Kadar gula alami dan kepekatan beta karoten yang sangat tinggi.' }
             ]
-          }
+          }*/
         ]
       },
       highlights: [
@@ -1553,11 +1553,11 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Membantu memelihara kesehatan sistem pencernaan dan menjadi makanan bagi bakteri baik usus.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Jumlah budidaya: 64.000 rumpun.',
         distribution: 'Ditanam di kebun tegalan, pekarangan rumah warga, dan pembatas lahan di seluruh wilayah Desa Belok/Sidan.',
         soilClimate: 'Tumbuh subur pada tanah lempung gembur yang kaya humus dan air dengan iklim tropis dataran sejuk.'
-      },
+      },*/
       varietyComparison: {
         title: 'Pisang Konsumsi Segar vs Pisang Upakara (Saba/Kepok)',
         description: 'Perbandingan pemanfaatan varietas pisang meja konsumsi dan pisang khusus sarana upacara adat di Bali.',
@@ -1585,7 +1585,7 @@ export class ProdukDetailPageComponent implements OnInit {
         ]
       },
       highlights: [
-        'Populasi budidaya mencapai 64.000 rumpun di seluruh desa',
+        'Populasi budidaya yang besar di seluruh desa',
         'Komoditas multiguna untuk pemenuhan gizi pangan dan sarana ritual upacara adat',
         'Sumber kalium, energi alami, dan vitamin B6 yang sangat baik',
         'Beragam varietas unggulan seperti Pisang Raja, Pisang Saba, Pisang Susu, dan Kepok',
@@ -1618,13 +1618,13 @@ export class ProdukDetailPageComponent implements OnInit {
         }
       ],
       farmInfo: {
-        hectares: 'Data luas budidaya vanili dicatat berdasarkan luasan kebun vanili intensif petani desa.',
+        hectares: 'Terdapat 0,93 Hektar lahan pertanian vanili yang dikelola oleh kelompok tani sayur di Desa Belok/Sidan.',
         distribution: 'Tersebar di perkebunan ternaungi di wilayah dataran menengah dan tinggi Desa Belok/Sidan.',
         soilClimate: 'Membutuhkan iklim tropis sejuk dengan kelembapan 70–80%, pohon rambatan pelindung, dan tanah kaya humus dengan drainase sangat baik.'
       },
       varietyComparison: {
-        title: 'Vanili Planifolia vs Vanili Tahitensis',
-        description: 'Perbandingan dua spesies vanili komersial utama dengan profil aroma dan bentuk polong yang berbeda.',
+        title: 'Vanili Planifolia',
+        //description: 'Perbandingan dua spesies vanili komersial utama dengan profil aroma dan bentuk polong yang berbeda.',
         variants: [
           {
             name: 'Vanilla Planifolia (Bourbon Vanilla)',
@@ -1636,7 +1636,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan', value: 'Ekstrak vanila premium, industri perhotelan, pastry kue internasional, dan pasar ekspor.' }
             ]
           },
-          {
+          /*{
             name: 'Vanilla Tahitensis',
             tagline: 'Spesies vanili dengan profil aroma floral bunga dan buah yang unik',
             attributes: [
@@ -1645,7 +1645,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Kandungan Vanilin', value: 'Kadar vanilin lebih rendah namun kaya senyawa aromatik heliotropin dan anisalil alkohol.' },
               { label: 'Pemanfaatan', value: 'Industri parfum, aromaterapi mewah, minuman spesialti, dan kosmetik herbal.' }
             ]
-          }
+          }*/
         ]
       },
       highlights: [
@@ -1681,11 +1681,11 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Mengandung inulin (serat prebiotik) yang memperlambat penyerapan glukosa dan memelihara kesehatan usus.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya dan sebaran pohon nao dicatat berdasarkan populasi tegakan pohon produktif di desa.',
         distribution: 'Pohon nao tumbuh alami dan dibudidayakan di lereng-lereng perbukitan dan kebun warga Desa Belok/Sidan.',
         soilClimate: 'Tumbuh optimal di kawasan perbukitan dataran sejuk dengan kelembapan tanah yang baik dan aerasi optimal.'
-      },
+      },*/
       varietyComparison: {
         title: 'Gula Aren Cetak Tradisional vs Gula Semut Aren',
         description: 'Dua bentuk olahan gula aren murni hasil produksi pengrajin nira Desa Belok/Sidan.',
@@ -1751,8 +1751,8 @@ export class ProdukDetailPageComponent implements OnInit {
         soilClimate: 'Membutuhkan iklim tropis basah dengan tanah lempung berpasir subur, berdrainase lancar, dan ketinggian yang mendukung.'
       },
       varietyComparison: {
-        title: 'Cengkeh Zanzibar vs Cengkeh Sikotok',
-        description: 'Perbandingan dua kultivar pohon cengkeh unggulan yang banyak dibudidayakan oleh petani perkebunan.',
+        title: 'Cengkeh Zanzibar',
+        //description: 'Perbandingan dua kultivar pohon cengkeh unggulan yang banyak dibudidayakan oleh petani perkebunan.',
         variants: [
           {
             name: 'Cengkeh Zanzibar',
@@ -1764,7 +1764,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan', value: 'Industri farmasi, minyak cengkeh, bumbu rempah dapur, dan bahan dupa wangi.' }
             ]
           },
-          {
+          /*{
             name: 'Cengkeh Sikotok',
             tagline: 'Kultivar berpostur ramping dengan kuncup bunga berukuran besar',
             attributes: [
@@ -1773,7 +1773,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Karakteristik Pengeringan', value: 'Menghasilkan cengkeh kering berbobot mantap dan warna cokelat gelap.' },
               { label: 'Pemanfaatan', value: 'Bumbu rempah masakan tradisional, racikan jamu herbal, dan pengawet alami.' }
             ]
-          }
+          }*/
         ]
       },
       highlights: [
@@ -2001,11 +2001,11 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Mendukung metabolisme energi dan memelihara kesehatan sistem imun tubuh.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya umbi-umbian dicatat berdasarkan luasan tegalan palawija masyarakat.',
         distribution: 'Tersebar di lahan tegalan dan batas kebun masyarakat Desa Belok/Sidan.',
         soilClimate: 'Tumbuh subur pada tanah gembur berpasir yang remah sehingga umbi dapat berkembang leluasa dan berbobot besar.'
-      },
+      },*/
       varietyComparison: {
         title: 'Ubi Jalar (Madu / Ungu) vs Singkong (Ubi Kayu)',
         description: 'Perbandingan dua jenis umbi palawija yang paling banyak dibudidayakan oleh petani desa.',
@@ -2065,16 +2065,16 @@ export class ProdukDetailPageComponent implements OnInit {
           description: 'Mendukung kesehatan kulit, fungsi kognitif otak, dan metabolisme konversi energi.'
         }
       ],
-      farmInfo: {
+      /*farmInfo: {
         hectares: 'Data luas budidaya kacang tanah dicatat berdasarkan luasan panen palawija musiman.',
         distribution: 'Ditanam pada lahan tegalan dan rotasi tanaman sawah di Desa Belok/Sidan.',
         soilClimate: 'Membutuhkan tanah gembur berpasir dan remah agar ginofor mudah menembus tanah, serta penyinaran matahari penuh.'
-      },
+      },*/
       varietyComparison: {
-        title: 'Kacang Tanah Biji Dua vs Kacang Tanah Biji Tiga/Empat',
-        description: 'Perbandingan kultivar kacang tanah berdasarkan jumlah biji per polong dan tekstur kerenyahannya.',
+        title: 'Kacang Tanah Biji Tiga/Empat',
+        //description: 'Perbandingan kultivar kacang tanah berdasarkan jumlah biji per polong dan tekstur kerenyahannya.',
         variants: [
-          {
+          /*{
             name: 'Kacang Tanah Biji Dua (Kacang Garing)',
             tagline: 'Kultivar polong berisi dua biji berukuran besar dan gurih',
             attributes: [
@@ -2083,7 +2083,7 @@ export class ProdukDetailPageComponent implements OnInit {
               { label: 'Pemanfaatan', value: 'Bahan kacang bawang, kacang oven, selai kacang (peanut butter), dan bumbu gado-gado.' },
               { label: 'Karakteristik', value: 'Ukuran biji seragam dan sangat disukai industri olahan kacang goreng.' }
             ]
-          },
+          },*/
           {
             name: 'Kacang Tanah Biji Tiga/Empat (Kacang Lokal)',
             tagline: 'Kultivar polong panjang berisi 3–4 biji yang manis untuk kacang rebus',

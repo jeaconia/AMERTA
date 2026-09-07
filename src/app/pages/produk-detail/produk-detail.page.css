@@ -136,21 +136,6 @@
   min-height: 200px;
 }
 
-.produk-detail__gallery-tag {
-  position: absolute;
-  bottom: 0.25rem;
-  right: 0.5rem;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--color-primary-dark);
-  font: 700 0.78rem var(--font-body);
-  padding: 0.25rem 0.65rem;
-  border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
 .produk-detail__gallery-tabs {
   display: flex;
   align-items: center;

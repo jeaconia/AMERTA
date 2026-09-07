@@ -13,7 +13,7 @@ export class WhatsappButtonComponent {
   @Input() phoneNumber: string = '6281934271202';
 
   /** Pesan awal default saat pengguna membuka chat WhatsApp */
-  @Input() defaultMessage: string = 'Halo Admin Desa Belok Sidan, saya ingin bertanya terkait informasi dan produk desa.';
+  @Input() defaultMessage: string = 'Halo Admin Desa Belok/Sidan, saya ingin bertanya terkait informasi dan produk desa.';
 
   /** Teks popup / tooltip pada tombol */
   @Input() label: string = 'Hubungi Kami';

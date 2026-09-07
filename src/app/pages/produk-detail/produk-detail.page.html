@@ -24,9 +24,6 @@
           <div class="produk-detail__gallery-box">
             <div class="produk-detail__gallery-display">
               <img [src]="activeGalleryImage || detail.galleryImages[0].url" [alt]="activeGalleryLabel || detail.title" class="produk-detail__image">
-              <span class="produk-detail__gallery-tag" *ngIf="activeGalleryLabel">
-                <i class="fa-solid fa-camera"></i> {{ activeGalleryLabel }}
-              </span>
             </div>
             <div class="produk-detail__gallery-tabs">
               <button
